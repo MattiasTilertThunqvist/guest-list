@@ -15,6 +15,11 @@
 		8A33DA70244DCF270009D9D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A33DA6F244DCF270009D9D0 /* Assets.xcassets */; };
 		8A33DA73244DCF270009D9D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A33DA71244DCF270009D9D0 /* LaunchScreen.storyboard */; };
 		8A33DA7D244DD61A0009D9D0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8A33DA7C244DD61A0009D9D0 /* GoogleService-Info.plist */; };
+		8A33DA82244DDDE40009D9D0 /* StoryboardInstance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A33DA81244DDDE40009D9D0 /* StoryboardInstance.swift */; };
+		8A33DA85244DDE360009D9D0 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A33DA84244DDE360009D9D0 /* NetworkManager.swift */; };
+		8A33DA89244DDF2D0009D9D0 /* UIColor + Wedding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A33DA88244DDF2D0009D9D0 /* UIColor + Wedding.swift */; };
+		8A33DA8B244DE3DC0009D9D0 /* UIFont + Wedding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A33DA8A244DE3DC0009D9D0 /* UIFont + Wedding.swift */; };
+		8A33DA8D244DE54E0009D9D0 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A33DA8C244DE54E0009D9D0 /* NetworkError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +33,11 @@
 		8A33DA72244DCF270009D9D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8A33DA74244DCF270009D9D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8A33DA7C244DD61A0009D9D0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8A33DA81244DDDE40009D9D0 /* StoryboardInstance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardInstance.swift; sourceTree = "<group>"; };
+		8A33DA84244DDE360009D9D0 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		8A33DA88244DDF2D0009D9D0 /* UIColor + Wedding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Wedding.swift"; sourceTree = "<group>"; };
+		8A33DA8A244DE3DC0009D9D0 /* UIFont + Wedding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont + Wedding.swift"; sourceTree = "<group>"; };
+		8A33DA8C244DE54E0009D9D0 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		EC4C66B88AEC9EDDDF361820 /* Pods-guest-list.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-guest-list.release.xcconfig"; path = "Pods/Target Support Files/Pods-guest-list/Pods-guest-list.release.xcconfig"; sourceTree = "<group>"; };
 		F0CA2C6D4DE83932D24994EA /* Pods-guest-list.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-guest-list.debug.xcconfig"; path = "Pods/Target Support Files/Pods-guest-list/Pods-guest-list.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -82,16 +92,69 @@
 		8A33DA65244DCF230009D9D0 /* guest-list */ = {
 			isa = PBXGroup;
 			children = (
-				8A33DA66244DCF230009D9D0 /* AppDelegate.swift */,
-				8A33DA68244DCF230009D9D0 /* SceneDelegate.swift */,
 				8A33DA6A244DCF230009D9D0 /* ViewController.swift */,
 				8A33DA6C244DCF230009D9D0 /* Main.storyboard */,
-				8A33DA6F244DCF270009D9D0 /* Assets.xcassets */,
+				8A33DA80244DDD9C0009D9D0 /* Cells */,
+				8A33DA83244DDE180009D9D0 /* Network Manager */,
+				8A33DA7F244DDD410009D9D0 /* Resources */,
+				8A33DA7E244DDD1D0009D9D0 /* Supporting Files */,
+			);
+			path = "guest-list";
+			sourceTree = "<group>";
+		};
+		8A33DA7E244DDD1D0009D9D0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8A33DA68244DCF230009D9D0 /* SceneDelegate.swift */,
+				8A33DA66244DCF230009D9D0 /* AppDelegate.swift */,
 				8A33DA71244DCF270009D9D0 /* LaunchScreen.storyboard */,
 				8A33DA74244DCF270009D9D0 /* Info.plist */,
 				8A33DA7C244DD61A0009D9D0 /* GoogleService-Info.plist */,
 			);
-			path = "guest-list";
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8A33DA7F244DDD410009D9D0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8A33DA87244DDEED0009D9D0 /* Extensions */,
+				8A33DA86244DDEC60009D9D0 /* UI Components */,
+				8A33DA6F244DCF270009D9D0 /* Assets.xcassets */,
+				8A33DA81244DDDE40009D9D0 /* StoryboardInstance.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		8A33DA80244DDD9C0009D9D0 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		8A33DA83244DDE180009D9D0 /* Network Manager */ = {
+			isa = PBXGroup;
+			children = (
+				8A33DA84244DDE360009D9D0 /* NetworkManager.swift */,
+				8A33DA8C244DE54E0009D9D0 /* NetworkError.swift */,
+			);
+			path = "Network Manager";
+			sourceTree = "<group>";
+		};
+		8A33DA86244DDEC60009D9D0 /* UI Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "UI Components";
+			sourceTree = "<group>";
+		};
+		8A33DA87244DDEED0009D9D0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8A33DA88244DDF2D0009D9D0 /* UIColor + Wedding.swift */,
+				8A33DA8A244DE3DC0009D9D0 /* UIFont + Wedding.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,8 +283,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A33DA6B244DCF230009D9D0 /* ViewController.swift in Sources */,
+				8A33DA8D244DE54E0009D9D0 /* NetworkError.swift in Sources */,
+				8A33DA8B244DE3DC0009D9D0 /* UIFont + Wedding.swift in Sources */,
+				8A33DA82244DDDE40009D9D0 /* StoryboardInstance.swift in Sources */,
+				8A33DA85244DDE360009D9D0 /* NetworkManager.swift in Sources */,
 				8A33DA67244DCF230009D9D0 /* AppDelegate.swift in Sources */,
 				8A33DA69244DCF230009D9D0 /* SceneDelegate.swift in Sources */,
+				8A33DA89244DDF2D0009D9D0 /* UIColor + Wedding.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,7 +436,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7W34QQJZM3;
-				INFOPLIST_FILE = "guest-list/Info.plist";
+				INFOPLIST_FILE = "guest-list/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -388,7 +456,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7W34QQJZM3;
-				INFOPLIST_FILE = "guest-list/Info.plist";
+				INFOPLIST_FILE = "guest-list/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
