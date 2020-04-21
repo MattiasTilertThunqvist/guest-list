@@ -8,8 +8,16 @@
 
 import UIKit
 
-class StoryboardInstance {
+final class StoryboardInstance {
     
+    private static let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
     
+    static func guestListViewController() -> GuestListViewController {
+        return mainStoryboard.instantiateViewController(withIdentifier: "GuestListViewController") as! GuestListViewController
+    }
+    
+    static func eventsViewController() -> EventsViewController {
+        return mainStoryboard.instantiateViewController(withIdentifier: "EventsViewController") as! EventsViewController
+    }
     
 }

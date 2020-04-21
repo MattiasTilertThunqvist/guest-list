@@ -8,9 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		1F4F7EF2E23E421E13D5C6F8 /* Pods_guest_list.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 575FC73F9547EB8B0E8C130F /* Pods_guest_list.framework */; };
+		8A252903244F118600ED903D /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A252902244F118600ED903D /* PageViewController.swift */; };
+		8A252905244F120500ED903D /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A252904244F120500ED903D /* EventsViewController.swift */; };
 		8A33DA67244DCF230009D9D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A33DA66244DCF230009D9D0 /* AppDelegate.swift */; };
 		8A33DA69244DCF230009D9D0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A33DA68244DCF230009D9D0 /* SceneDelegate.swift */; };
-		8A33DA6B244DCF230009D9D0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A33DA6A244DCF230009D9D0 /* ViewController.swift */; };
+		8A33DA6B244DCF230009D9D0 /* GuestListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A33DA6A244DCF230009D9D0 /* GuestListViewController.swift */; };
 		8A33DA6E244DCF230009D9D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A33DA6C244DCF230009D9D0 /* Main.storyboard */; };
 		8A33DA70244DCF270009D9D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A33DA6F244DCF270009D9D0 /* Assets.xcassets */; };
 		8A33DA73244DCF270009D9D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A33DA71244DCF270009D9D0 /* LaunchScreen.storyboard */; };
@@ -24,10 +26,12 @@
 
 /* Begin PBXFileReference section */
 		575FC73F9547EB8B0E8C130F /* Pods_guest_list.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_guest_list.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A252902244F118600ED903D /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
+		8A252904244F120500ED903D /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
 		8A33DA63244DCF230009D9D0 /* guest-list.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "guest-list.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A33DA66244DCF230009D9D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8A33DA68244DCF230009D9D0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8A33DA6A244DCF230009D9D0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8A33DA6A244DCF230009D9D0 /* GuestListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestListViewController.swift; sourceTree = "<group>"; };
 		8A33DA6D244DCF230009D9D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8A33DA6F244DCF270009D9D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8A33DA72244DCF270009D9D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -71,6 +75,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		8A252906244F125F00ED903D /* Guest List */ = {
+			isa = PBXGroup;
+			children = (
+				8A33DA6A244DCF230009D9D0 /* GuestListViewController.swift */,
+			);
+			path = "Guest List";
+			sourceTree = "<group>";
+		};
+		8A252907244F127200ED903D /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				8A252904244F120500ED903D /* EventsViewController.swift */,
+			);
+			path = Events;
+			sourceTree = "<group>";
+		};
 		8A33DA5A244DCF230009D9D0 = {
 			isa = PBXGroup;
 			children = (
@@ -92,8 +112,10 @@
 		8A33DA65244DCF230009D9D0 /* guest-list */ = {
 			isa = PBXGroup;
 			children = (
-				8A33DA6A244DCF230009D9D0 /* ViewController.swift */,
 				8A33DA6C244DCF230009D9D0 /* Main.storyboard */,
+				8A252902244F118600ED903D /* PageViewController.swift */,
+				8A252906244F125F00ED903D /* Guest List */,
+				8A252907244F127200ED903D /* Events */,
 				8A33DA80244DDD9C0009D9D0 /* Cells */,
 				8A33DA83244DDE180009D9D0 /* Network Manager */,
 				8A33DA7F244DDD410009D9D0 /* Resources */,
@@ -282,14 +304,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8A33DA6B244DCF230009D9D0 /* ViewController.swift in Sources */,
+				8A33DA6B244DCF230009D9D0 /* GuestListViewController.swift in Sources */,
 				8A33DA8D244DE54E0009D9D0 /* NetworkError.swift in Sources */,
 				8A33DA8B244DE3DC0009D9D0 /* UIFont + Wedding.swift in Sources */,
 				8A33DA82244DDDE40009D9D0 /* StoryboardInstance.swift in Sources */,
 				8A33DA85244DDE360009D9D0 /* NetworkManager.swift in Sources */,
 				8A33DA67244DCF230009D9D0 /* AppDelegate.swift in Sources */,
+				8A252903244F118600ED903D /* PageViewController.swift in Sources */,
 				8A33DA69244DCF230009D9D0 /* SceneDelegate.swift in Sources */,
 				8A33DA89244DDF2D0009D9D0 /* UIColor + Wedding.swift in Sources */,
+				8A252905244F120500ED903D /* EventsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
