@@ -10,14 +10,16 @@ import UIKit
 
 final class StoryboardInstance {
     
-    private static let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+    private static let pageScrollStoryboard = UIStoryboard(name: "PageSroll", bundle: nil)
+    private static let guestListStoryboard = UIStoryboard(name: "GuestList", bundle: nil)
+    private static let eventsStoryboard = UIStoryboard(name: "Events", bundle: nil)
     
     static func guestListViewController() -> GuestListViewController {
-        return mainStoryboard.instantiateViewController(withIdentifier: "GuestListViewController") as! GuestListViewController
+        return guestListStoryboard.instantiateViewController(withIdentifier: "GuestListViewController") as! GuestListViewController
     }
     
     static func eventsViewController() -> EventsViewController {
-        return mainStoryboard.instantiateViewController(withIdentifier: "EventsViewController") as! EventsViewController
+        return eventsStoryboard.instantiateViewController(withIdentifier: "EventsViewController") as! EventsViewController
     }
     
 }

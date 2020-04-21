@@ -10,10 +10,12 @@
 		1F4F7EF2E23E421E13D5C6F8 /* Pods_guest_list.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 575FC73F9547EB8B0E8C130F /* Pods_guest_list.framework */; };
 		8A252903244F118600ED903D /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A252902244F118600ED903D /* PageViewController.swift */; };
 		8A252905244F120500ED903D /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A252904244F120500ED903D /* EventsViewController.swift */; };
+		8A252909244F1DA800ED903D /* GuestList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A252908244F1DA800ED903D /* GuestList.storyboard */; };
+		8A25290B244F1DC900ED903D /* Events.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A25290A244F1DC900ED903D /* Events.storyboard */; };
 		8A33DA67244DCF230009D9D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A33DA66244DCF230009D9D0 /* AppDelegate.swift */; };
 		8A33DA69244DCF230009D9D0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A33DA68244DCF230009D9D0 /* SceneDelegate.swift */; };
 		8A33DA6B244DCF230009D9D0 /* GuestListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A33DA6A244DCF230009D9D0 /* GuestListViewController.swift */; };
-		8A33DA6E244DCF230009D9D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A33DA6C244DCF230009D9D0 /* Main.storyboard */; };
+		8A33DA6E244DCF230009D9D0 /* PageScroll.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A33DA6C244DCF230009D9D0 /* PageScroll.storyboard */; };
 		8A33DA70244DCF270009D9D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A33DA6F244DCF270009D9D0 /* Assets.xcassets */; };
 		8A33DA73244DCF270009D9D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A33DA71244DCF270009D9D0 /* LaunchScreen.storyboard */; };
 		8A33DA7D244DD61A0009D9D0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8A33DA7C244DD61A0009D9D0 /* GoogleService-Info.plist */; };
@@ -28,11 +30,13 @@
 		575FC73F9547EB8B0E8C130F /* Pods_guest_list.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_guest_list.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A252902244F118600ED903D /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		8A252904244F120500ED903D /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
+		8A252908244F1DA800ED903D /* GuestList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GuestList.storyboard; sourceTree = "<group>"; };
+		8A25290A244F1DC900ED903D /* Events.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Events.storyboard; sourceTree = "<group>"; };
 		8A33DA63244DCF230009D9D0 /* guest-list.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "guest-list.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A33DA66244DCF230009D9D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8A33DA68244DCF230009D9D0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		8A33DA6A244DCF230009D9D0 /* GuestListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestListViewController.swift; sourceTree = "<group>"; };
-		8A33DA6D244DCF230009D9D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8A33DA6D244DCF230009D9D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/PageScroll.storyboard; sourceTree = "<group>"; };
 		8A33DA6F244DCF270009D9D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8A33DA72244DCF270009D9D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8A33DA74244DCF270009D9D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -79,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				8A33DA6A244DCF230009D9D0 /* GuestListViewController.swift */,
+				8A252908244F1DA800ED903D /* GuestList.storyboard */,
 			);
 			path = "Guest List";
 			sourceTree = "<group>";
@@ -87,8 +92,18 @@
 			isa = PBXGroup;
 			children = (
 				8A252904244F120500ED903D /* EventsViewController.swift */,
+				8A25290A244F1DC900ED903D /* Events.storyboard */,
 			);
 			path = Events;
+			sourceTree = "<group>";
+		};
+		8A25290C244F1E6C00ED903D /* Page Scroll View */ = {
+			isa = PBXGroup;
+			children = (
+				8A33DA6C244DCF230009D9D0 /* PageScroll.storyboard */,
+				8A252902244F118600ED903D /* PageViewController.swift */,
+			);
+			path = "Page Scroll View";
 			sourceTree = "<group>";
 		};
 		8A33DA5A244DCF230009D9D0 = {
@@ -112,8 +127,7 @@
 		8A33DA65244DCF230009D9D0 /* guest-list */ = {
 			isa = PBXGroup;
 			children = (
-				8A33DA6C244DCF230009D9D0 /* Main.storyboard */,
-				8A252902244F118600ED903D /* PageViewController.swift */,
+				8A25290C244F1E6C00ED903D /* Page Scroll View */,
 				8A252906244F125F00ED903D /* Guest List */,
 				8A252907244F127200ED903D /* Events */,
 				8A33DA80244DDD9C0009D9D0 /* Cells */,
@@ -242,7 +256,9 @@
 				8A33DA73244DCF270009D9D0 /* LaunchScreen.storyboard in Resources */,
 				8A33DA7D244DD61A0009D9D0 /* GoogleService-Info.plist in Resources */,
 				8A33DA70244DCF270009D9D0 /* Assets.xcassets in Resources */,
-				8A33DA6E244DCF230009D9D0 /* Main.storyboard in Resources */,
+				8A252909244F1DA800ED903D /* GuestList.storyboard in Resources */,
+				8A33DA6E244DCF230009D9D0 /* PageScroll.storyboard in Resources */,
+				8A25290B244F1DC900ED903D /* Events.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,12 +336,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		8A33DA6C244DCF230009D9D0 /* Main.storyboard */ = {
+		8A33DA6C244DCF230009D9D0 /* PageScroll.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				8A33DA6D244DCF230009D9D0 /* Base */,
 			);
-			name = Main.storyboard;
+			name = PageScroll.storyboard;
 			sourceTree = "<group>";
 		};
 		8A33DA71244DCF270009D9D0 /* LaunchScreen.storyboard */ = {
