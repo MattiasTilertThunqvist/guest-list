@@ -19,6 +19,16 @@ class PageViewController: UIPageViewController {
         ]
     }()
     
+    // MARK: IBOutlet
+    
+    @IBOutlet weak private var segmentedControl: UISegmentedControl!
+    
+    @IBAction func valueChangedSegmentedControl(_ sender: UISegmentedControl) {
+        let index = sender.selectedSegmentIndex
+        let direction: UIPageViewController.NavigationDirection = index == 0 ? .reverse : .forward // Modify if nr of viewControllers increase
+        setViewControllers([orderedViewControllers[index]], direction: direction, animated: true, completion: nil)
+    }
+    
     // MARK: Lifecycle
 
     override func viewDidLoad() {
