@@ -50,14 +50,24 @@
                             <constraint firstAttribute="height" constant="24" id="ymc-8t-KBb"/>
                         </constraints>
                     </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xTz-05-Kp7">
+                        <rect key="frame" x="0.0" y="89" width="409" height="1"/>
+                        <color key="backgroundColor" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="aJ8-vt-03g"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
+                    <constraint firstAttribute="trailing" secondItem="xTz-05-Kp7" secondAttribute="trailing" id="3Nf-R3-Kfe"/>
                     <constraint firstItem="gal-9N-yNY" firstAttribute="centerY" secondItem="fxu-SK-mCv" secondAttribute="centerY" id="9TE-Tm-Rds"/>
                     <constraint firstItem="fxu-SK-mCv" firstAttribute="top" secondItem="n3R-fY-qum" secondAttribute="bottom" constant="16" id="U0V-1K-Kao"/>
+                    <constraint firstItem="xTz-05-Kp7" firstAttribute="leading" secondItem="bEx-x8-0Uv" secondAttribute="leading" id="Uvk-hS-j6d"/>
                     <constraint firstAttribute="trailing" secondItem="gal-9N-yNY" secondAttribute="trailing" constant="16" id="W74-dI-b7O"/>
                     <constraint firstItem="fxu-SK-mCv" firstAttribute="leading" secondItem="bEx-x8-0Uv" secondAttribute="leading" constant="16" id="aPD-d8-Y5u"/>
                     <constraint firstItem="n3R-fY-qum" firstAttribute="leading" secondItem="bEx-x8-0Uv" secondAttribute="leading" id="f0x-eb-EJF"/>
                     <constraint firstAttribute="trailing" secondItem="n3R-fY-qum" secondAttribute="trailing" id="fOm-FY-qLi"/>
+                    <constraint firstAttribute="bottom" secondItem="xTz-05-Kp7" secondAttribute="bottom" id="sbT-GO-L9b"/>
                     <constraint firstAttribute="bottom" secondItem="fxu-SK-mCv" secondAttribute="bottom" constant="16" id="v6o-dP-N5T"/>
                     <constraint firstItem="n3R-fY-qum" firstAttribute="top" secondItem="bEx-x8-0Uv" secondAttribute="top" constant="10" id="w8r-kA-Yih"/>
                 </constraints>
