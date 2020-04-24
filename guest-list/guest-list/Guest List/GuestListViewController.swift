@@ -30,9 +30,25 @@ class GuestListViewController: UITableViewController {
     }
     
     private func registerNibs() {
+        let headerNib = UINib(nibName: GuestTableViewHeader.headerIdentifier, bundle: nil)
+        tableView.register(headerNib, forHeaderFooterViewReuseIdentifier: GuestTableViewHeader.headerIdentifier)
+        
         let cellNib = UINib(nibName: GuestTableViewCell.cellIdentifier, bundle: nil)
         tableView.register(cellNib, forCellReuseIdentifier: GuestTableViewCell.cellIdentifier)
     }
+    
+    // MARK: Header
+    
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let header = tableView.dequeueReusableCell(withIdentifier: GuestTableViewHeader.headerIdentifier)
+        return header
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 100
+    }
+    
+    // MARK: Rows
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1

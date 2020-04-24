@@ -27,6 +27,8 @@
 		8A75356B2452D8FD00777F3B /* GuestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7535692452D8FD00777F3B /* GuestTableViewCell.swift */; };
 		8A75356C2452D8FD00777F3B /* GuestTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A75356A2452D8FD00777F3B /* GuestTableViewCell.xib */; };
 		8A75356E2452F42000777F3B /* MediumTextLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A75356D2452F42000777F3B /* MediumTextLabel.swift */; };
+		8A7535712452F66B00777F3B /* GuestTableViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A7535702452F66B00777F3B /* GuestTableViewHeader.xib */; };
+		8A7535732452F6DE00777F3B /* GuestTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7535722452F6DE00777F3B /* GuestTableViewHeader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +54,8 @@
 		8A7535692452D8FD00777F3B /* GuestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestTableViewCell.swift; sourceTree = "<group>"; };
 		8A75356A2452D8FD00777F3B /* GuestTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GuestTableViewCell.xib; sourceTree = "<group>"; };
 		8A75356D2452F42000777F3B /* MediumTextLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumTextLabel.swift; sourceTree = "<group>"; };
+		8A7535702452F66B00777F3B /* GuestTableViewHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GuestTableViewHeader.xib; sourceTree = "<group>"; };
+		8A7535722452F6DE00777F3B /* GuestTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestTableViewHeader.swift; sourceTree = "<group>"; };
 		EC4C66B88AEC9EDDDF361820 /* Pods-guest-list.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-guest-list.release.xcconfig"; path = "Pods/Target Support Files/Pods-guest-list/Pods-guest-list.release.xcconfig"; sourceTree = "<group>"; };
 		F0CA2C6D4DE83932D24994EA /* Pods-guest-list.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-guest-list.debug.xcconfig"; path = "Pods/Target Support Files/Pods-guest-list/Pods-guest-list.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -170,6 +174,7 @@
 		8A33DA80244DDD9C0009D9D0 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				8A75356F2452F5C300777F3B /* Guest Table View Header */,
 				8A7535682452D8D700777F3B /* Guest Table View Cell */,
 			);
 			path = Cells;
@@ -208,6 +213,15 @@
 				8A75356A2452D8FD00777F3B /* GuestTableViewCell.xib */,
 			);
 			path = "Guest Table View Cell";
+			sourceTree = "<group>";
+		};
+		8A75356F2452F5C300777F3B /* Guest Table View Header */ = {
+			isa = PBXGroup;
+			children = (
+				8A7535722452F6DE00777F3B /* GuestTableViewHeader.swift */,
+				8A7535702452F66B00777F3B /* GuestTableViewHeader.xib */,
+			);
+			path = "Guest Table View Header";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,6 +289,7 @@
 				8A75356C2452D8FD00777F3B /* GuestTableViewCell.xib in Resources */,
 				8A33DA70244DCF270009D9D0 /* Assets.xcassets in Resources */,
 				8A252909244F1DA800ED903D /* GuestList.storyboard in Resources */,
+				8A7535712452F66B00777F3B /* GuestTableViewHeader.xib in Resources */,
 				8A33DA6E244DCF230009D9D0 /* PageScroll.storyboard in Resources */,
 				8A25290B244F1DC900ED903D /* Events.storyboard in Resources */,
 			);
@@ -341,6 +356,7 @@
 				8A33DA6B244DCF230009D9D0 /* GuestListViewController.swift in Sources */,
 				8A33DA8D244DE54E0009D9D0 /* NetworkError.swift in Sources */,
 				8A33DA8B244DE3DC0009D9D0 /* UIFont + Wedding.swift in Sources */,
+				8A7535732452F6DE00777F3B /* GuestTableViewHeader.swift in Sources */,
 				8A33DA82244DDDE40009D9D0 /* StoryboardInstance.swift in Sources */,
 				8A33DA85244DDE360009D9D0 /* NetworkManager.swift in Sources */,
 				8A33DA67244DCF230009D9D0 /* AppDelegate.swift in Sources */,
