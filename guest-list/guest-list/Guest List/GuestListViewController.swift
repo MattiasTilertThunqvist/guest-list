@@ -40,7 +40,7 @@ class GuestListViewController: UITableViewController {
     // MARK: Header
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let header = tableView.dequeueReusableCell(withIdentifier: GuestTableViewHeader.headerIdentifier)
+        let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: GuestTableViewHeader.headerIdentifier) as! GuestTableViewHeader
         return header
     }
     

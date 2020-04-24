@@ -9,9 +9,16 @@
 import UIKit
 
 public extension UIFont {
-    // Only use font size 13, 15, 17, 20 for weddingRegularFont
-    class func weddingRegularFont(_ size: CGFloat) -> UIFont {
-        return UIFont(name: "AmericanTypewriter", size: size)!
+    
+    enum TextSize: CGFloat {
+        case small = 13
+        case medium = 15
+        case large = 17
+        case extraLarge = 20
+    }
+    
+    class func weddingRegularFont(textSize: TextSize) -> UIFont {
+        return UIFont(name: "AmericanTypewriter", size: textSize.rawValue)!
     }
     
     class func weddingLightFont(_ size: CGFloat) -> UIFont {
@@ -20,16 +27,5 @@ public extension UIFont {
     
     class func weddingBoldFont(_ size: CGFloat) -> UIFont {
         return UIFont(name: "AmericanTypewriter-Bold", size: size)!
-    }
-    
-    class func preferredFontStyle(_ style: String) -> UIFont {
-        switch(style) {
-        case "button":
-            return UIFont.weddingRegularFont(13)
-        case "header":
-            return UIFont.weddingRegularFont(20)
-        default:
-            return UIFont.weddingRegularFont(13)
-        }
     }
 }

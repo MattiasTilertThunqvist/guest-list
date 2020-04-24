@@ -31,8 +31,7 @@ class MediumTextLabel: UILabel {
     
     func setUp() {
         numberOfLines = 500 //Allow unlimited
-        textColor = UIColor.weddingGray
-        font = UIFont.weddingRegularFont(15)
+        textColor = .weddingGray
+        font = .weddingRegularFont(textSize: .medium)
     }
 }
-
