@@ -22,4 +22,7 @@ final class StoryboardInstance {
         return eventsStoryboard.instantiateViewController(withIdentifier: "EventsViewController") as! EventsViewController
     }
     
+    static func addGuestsViewController() -> AddGuestsViewController {
+        return guestListStoryboard.instantiateViewController(withIdentifier: "AddGuestsViewController") as! AddGuestsViewController
+    }
 }

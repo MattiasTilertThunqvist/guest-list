@@ -14,14 +14,14 @@
                 <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="IdH-xG-xSw" customClass="PageViewController" customModule="guest_list" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="ZeY-Gd-WCk">
                         <nil key="title"/>
-                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="0Fp-Ez-OKP">
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="0Fp-Ez-OKP" customClass="WeddingSegmentedControl" customModule="guest_list" customModuleProvider="target">
                             <rect key="frame" x="89.5" y="5.5" width="235" height="33"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <segments>
                                 <segment title="Guest List"/>
                                 <segment title="RSVPs &amp; Events"/>
                             </segments>
-                            <color key="tintColor" name="weddingPink"/>
+                            <color key="tintColor" name="weddingWhite"/>
                             <connections>
                                 <action selector="valueChangedSegmentedControl:" destination="IdH-xG-xSw" eventType="valueChanged" id="lJa-uh-dqd"/>
                             </connections>
@@ -55,8 +55,8 @@
         </scene>
     </scenes>
     <resources>
-        <namedColor name="weddingPink">
-            <color red="0.93333333333333335" green="0.63529411764705879" blue="0.6705882352941176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="weddingWhite">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

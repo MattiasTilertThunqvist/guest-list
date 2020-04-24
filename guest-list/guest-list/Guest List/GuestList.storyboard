@@ -4,6 +4,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -11,7 +13,7 @@
         <scene sceneID="pVt-XY-daw">
             <objects>
                 <tableViewController storyboardIdentifier="GuestListViewController" id="msn-i7-9xr" customClass="GuestListViewController" customModule="guest_list" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="p6I-63-2WI">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="p6I-63-2WI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -25,5 +27,88 @@
             </objects>
             <point key="canvasLocation" x="2426" y="117"/>
         </scene>
+        <!--Add Guests View Controller-->
+        <scene sceneID="O2B-Bf-33p">
+            <objects>
+                <viewController storyboardIdentifier="AddGuestsViewController" id="N7h-o9-dli" customClass="AddGuestsViewController" customModule="guest_list" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5Gd-qx-awX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lRW-bj-EHc">
+                                <rect key="frame" x="16" y="60" width="48" height="30"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" name="weddingGray"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapCancelButton:" destination="N7h-o9-dli" eventType="touchUpInside" id="5iG-4m-1pC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pqb-Co-m0q">
+                                <rect key="frame" x="361" y="60" width="37" height="30"/>
+                                <state key="normal" title="Done">
+                                    <color key="titleColor" name="weddingLightGray"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapDoneButton:" destination="N7h-o9-dli" eventType="touchUpInside" id="Awa-sW-3Rf"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Guests" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BPe-5Y-JRy">
+                                <rect key="frame" x="156" y="63" width="102" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" name="weddingBlack"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="N1z-fS-Ez9" customClass="WeddingSegmentedControl" customModule="guest_list" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="103" width="414" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="7gZ-dV-4Mz"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Single"/>
+                                    <segment title="Couple"/>
+                                    <segment title="Household"/>
+                                </segments>
+                                <connections>
+                                    <action selector="valueChangedSegmentedControl:" destination="N7h-o9-dli" eventType="valueChanged" id="5MZ-BE-pcK"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="lRW-bj-EHc" firstAttribute="top" secondItem="tMX-1r-egZ" secondAttribute="top" constant="16" id="24u-w9-THH"/>
+                            <constraint firstItem="N1z-fS-Ez9" firstAttribute="top" secondItem="BPe-5Y-JRy" secondAttribute="bottom" constant="16" id="Rpc-K6-rxM"/>
+                            <constraint firstItem="BPe-5Y-JRy" firstAttribute="centerY" secondItem="lRW-bj-EHc" secondAttribute="centerY" id="Z1i-Jm-0zD"/>
+                            <constraint firstItem="N1z-fS-Ez9" firstAttribute="leading" secondItem="tMX-1r-egZ" secondAttribute="leading" id="bk7-QF-ySY"/>
+                            <constraint firstItem="tMX-1r-egZ" firstAttribute="trailing" secondItem="pqb-Co-m0q" secondAttribute="trailing" constant="16" id="h7E-96-cx5"/>
+                            <constraint firstItem="lRW-bj-EHc" firstAttribute="leading" secondItem="tMX-1r-egZ" secondAttribute="leading" constant="16" id="jfm-TO-YVP"/>
+                            <constraint firstItem="pqb-Co-m0q" firstAttribute="top" secondItem="tMX-1r-egZ" secondAttribute="top" constant="16" id="uza-Ek-ueQ"/>
+                            <constraint firstItem="BPe-5Y-JRy" firstAttribute="centerX" secondItem="tMX-1r-egZ" secondAttribute="centerX" id="wUL-2u-owQ"/>
+                            <constraint firstItem="tMX-1r-egZ" firstAttribute="trailing" secondItem="N1z-fS-Ez9" secondAttribute="trailing" id="ymR-tr-NrZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="tMX-1r-egZ"/>
+                    </view>
+                    <connections>
+                        <outlet property="cancelButton" destination="lRW-bj-EHc" id="88U-eP-k9f"/>
+                        <outlet property="companySegmentedControl" destination="N1z-fS-Ez9" id="e0X-Pj-gcf"/>
+                        <outlet property="doneButton" destination="pqb-Co-m0q" id="kWu-Re-YOP"/>
+                        <outlet property="titleLabel" destination="BPe-5Y-JRy" id="4aA-Jy-3oc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f7u-vE-M9L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3254" y="117"/>
+        </scene>
     </scenes>
+    <resources>
+        <namedColor name="weddingBlack">
+            <color red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="weddingGray">
+            <color red="0.49803921568627452" green="0.49803921568627452" blue="0.49803921568627452" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="weddingLightGray">
+            <color red="0.6705882352941176" green="0.6705882352941176" blue="0.6705882352941176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>

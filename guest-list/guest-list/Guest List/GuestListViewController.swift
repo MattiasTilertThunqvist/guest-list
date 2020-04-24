@@ -41,11 +41,22 @@ class GuestListViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: GuestTableViewHeader.headerIdentifier) as! GuestTableViewHeader
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(didTapTableViewHeader))
+        header.addGestureRecognizer(tapGesture)
+        
         return header
     }
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 100
+    }
+    
+    @objc private func didTapTableViewHeader() {
+        let viewController = StoryboardInstance.addGuestsViewController()
+        present(viewController, animated: true) {
+            // TODO: Reload data
+        }
     }
     
     // MARK: Rows
