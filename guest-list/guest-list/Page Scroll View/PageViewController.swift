@@ -23,6 +23,8 @@ class PageViewController: UIPageViewController {
     
     @IBOutlet weak private var segmentedControl: UISegmentedControl!
     
+    // MARK: IBAction
+    
     @IBAction func valueChangedSegmentedControl(_ sender: UISegmentedControl) {
         let index = sender.selectedSegmentIndex
         let direction: UIPageViewController.NavigationDirection = index == 0 ? .reverse : .forward // Modify if nr of viewControllers increase
@@ -38,6 +40,7 @@ class PageViewController: UIPageViewController {
     
     private func setup() {
         dataSource = self
+        delegate = self
         
         if let firstViewController = orderedViewControllers.first {
             setViewControllers([firstViewController], direction: .forward, animated: true, completion: nil)
@@ -66,4 +69,11 @@ extension PageViewController: UIPageViewControllerDataSource {
         
         return orderedViewControllers[nextIndex]
     }
+}
+
+// MARK: UIPageViewControllerDelegate
+
+extension PageViewController: UIPageViewControllerDelegate {
+    
+    
 }
