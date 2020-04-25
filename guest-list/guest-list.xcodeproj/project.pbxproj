@@ -25,6 +25,9 @@
 		8A33DA89244DDF2D0009D9D0 /* UIColor + Wedding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A33DA88244DDF2D0009D9D0 /* UIColor + Wedding.swift */; };
 		8A33DA8B244DE3DC0009D9D0 /* UIFont + Wedding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A33DA8A244DE3DC0009D9D0 /* UIFont + Wedding.swift */; };
 		8A33DA8D244DE54E0009D9D0 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A33DA8C244DE54E0009D9D0 /* NetworkError.swift */; };
+		8A4FA8462454A9C100E0ABC4 /* LargeTextLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4FA8452454A9C100E0ABC4 /* LargeTextLabel.swift */; };
+		8A4FA8482454AC2400E0ABC4 /* GuestStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4FA8472454AC2400E0ABC4 /* GuestStatusViewController.swift */; };
+		8A4FA84A2454AFF100E0ABC4 /* BoxButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4FA8492454AFF100E0ABC4 /* BoxButton.swift */; };
 		8A55BEB62453355100672E63 /* AddGuestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A55BEB42453355100672E63 /* AddGuestsViewController.swift */; };
 		8A75356B2452D8FD00777F3B /* GuestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7535692452D8FD00777F3B /* GuestTableViewCell.swift */; };
 		8A75356C2452D8FD00777F3B /* GuestTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A75356A2452D8FD00777F3B /* GuestTableViewCell.xib */; };
@@ -57,6 +60,9 @@
 		8A33DA88244DDF2D0009D9D0 /* UIColor + Wedding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Wedding.swift"; sourceTree = "<group>"; };
 		8A33DA8A244DE3DC0009D9D0 /* UIFont + Wedding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont + Wedding.swift"; sourceTree = "<group>"; };
 		8A33DA8C244DE54E0009D9D0 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		8A4FA8452454A9C100E0ABC4 /* LargeTextLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeTextLabel.swift; sourceTree = "<group>"; };
+		8A4FA8472454AC2400E0ABC4 /* GuestStatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestStatusViewController.swift; sourceTree = "<group>"; };
+		8A4FA8492454AFF100E0ABC4 /* BoxButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxButton.swift; sourceTree = "<group>"; };
 		8A55BEB42453355100672E63 /* AddGuestsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGuestsViewController.swift; sourceTree = "<group>"; };
 		8A7535692452D8FD00777F3B /* GuestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestTableViewCell.swift; sourceTree = "<group>"; };
 		8A75356A2452D8FD00777F3B /* GuestTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GuestTableViewCell.xib; sourceTree = "<group>"; };
@@ -107,6 +113,7 @@
 				8A55BEB42453355100672E63 /* AddGuestsViewController.swift */,
 				8ADCBA8E24543B7A001DE10D /* GuestInfoTextFieldsViewController.swift */,
 				8ADCBA9024545B84001DE10D /* MoreGuestInfoViewController.swift */,
+				8A4FA8472454AC2400E0ABC4 /* GuestStatusViewController.swift */,
 			);
 			path = "Guest List";
 			sourceTree = "<group>";
@@ -208,6 +215,8 @@
 				8A75356D2452F42000777F3B /* MediumTextLabel.swift */,
 				8A32E9D42453412F001D585E /* WeddingSegmentedControl.swift */,
 				8ADCBA8C24542A2E001DE10D /* LargeTextField.swift */,
+				8A4FA8452454A9C100E0ABC4 /* LargeTextLabel.swift */,
+				8A4FA8492454AFF100E0ABC4 /* BoxButton.swift */,
 			);
 			path = "UI Components";
 			sourceTree = "<group>";
@@ -371,7 +380,9 @@
 				8A33DA6B244DCF230009D9D0 /* GuestListViewController.swift in Sources */,
 				8A32E9D52453412F001D585E /* WeddingSegmentedControl.swift in Sources */,
 				8A33DA8D244DE54E0009D9D0 /* NetworkError.swift in Sources */,
+				8A4FA8462454A9C100E0ABC4 /* LargeTextLabel.swift in Sources */,
 				8ADCBA8D24542A2E001DE10D /* LargeTextField.swift in Sources */,
+				8A4FA84A2454AFF100E0ABC4 /* BoxButton.swift in Sources */,
 				8ADCBA8F24543B7A001DE10D /* GuestInfoTextFieldsViewController.swift in Sources */,
 				8A33DA8B244DE3DC0009D9D0 /* UIFont + Wedding.swift in Sources */,
 				8A7535732452F6DE00777F3B /* GuestTableViewHeader.swift in Sources */,
@@ -384,6 +395,7 @@
 				8A33DA69244DCF230009D9D0 /* SceneDelegate.swift in Sources */,
 				8ADCBA9124545B84001DE10D /* MoreGuestInfoViewController.swift in Sources */,
 				8A33DA89244DDF2D0009D9D0 /* UIColor + Wedding.swift in Sources */,
+				8A4FA8482454AC2400E0ABC4 /* GuestStatusViewController.swift in Sources */,
 				8A75356E2452F42000777F3B /* MediumTextLabel.swift in Sources */,
 				8A252905244F120500ED903D /* EventsViewController.swift in Sources */,
 			);

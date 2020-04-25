@@ -11,7 +11,9 @@ import UIKit
 class AddGuestsViewController: UIViewController {
     
     // MARK: Properties
+    
     private var guestInfoTextFieldsViewController: GuestInfoTextFieldsViewController?
+    private var guestStatusViewController: GuestStatusViewController?
     private var moreGuestInfoViewController: MoreGuestInfoViewController?
     
     // MARK: IBOutlets
@@ -21,6 +23,7 @@ class AddGuestsViewController: UIViewController {
     @IBOutlet weak private var cancelButton: UIButton!
     @IBOutlet weak private var doneButton: UIButton!
     @IBOutlet weak private var guestInfoContainerHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak private var guestStatusContainerHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak private var moreGuestInfoContainerHeightConstraint: NSLayoutConstraint!
     
     // MARK: IBActions
@@ -47,6 +50,10 @@ class AddGuestsViewController: UIViewController {
             guestInfoContainerHeightConstraint.constant = viewController.preferredContentSize.height
         }
         
+        if let viewController = container as? GuestStatusViewController {
+            guestStatusContainerHeightConstraint.constant = viewController.preferredContentSize.height
+        }
+        
         if let viewController  = container as? MoreGuestInfoViewController {
             moreGuestInfoContainerHeightConstraint.constant = viewController.preferredContentSize.height
         }
@@ -65,6 +72,12 @@ class AddGuestsViewController: UIViewController {
             fatalError("Check storyboard for missing GuestInfoTextFieldsViewController")
         }
         
+        guard let guestStatusViewController = children.first(where: { (viewController) -> Bool in
+            return viewController.restorationIdentifier == "GuestStatusViewController"
+        }) as? GuestStatusViewController else {
+            fatalError("Check storyboard for missing GuestStatusViewController")
+        }
+        
         guard let moreGuestInfoViewController = children.first(where: { (viewController) -> Bool in
             return viewController.restorationIdentifier == "MoreGuestInfoViewController"
         }) as? MoreGuestInfoViewController else {
@@ -72,6 +85,7 @@ class AddGuestsViewController: UIViewController {
         }
         
         self.guestInfoTextFieldsViewController = guestInfoTextFieldsViewController
+        self.guestStatusViewController = guestStatusViewController
         self.moreGuestInfoViewController = moreGuestInfoViewController
         
         // Keyboard
