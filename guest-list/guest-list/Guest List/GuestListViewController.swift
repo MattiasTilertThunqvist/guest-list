@@ -12,6 +12,11 @@ class GuestListViewController: UITableViewController {
     
     // MARK: Properties
     
+    
+    // MARK: IBOutlets
+    
+
+    
 
     // MARK: Lifecycle
     
