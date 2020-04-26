@@ -10,6 +10,14 @@ import UIKit
 
 class AddGuestsViewController: UIViewController {
     
+    //
+    //
+    // CREATE AN OPTIONAL GUEST OBJECT PROPERTY.
+    // IF IT'S NIL, DISPLAY VIEW AS A NEW USER SHALL BE ADDED
+    // IF ITS NOT NIL, DISPLAY USER VIEW
+    //
+    //
+    
     // MARK: Properties
     
     private var guestInfoTextFieldsViewController: GuestInfoTextFieldsViewController?

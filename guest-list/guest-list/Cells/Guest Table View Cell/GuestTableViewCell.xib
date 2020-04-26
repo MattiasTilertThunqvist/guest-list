@@ -34,7 +34,7 @@
                             </label>
                         </subviews>
                     </stackView>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="check-2x" translatesAutoresizingMaskIntoConstraints="NO" id="cjZ-BH-WDf">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="check-green" translatesAutoresizingMaskIntoConstraints="NO" id="cjZ-BH-WDf">
                         <rect key="frame" x="280" y="13" width="24" height="24"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="24" id="HSU-Gc-zbj"/>
@@ -68,6 +68,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="check-2x" width="24" height="24"/>
+        <image name="check-green" width="24" height="24"/>
     </resources>
 </document>
