@@ -12,9 +12,13 @@ class BoxButton: UIButton {
     
     // MARK: Properties
     
-    let inset = CGFloat(15)
-    let buttonHeight = CGFloat(50)
-    let buttonWidth = CGFloat(100)
+    let inset = CGFloat(16)
+    let buttonHeight = CGFloat(46)
+    let buttonWidth: CGFloat = {
+        let screenWidth = UIScreen.main.bounds.size.width
+        let inset = CGFloat(24)
+        return screenWidth / 2 - inset
+    }()
     
     public enum ColorScheme {
         case blackOnTransparent
@@ -61,15 +65,26 @@ class BoxButton: UIButton {
     
     func setUp() {
         translatesAutoresizingMaskIntoConstraints = false
-        titleLabel?.textColor = .weddingGray
+        
+        setTitleColor(.weddingGray, for: .normal)
         titleLabel?.font = .weddingRegularFont(textSize: .small)
         titleLabel?.numberOfLines = 1
         titleLabel?.adjustsFontSizeToFitWidth = false
+        
         layer.borderColor = UIColor.weddingLightGray.cgColor
         layer.borderWidth = 1
+        layer.cornerRadius = 5
+        
+        tintColor = .lightGray
+        setImage(#imageLiteral(resourceName: "down-arrow-lightgray"), for: .normal)
+        imageView?.contentMode = .scaleAspectFit
+        imageEdgeInsets = UIEdgeInsets(top: 17, left: 0, bottom: 17, right: 15)
         
         let heightConstraint = NSLayoutConstraint(item: self, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: buttonHeight)
         addConstraint(heightConstraint)
+        
+        let widthConstraint = NSLayoutConstraint(item: self, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: buttonWidth)
+        addConstraint(widthConstraint)
         
         setNeedsLayout()
     }

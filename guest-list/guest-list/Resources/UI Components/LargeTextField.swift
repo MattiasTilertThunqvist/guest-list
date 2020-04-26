@@ -65,6 +65,9 @@ class LargeTextField: UITextField {
         textColor = .weddingGray
         tintColor = .weddingGray
         font = .weddingRegularFont(textSize: .medium)
+        layer.borderColor = UIColor.weddingLightGray.cgColor
+        layer.borderWidth = 1
+        layer.cornerRadius = 5
         descriptionLabel.text = placeholder
         
         let heightConstraint = NSLayoutConstraint(item: self, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: textFieldHeight)

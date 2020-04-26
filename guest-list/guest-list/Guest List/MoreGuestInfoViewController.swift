@@ -54,7 +54,7 @@ class MoreGuestInfoViewController: UIViewController {
     }
     
     private func setup() {
-        
+
     }
     
     private func calculatePreferredSize() {

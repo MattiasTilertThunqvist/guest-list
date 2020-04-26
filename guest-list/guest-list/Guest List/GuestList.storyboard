@@ -336,17 +336,69 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="500"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cHa-bK-cLW" customClass="BoxButton" customModule="guest_list" customModuleProvider="target">
-                                <rect key="frame" x="16" y="68" width="397" height="416"/>
-                                <state key="normal" title="Button"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="14c-2S-q8s" userLabel="First Stack View">
+                                <rect key="frame" x="16" y="8" width="382" height="29.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="MIO-t6-taS" userLabel="RSVP Stack View">
+                                        <rect key="frame" x="0.0" y="0.0" width="183" height="29.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RSVP" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T2H-9y-xCn" customClass="LargeTextLabel" customModule="guest_list" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="183" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ofh-gV-b5e">
+                                                <rect key="frame" x="0.0" y="28.5" width="183" height="1"/>
+                                                <color key="backgroundColor" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1" id="O9l-sw-xxU"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="iz9-Op-uO5" userLabel="List Stack View">
+                                        <rect key="frame" x="199" y="0.0" width="183" height="29.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="List" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CMD-n4-2jz" customClass="LargeTextLabel" customModule="guest_list" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="183" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wMi-ql-aME">
+                                                <rect key="frame" x="0.0" y="28.5" width="183" height="1"/>
+                                                <color key="backgroundColor" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1" id="Njt-us-JId"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LfY-OP-eoj" customClass="BoxButton" customModule="guest_list" customModuleProvider="target">
+                                <rect key="frame" x="16" y="53.5" width="87" height="36.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="No response">
+                                    <color key="titleColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jkH-9S-1WW" customClass="BoxButton" customModule="guest_list" customModuleProvider="target">
+                                <rect key="frame" x="328" y="53.5" width="70" height="30"/>
+                                <state key="normal" title="Guest List"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="cHa-bK-cLW" firstAttribute="top" secondItem="fZJ-R8-tZL" secondAttribute="top" constant="24" id="9pt-mB-it9"/>
-                            <constraint firstItem="cHa-bK-cLW" firstAttribute="leading" secondItem="fZJ-R8-tZL" secondAttribute="leading" constant="16" id="DTA-Z2-dqi"/>
-                            <constraint firstItem="fZJ-R8-tZL" firstAttribute="trailing" secondItem="cHa-bK-cLW" secondAttribute="trailing" constant="1" id="dMX-Tt-PQR"/>
-                            <constraint firstItem="fZJ-R8-tZL" firstAttribute="bottom" secondItem="cHa-bK-cLW" secondAttribute="bottom" constant="16" id="ddI-ZN-ojk"/>
+                            <constraint firstItem="14c-2S-q8s" firstAttribute="leading" secondItem="fZJ-R8-tZL" secondAttribute="leading" constant="16" id="5Jx-1G-DKH"/>
+                            <constraint firstItem="jkH-9S-1WW" firstAttribute="top" secondItem="14c-2S-q8s" secondAttribute="bottom" constant="16" id="B0L-0C-zqx"/>
+                            <constraint firstItem="fZJ-R8-tZL" firstAttribute="trailing" secondItem="14c-2S-q8s" secondAttribute="trailing" constant="16" id="Ce3-fw-nUE"/>
+                            <constraint firstItem="fZJ-R8-tZL" firstAttribute="bottom" secondItem="LfY-OP-eoj" secondAttribute="bottom" constant="410" id="Woi-rE-P38"/>
+                            <constraint firstItem="LfY-OP-eoj" firstAttribute="leading" secondItem="fZJ-R8-tZL" secondAttribute="leading" constant="16" id="knW-8G-RpK"/>
+                            <constraint firstItem="LfY-OP-eoj" firstAttribute="top" secondItem="14c-2S-q8s" secondAttribute="bottom" constant="16" id="uVH-4b-ire"/>
+                            <constraint firstItem="14c-2S-q8s" firstAttribute="top" secondItem="TrQ-fl-4XH" secondAttribute="top" constant="8" id="yFt-O0-T1X"/>
+                            <constraint firstItem="fZJ-R8-tZL" firstAttribute="trailing" secondItem="jkH-9S-1WW" secondAttribute="trailing" constant="16" id="z3E-FI-PeV"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fZJ-R8-tZL"/>
                     </view>
