@@ -19,7 +19,7 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <segments>
                                 <segment title="Guest List"/>
-                                <segment title="RSVPs &amp; Events"/>
+                                <segment title="RSVP"/>
                             </segments>
                             <color key="tintColor" name="weddingWhite"/>
                             <connections>

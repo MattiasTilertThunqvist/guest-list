@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -34,7 +35,7 @@
                             </label>
                         </subviews>
                     </stackView>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="check-green" translatesAutoresizingMaskIntoConstraints="NO" id="cjZ-BH-WDf">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="check-gray" translatesAutoresizingMaskIntoConstraints="NO" id="cjZ-BH-WDf">
                         <rect key="frame" x="280" y="13" width="24" height="24"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="24" id="HSU-Gc-zbj"/>
@@ -43,7 +44,7 @@
                     </imageView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JoM-zx-VQV">
                         <rect key="frame" x="0.0" y="49" width="320" height="1"/>
-                        <color key="backgroundColor" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" name="weddingVeryLightGray"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="1" id="E0v-DA-0au"/>
                         </constraints>
@@ -68,6 +69,9 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="check-green" width="24" height="24"/>
+        <image name="check-gray" width="24" height="24"/>
+        <namedColor name="weddingVeryLightGray">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

@@ -21,6 +21,10 @@ public extension UIFont {
         return UIFont(name: "AmericanTypewriter", size: textSize.rawValue)!
     }
     
+    class func weddingRegularFont(_ size: CGFloat) -> UIFont {
+        return UIFont(name: "AmericanTypewriter", size: size)!
+    }
+    
     class func weddingLightFont(_ size: CGFloat) -> UIFont {
         return UIFont(name: "AmericanTypewriter-Light", size: size)!
     }

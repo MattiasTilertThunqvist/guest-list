@@ -15,7 +15,7 @@ class PageViewController: UIPageViewController {
     private (set) lazy var orderedViewControllers: [UIViewController] = {
         return [
             StoryboardInstance.guestListViewController(),
-            StoryboardInstance.eventsViewController()
+            StoryboardInstance.RVSPSummaryViewController()
         ]
     }()
     

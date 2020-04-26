@@ -12,14 +12,14 @@ final class StoryboardInstance {
     
     private static let pageScrollStoryboard = UIStoryboard(name: "PageSroll", bundle: nil)
     private static let guestListStoryboard = UIStoryboard(name: "GuestList", bundle: nil)
-    private static let eventsStoryboard = UIStoryboard(name: "Events", bundle: nil)
+    private static let summaryStoryboard = UIStoryboard(name: "Summary", bundle: nil)
     
     static func guestListViewController() -> GuestListViewController {
         return guestListStoryboard.instantiateViewController(withIdentifier: "GuestListViewController") as! GuestListViewController
     }
     
-    static func eventsViewController() -> EventsViewController {
-        return eventsStoryboard.instantiateViewController(withIdentifier: "EventsViewController") as! EventsViewController
+    static func RVSPSummaryViewController() -> RVSPSummaryViewController {
+        return summaryStoryboard.instantiateViewController(withIdentifier: "RVSPSummaryViewController") as! RVSPSummaryViewController
     }
     
     static func addGuestsViewController() -> AddGuestsViewController {

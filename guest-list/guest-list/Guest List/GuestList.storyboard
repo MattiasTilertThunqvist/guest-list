@@ -292,7 +292,7 @@
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2p0-bm-Zmm">
                                 <rect key="frame" x="16" y="457" width="382" height="1"/>
-                                <color key="backgroundColor" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" name="weddingVeryLightGray"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="rm7-Bd-lC6"/>
                                 </constraints>
@@ -310,7 +310,7 @@
                                     <constraint firstAttribute="height" constant="50" id="CPS-89-8W6"/>
                                     <constraint firstAttribute="width" constant="50" id="eGi-jh-7nA"/>
                                 </constraints>
-                                <state key="normal" image="check-green"/>
+                                <state key="normal" image="check-gray"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thank You Sent" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uAM-Ki-qpm" customClass="MediumTextLabel" customModule="guest_list" customModuleProvider="target">
                                 <rect key="frame" x="16" y="547.5" width="316" height="21"/>
@@ -329,14 +329,14 @@
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bjm-Tt-Nwm">
                                 <rect key="frame" x="16" y="524" width="382" height="1"/>
-                                <color key="backgroundColor" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" name="weddingVeryLightGray"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="tKk-E4-eCd"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s6K-jq-DWq">
                                 <rect key="frame" x="16" y="591" width="382" height="1"/>
-                                <color key="backgroundColor" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" name="weddingVeryLightGray"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="cff-qi-ioJ"/>
                                 </constraints>
@@ -429,7 +429,7 @@
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ofh-gV-b5e">
                                                 <rect key="frame" x="0.0" y="28.5" width="183" height="1"/>
-                                                <color key="backgroundColor" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" name="weddingVeryLightGray"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="O9l-sw-xxU"/>
                                                 </constraints>
@@ -447,7 +447,7 @@
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wMi-ql-aME">
                                                 <rect key="frame" x="0.0" y="28.5" width="183" height="1"/>
-                                                <color key="backgroundColor" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" name="weddingVeryLightGray"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="Njt-us-JId"/>
                                                 </constraints>
@@ -481,7 +481,7 @@
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RSn-Ak-h3o">
                                                 <rect key="frame" x="0.0" y="28.5" width="183" height="1"/>
-                                                <color key="backgroundColor" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" name="weddingVeryLightGray"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="n41-3D-CoW"/>
                                                 </constraints>
@@ -499,7 +499,7 @@
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pSz-nc-gEE">
                                                 <rect key="frame" x="0.0" y="28.5" width="183" height="1"/>
-                                                <color key="backgroundColor" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" name="weddingVeryLightGray"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="95Y-RA-MpW"/>
                                                 </constraints>
@@ -533,7 +533,7 @@
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="72s-DJ-L6f">
                                                 <rect key="frame" x="0.0" y="28.5" width="183" height="1"/>
-                                                <color key="backgroundColor" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" name="weddingVeryLightGray"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="cj5-K7-6UW"/>
                                                 </constraints>
@@ -551,7 +551,7 @@
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uol-pd-qJH">
                                                 <rect key="frame" x="0.0" y="28.5" width="183" height="1"/>
-                                                <color key="backgroundColor" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" name="weddingVeryLightGray"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="YQl-Wh-mDq"/>
                                                 </constraints>
@@ -607,7 +607,6 @@
     </scenes>
     <resources>
         <image name="check-gray" width="24" height="24"/>
-        <image name="check-green" width="24" height="24"/>
         <namedColor name="weddingBlack">
             <color red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -616,6 +615,9 @@
         </namedColor>
         <namedColor name="weddingLightGray">
             <color red="0.6705882352941176" green="0.6705882352941176" blue="0.6705882352941176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="weddingVeryLightGray">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="weddingWhite">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

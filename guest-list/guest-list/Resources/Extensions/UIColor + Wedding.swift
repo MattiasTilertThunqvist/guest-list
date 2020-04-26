@@ -38,6 +38,10 @@ extension UIColor {
         return #colorLiteral(red: 0.6705882353, green: 0.6705882353, blue: 0.6705882353, alpha: 1)
     }
     
+    public class var weddingVeryLightGray: UIColor {
+        return #colorLiteral(red: 0.8980392157, green: 0.8980392157, blue: 0.9176470588, alpha: 1)
+    }
+    
     // HEX: #222222
     public class var weddingBlack: UIColor {
         return #colorLiteral(red: 0.1333333333, green: 0.1333333333, blue: 0.1333333333, alpha: 1)
