@@ -63,6 +63,7 @@ class AddGuestsViewController: UIViewController {
         titleLabel.font = .weddingRegularFont(textSize: .large)
         cancelButton.titleLabel?.font = .weddingRegularFont(textSize: .medium)
         doneButton.titleLabel?.font = .weddingRegularFont(textSize: .medium)
+        scrollView.keyboardDismissMode = .interactive
         
         // Children
         
