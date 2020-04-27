@@ -36,7 +36,7 @@
 		8A75356E2452F42000777F3B /* MediumTextLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A75356D2452F42000777F3B /* MediumTextLabel.swift */; };
 		8A7535712452F66B00777F3B /* GuestTableViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A7535702452F66B00777F3B /* GuestTableViewHeader.xib */; };
 		8A7535732452F6DE00777F3B /* GuestTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7535722452F6DE00777F3B /* GuestTableViewHeader.swift */; };
-		8ABFDA282456D86100B9E333 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8ABFDA272456D86100B9E333 /* Onboarding.storyboard */; };
+		8ABFDA282456D86100B9E333 /* OnboardUser.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8ABFDA272456D86100B9E333 /* OnboardUser.storyboard */; };
 		8ABFDA2A2456D9D500B9E333 /* StartOnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABFDA292456D9D500B9E333 /* StartOnboardingViewController.swift */; };
 		8ABFDA2C2456D9DF00B9E333 /* SignupWithEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABFDA2B2456D9DF00B9E333 /* SignupWithEmailViewController.swift */; };
 		8ABFDA2E2456D9E800B9E333 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABFDA2D2456D9E800B9E333 /* LoginViewController.swift */; };
@@ -80,7 +80,7 @@
 		8A75356D2452F42000777F3B /* MediumTextLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumTextLabel.swift; sourceTree = "<group>"; };
 		8A7535702452F66B00777F3B /* GuestTableViewHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GuestTableViewHeader.xib; sourceTree = "<group>"; };
 		8A7535722452F6DE00777F3B /* GuestTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestTableViewHeader.swift; sourceTree = "<group>"; };
-		8ABFDA272456D86100B9E333 /* Onboarding.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
+		8ABFDA272456D86100B9E333 /* OnboardUser.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = OnboardUser.storyboard; sourceTree = "<group>"; };
 		8ABFDA292456D9D500B9E333 /* StartOnboardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartOnboardingViewController.swift; sourceTree = "<group>"; };
 		8ABFDA2B2456D9DF00B9E333 /* SignupWithEmailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupWithEmailViewController.swift; sourceTree = "<group>"; };
 		8ABFDA2D2456D9E800B9E333 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -265,10 +265,7 @@
 		8A504D512456D15A007D4C14 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
-				8ABFDA272456D86100B9E333 /* Onboarding.storyboard */,
-				8ABFDA292456D9D500B9E333 /* StartOnboardingViewController.swift */,
-				8ABFDA2B2456D9DF00B9E333 /* SignupWithEmailViewController.swift */,
-				8ABFDA2D2456D9E800B9E333 /* LoginViewController.swift */,
+				8ABFDA352456F82200B9E333 /* Onboard User */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -289,6 +286,17 @@
 				8A7535722452F6DE00777F3B /* GuestTableViewHeader.swift */,
 			);
 			path = "Guest Table View Header";
+			sourceTree = "<group>";
+		};
+		8ABFDA352456F82200B9E333 /* Onboard User */ = {
+			isa = PBXGroup;
+			children = (
+				8ABFDA272456D86100B9E333 /* OnboardUser.storyboard */,
+				8ABFDA292456D9D500B9E333 /* StartOnboardingViewController.swift */,
+				8ABFDA2B2456D9DF00B9E333 /* SignupWithEmailViewController.swift */,
+				8ABFDA2D2456D9E800B9E333 /* LoginViewController.swift */,
+			);
+			path = "Onboard User";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -355,7 +363,7 @@
 				8A33DA7D244DD61A0009D9D0 /* GoogleService-Info.plist in Resources */,
 				8A75356C2452D8FD00777F3B /* GuestTableViewCell.xib in Resources */,
 				8A33DA70244DCF270009D9D0 /* Assets.xcassets in Resources */,
-				8ABFDA282456D86100B9E333 /* Onboarding.storyboard in Resources */,
+				8ABFDA282456D86100B9E333 /* OnboardUser.storyboard in Resources */,
 				8A252909244F1DA800ED903D /* GuestList.storyboard in Resources */,
 				8A7535712452F66B00777F3B /* GuestTableViewHeader.xib in Resources */,
 				8A33DA6E244DCF230009D9D0 /* PageScroll.storyboard in Resources */,
