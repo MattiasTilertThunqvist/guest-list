@@ -6,8 +6,6 @@
 //  Copyright © 2020 Mattias Tilert Thunqvist. All rights reserved.
 //
 
-
-
 import UIKit
 
 class SignupWithEmailViewController: UIViewController {
@@ -53,8 +51,8 @@ class SignupWithEmailViewController: UIViewController {
     }
     
     func animateItemsIntoView() {
-        var late = Double(0.2)
-        let duration = Double(0.3)
+        var late = Double(0.1)
+        let duration = Double(0.2)
         
         for textfield in textfieldsCollection {
             UIView.animate(withDuration: duration, delay: late, options: [], animations: {

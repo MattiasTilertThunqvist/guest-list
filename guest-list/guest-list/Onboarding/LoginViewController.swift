@@ -30,10 +30,15 @@ class LoginViewController: UIViewController {
         animateItemsIntoView()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        emailTextField.becomeFirstResponder()
+    }
+    
     // MARK: View
     
     func setUp() {
         navigationItem.title = "LOG IN"
+        loginWithEmailButton.colorScheme = .email
         
         // Place the items outside of the view. When view appears they will be animated to original position.
         let transform = CGAffineTransform(translationX: view.frame.width, y: 0)
@@ -43,8 +48,8 @@ class LoginViewController: UIViewController {
     }
     
     func animateItemsIntoView() {
-        var late = Double(0.2)
-        let duration = Double(0.3)
+        var late = Double(0.1)
+        let duration = Double(0.2)
         
         UIView.animate(withDuration: duration, delay: late, options: [], animations: {
             self.emailTextField.transform = .identity

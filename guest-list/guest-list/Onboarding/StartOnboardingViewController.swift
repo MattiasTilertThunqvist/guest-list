@@ -21,16 +21,11 @@ class StartOnboardingViewController: UIViewController {
     // MARK: IBActions
     
     
-    
     // MARK: View
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setUp()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-//        UIApplication.shared.setStatusBarBackgroundColor(to: .clear)
     }
     
     func setUp() {
@@ -40,13 +35,7 @@ class StartOnboardingViewController: UIViewController {
         signupWithEmailButton.colorScheme = .email
         loginButton.colorScheme = .whiteOnTransparent
         
-        signupWithEmailButton.setTitle(NSLocalizedString("Sign up with email", comment: "").uppercased(), for: .normal)
-        loginButton.setTitle(NSLocalizedString("Log in", comment: "").uppercased(), for: .normal)
-    }
-    
-    // MARK: Override
-    
-    override var prefersStatusBarHidden: Bool {
-        return true
+        signupWithEmailButton.setTitle("SIGN UP WITH EMAIL", for: .normal)
+        loginButton.setTitle("LOG IN", for: .normal)
     }
 }
