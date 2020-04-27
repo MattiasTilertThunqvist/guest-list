@@ -35,7 +35,7 @@
                             </label>
                         </subviews>
                     </stackView>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="check-gray" translatesAutoresizingMaskIntoConstraints="NO" id="cjZ-BH-WDf">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="check-green" translatesAutoresizingMaskIntoConstraints="NO" id="cjZ-BH-WDf">
                         <rect key="frame" x="280" y="13" width="24" height="24"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="24" id="HSU-Gc-zbj"/>
@@ -63,13 +63,14 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="companyLabel" destination="Kkw-eL-WVM" id="sVj-OR-pXC"/>
+                <outlet property="contentImageView" destination="cjZ-BH-WDf" id="UJ9-0u-oMN"/>
                 <outlet property="nameLabel" destination="48e-eC-qLq" id="8FU-Fl-VDt"/>
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="153.34821428571428"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="check-gray" width="24" height="24"/>
+        <image name="check-green" width="24" height="24"/>
         <namedColor name="weddingVeryLightGray">
             <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

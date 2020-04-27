@@ -18,6 +18,7 @@ class GuestTableViewCell: UITableViewCell {
     
     @IBOutlet weak private var nameLabel: UILabel!
     @IBOutlet weak private var companyLabel: UILabel!
+    @IBOutlet private var contentImageView: UIImageView!
     
     // MARK: Init
     
@@ -33,5 +34,9 @@ class GuestTableViewCell: UITableViewCell {
     
     func setCompanyLabel(to number: Int) {
         companyLabel.text = number == 0 ? nil : "(+\(number))"
+    }
+    
+    func setImage(to image: UIImage) {
+        contentImageView.image = image
     }
 }

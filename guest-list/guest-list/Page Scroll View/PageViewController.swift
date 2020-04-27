@@ -45,6 +45,9 @@ class PageViewController: UIPageViewController {
     }
     
     private func setup() {
+        navigationController?.transparentNavigationBar()
+        navigationItem.hidesBackButton = true
+        
         dataSource = self
         delegate = self
         

@@ -29,6 +29,21 @@ class RVSPSummaryViewController: UIViewController {
     
     @IBOutlet weak var nrTotalGuestsLabel: UILabel!
     
+    @IBOutlet weak var invitationSentButton: UIButton!
+    @IBOutlet weak var thankYousSentButton: UIButton!
+    
+    // MARK: IBActions
+    
+    @IBAction func didTapInvitationSentButton(_ sender: UIButton) {
+        displayRSVPDetailsVC(ofType: .inviteNotSent)
+    }
+    
+    @IBAction func didTapThankYousSentButton(_ sender: UIButton) {
+        displayRSVPDetailsVC(ofType: .thankYouNotSent)
+    }
+    
+    
+    
     // MARK: Lifecycle
 
     override func viewDidLoad() {
@@ -51,8 +66,16 @@ class RVSPSummaryViewController: UIViewController {
         declinedLabel.font = .weddingRegularFont(textSize: .small)
         declinedNrLabel.font = .weddingRegularFont(35)
         nrTotalGuestsLabel.font = .weddingRegularFont(textSize: .small)
-        
+        invitationSentButton.titleLabel?.font = .weddingRegularFont(textSize: .medium)
+        thankYousSentButton.titleLabel?.font = .weddingRegularFont(textSize: .medium)
+
     }
-
-
+    
+    // MARK: Helpers
+    
+    private func displayRSVPDetailsVC(ofType contentType: ContentType) {
+        let viewController = StoryboardInstance.RSVPDetailsViewController()
+        viewController.contentMode = contentType
+        navigationController?.pushViewController(viewController, animated: true)
+    }
 }

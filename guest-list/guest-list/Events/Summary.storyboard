@@ -88,7 +88,7 @@
                                                     <constraint firstAttribute="height" constant="100" id="snG-pc-TZt"/>
                                                 </constraints>
                                             </stackView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 TOTAL GUESTS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CfW-0F-e3N">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5 TOTAL GUESTS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CfW-0F-e3N">
                                                 <rect key="frame" x="139" y="210.5" width="136" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" name="weddingGray"/>
@@ -124,11 +124,20 @@
                                                         <rect key="frame" x="199" y="0.0" width="183" height="120"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="1 invite are already out the door - you're breezing through this!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Xf-9B-TsO" customClass="MediumTextLabel" customModule="guest_list" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="183" height="120"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="183" height="60"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vWI-xI-1AX">
+                                                                <rect key="frame" x="0.0" y="60" width="183" height="60"/>
+                                                                <state key="normal" title="See Who's Left">
+                                                                    <color key="titleColor" name="weddingGold"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="didTapInvitationSentButton:" destination="ctq-5x-t9a" eventType="touchUpInside" id="zTh-Qu-Gc1"/>
+                                                                </connections>
+                                                            </button>
                                                         </subviews>
                                                     </stackView>
                                                 </subviews>
@@ -152,11 +161,21 @@
                                                         <rect key="frame" x="194" y="0.0" width="188" height="120"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="You've already sent 0 thank-you notes - you've got this!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kx1-DI-Nj5" customClass="MediumTextLabel" customModule="guest_list" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="188" height="120"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="188" height="60"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="9Ia-4W-6pd">
+                                                                <rect key="frame" x="0.0" y="60" width="188" height="60"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <state key="normal" title="See Who's Left">
+                                                                    <color key="titleColor" name="weddingGold"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="didTapThankYousSentButton:" destination="ctq-5x-t9a" eventType="touchUpInside" id="YxQ-hB-hHc"/>
+                                                                </connections>
+                                                            </button>
                                                         </subviews>
                                                     </stackView>
                                                 </subviews>
@@ -223,15 +242,36 @@
                         <outlet property="declinedLabel" destination="38C-J2-7eq" id="2Zn-h0-UkS"/>
                         <outlet property="declinedNrLabel" destination="CFj-Wz-m6p" id="NEI-3w-YTc"/>
                         <outlet property="declinedStackView" destination="mqp-5q-8WS" id="1QB-5H-Gf9"/>
+                        <outlet property="invitationSentButton" destination="vWI-xI-1AX" id="7KM-ae-08N"/>
                         <outlet property="noResponseLabel" destination="8pj-mW-pmo" id="Z4S-x1-qHt"/>
                         <outlet property="noResponseNrLabel" destination="uTR-7X-jGX" id="Fbj-sR-SQl"/>
                         <outlet property="noResponseStackView" destination="8ub-Vl-Phj" id="nWR-SC-RPJ"/>
                         <outlet property="nrTotalGuestsLabel" destination="CfW-0F-e3N" id="ekP-1s-5Eb"/>
+                        <outlet property="thankYousSentButton" destination="9Ia-4W-6pd" id="UgO-e3-g3C"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hhy-uw-o7c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2362.3188405797105" y="116.51785714285714"/>
+        </scene>
+        <!--Details View Controller-->
+        <scene sceneID="Lfz-h1-H3I">
+            <objects>
+                <tableViewController storyboardIdentifier="RSVPDetailsViewController" id="mbA-by-w2W" customClass="RSVPDetailsViewController" customModule="guest_list" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Ta1-0t-al3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <connections>
+                            <outlet property="dataSource" destination="mbA-by-w2W" id="wId-cv-V6L"/>
+                            <outlet property="delegate" destination="mbA-by-w2W" id="InW-Qx-vQr"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="2fH-YV-BAk"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OFf-wa-7z9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3142" y="118"/>
         </scene>
     </scenes>
     <resources>
