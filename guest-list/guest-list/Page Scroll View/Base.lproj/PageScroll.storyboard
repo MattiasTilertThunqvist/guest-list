@@ -26,6 +26,12 @@
                                 <action selector="valueChangedSegmentedControl:" destination="IdH-xG-xSw" eventType="valueChanged" id="lJa-uh-dqd"/>
                             </connections>
                         </segmentedControl>
+                        <barButtonItem key="rightBarButtonItem" title="onb" id="WCh-Om-SGq">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="didTapOnboardingButton:" destination="IdH-xG-xSw" id="eob-Dm-7d8"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="segmentedControl" destination="0Fp-Ez-OKP" id="EBy-4O-YtV"/>

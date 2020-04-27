@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Eaf-a2-mvI">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Start Onboarding View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="WelcomeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="StartOnboardingViewController" customModule="guest_list" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background-wedding" translatesAutoresizingMaskIntoConstraints="NO" id="MTK-Nu-4gH">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                            </imageView>
+                            <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a75-2t-gjM">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rp0-FI-wHw" customClass="LargeStickyButton" customModule="guest_list" customModuleProvider="target">
+                                <rect key="frame" x="182.5" y="712" width="49" height="30"/>
+                                <state key="normal" title="LOG IN"/>
+                                <connections>
+                                    <segue destination="l8D-oi-k57" kind="show" id="Hm3-iQ-pEL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y80-5h-fsb" customClass="LargeStickyButton" customModule="guest_list" customModuleProvider="target">
+                                <rect key="frame" x="132.5" y="658" width="149" height="30"/>
+                                <state key="normal" title="SIGN UP WITH EMAIL"/>
+                                <connections>
+                                    <segue destination="Tka-iO-BpD" kind="show" id="6b4-Ip-EDL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="y80-5h-fsb" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="96p-Z1-3El"/>
+                            <constraint firstItem="a75-2t-gjM" firstAttribute="width" secondItem="MTK-Nu-4gH" secondAttribute="width" id="Bv1-9F-21E"/>
+                            <constraint firstItem="a75-2t-gjM" firstAttribute="height" secondItem="MTK-Nu-4gH" secondAttribute="height" id="Dne-ET-gnd"/>
+                            <constraint firstAttribute="bottom" secondItem="MTK-Nu-4gH" secondAttribute="bottom" id="Gfs-cQ-OZ3"/>
+                            <constraint firstItem="a75-2t-gjM" firstAttribute="leading" secondItem="MTK-Nu-4gH" secondAttribute="leading" id="N5R-r0-NaD"/>
+                            <constraint firstAttribute="trailing" secondItem="MTK-Nu-4gH" secondAttribute="trailing" id="YbD-mA-BJQ"/>
+                            <constraint firstItem="a75-2t-gjM" firstAttribute="top" secondItem="MTK-Nu-4gH" secondAttribute="top" id="aP3-d6-F3F"/>
+                            <constraint firstItem="MTK-Nu-4gH" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="acT-Vj-rvb"/>
+                            <constraint firstItem="rp0-FI-wHw" firstAttribute="top" secondItem="y80-5h-fsb" secondAttribute="bottom" constant="24" id="cGW-Mw-qOn"/>
+                            <constraint firstItem="rp0-FI-wHw" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="eRS-jP-cEy"/>
+                            <constraint firstItem="MTK-Nu-4gH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="qwk-ll-70W"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="rp0-FI-wHw" secondAttribute="bottom" constant="32" id="sAt-c2-lWc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="lan-SB-jW4"/>
+                    <connections>
+                        <outlet property="backgroundImage" destination="MTK-Nu-4gH" id="rr6-ys-05V"/>
+                        <outlet property="loginButton" destination="rp0-FI-wHw" id="FWz-eA-Syv"/>
+                        <outlet property="signupWithEmailButton" destination="y80-5h-fsb" id="gty-dn-vOz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="479.19999999999999" y="132.68365817091455"/>
+        </scene>
+        <!--Signup With Email View Controller-->
+        <scene sceneID="9bk-kp-PLQ">
+            <objects>
+                <viewController id="Tka-iO-BpD" customClass="SignupWithEmailViewController" customModule="guest_list" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZRB-je-FAZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z4u-R2-FbZ" customClass="LargeStickyButton" customModule="guest_list" customModuleProvider="target">
+                                <rect key="frame" x="132.5" y="256" width="149" height="30"/>
+                                <state key="normal" title="SIGN UP WITH EMAIL"/>
+                                <connections>
+                                    <action selector="signUpButtonWasPressed:" destination="Tka-iO-BpD" eventType="touchUpInside" id="3v9-Yx-rj4"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-mail" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Hhz-T0-RWH" customClass="LargeTextField" customModule="guest_list" customModuleProvider="target">
+                                <rect key="frame" x="172.5" y="140" width="69" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress" textContentType="email"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="yPm-C5-qfm" customClass="LargeTextField" customModule="guest_list" customModuleProvider="target">
+                                <rect key="frame" x="162" y="198" width="90.5" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES" textContentType="password"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Firstname" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="2D7-RA-Brc" customClass="LargeTextField" customModule="guest_list" customModuleProvider="target">
+                                <rect key="frame" x="161" y="24" width="92" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" textContentType="name"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Lastname" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="T9U-1w-p9W" customClass="LargeTextField" customModule="guest_list" customModuleProvider="target">
+                                <rect key="frame" x="161.5" y="82" width="91" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" textContentType="name"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Hhz-T0-RWH" firstAttribute="centerX" secondItem="tmd-pB-31K" secondAttribute="centerX" id="559-lB-ngQ"/>
+                            <constraint firstItem="Hhz-T0-RWH" firstAttribute="top" secondItem="T9U-1w-p9W" secondAttribute="bottom" constant="24" id="A63-8c-4df"/>
+                            <constraint firstItem="yPm-C5-qfm" firstAttribute="centerX" secondItem="tmd-pB-31K" secondAttribute="centerX" id="JDd-YF-ifH"/>
+                            <constraint firstItem="Z4u-R2-FbZ" firstAttribute="top" secondItem="yPm-C5-qfm" secondAttribute="bottom" constant="24" id="JVs-rx-sTb"/>
+                            <constraint firstItem="2D7-RA-Brc" firstAttribute="centerX" secondItem="tmd-pB-31K" secondAttribute="centerX" id="NwU-fS-4Pf"/>
+                            <constraint firstItem="T9U-1w-p9W" firstAttribute="centerX" secondItem="tmd-pB-31K" secondAttribute="centerX" id="P4T-5G-dcg"/>
+                            <constraint firstItem="2D7-RA-Brc" firstAttribute="top" secondItem="tmd-pB-31K" secondAttribute="top" constant="24" id="UYj-2d-MED"/>
+                            <constraint firstItem="T9U-1w-p9W" firstAttribute="top" secondItem="2D7-RA-Brc" secondAttribute="bottom" constant="24" id="d7j-Nh-8XA"/>
+                            <constraint firstItem="Z4u-R2-FbZ" firstAttribute="centerX" secondItem="tmd-pB-31K" secondAttribute="centerX" id="gmp-dx-vb3"/>
+                            <constraint firstItem="yPm-C5-qfm" firstAttribute="top" secondItem="Hhz-T0-RWH" secondAttribute="bottom" constant="24" id="hSw-0r-XFu"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="tmd-pB-31K"/>
+                    </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="Hhz-T0-RWH" id="Fvh-hM-z0h"/>
+                        <outlet property="firstnameTextField" destination="2D7-RA-Brc" id="HWU-yn-Cx1"/>
+                        <outlet property="lastnameTextField" destination="T9U-1w-p9W" id="qF1-aJ-OZ0"/>
+                        <outlet property="passwordTextField" destination="yPm-C5-qfm" id="0k9-db-FON"/>
+                        <outlet property="signUpButton" destination="Z4u-R2-FbZ" id="Y0f-Tb-uAB"/>
+                        <outletCollection property="textfieldsCollection" destination="2D7-RA-Brc" collectionClass="NSMutableArray" id="GAx-d5-WOt"/>
+                        <outletCollection property="textfieldsCollection" destination="T9U-1w-p9W" collectionClass="NSMutableArray" id="wF4-i1-5cx"/>
+                        <outletCollection property="textfieldsCollection" destination="Hhz-T0-RWH" collectionClass="NSMutableArray" id="0bL-on-P57"/>
+                        <outletCollection property="textfieldsCollection" destination="yPm-C5-qfm" collectionClass="NSMutableArray" id="wpq-vu-P5E"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kYu-6j-9pM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1290.4000000000001" y="404.34782608695656"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="WBy-c9-ZW7">
+            <objects>
+                <viewController id="l8D-oi-k57" customClass="LoginViewController" customModule="guest_list" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1qP-jI-XZi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TGb-vy-LyO">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="872"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="PkG-7T-sQZ" customClass="LargeTextField" customModule="guest_list" customModuleProvider="target">
+                                <rect key="frame" x="176" y="256" width="62.5" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress" textContentType="email"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="osK-sI-5XH" customClass="LargeTextField" customModule="guest_list" customModuleProvider="target">
+                                <rect key="frame" x="162" y="314" width="90.5" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES" textContentType="password"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ECY-34-nAq" customClass="LargeStickyButton" customModule="guest_list" customModuleProvider="target">
+                                <rect key="frame" x="137.5" y="372" width="139" height="30"/>
+                                <state key="normal" title="LOG IN WITH EMAIL"/>
+                                <connections>
+                                    <action selector="loginWithEmailButtonWasPressed:" destination="l8D-oi-k57" eventType="touchUpInside" id="Nuq-qy-gpN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="PkG-7T-sQZ" firstAttribute="centerX" secondItem="dMs-nF-M7d" secondAttribute="centerX" id="NxD-l4-xHC"/>
+                            <constraint firstAttribute="trailing" secondItem="TGb-vy-LyO" secondAttribute="trailing" id="OC5-jP-NtF"/>
+                            <constraint firstItem="osK-sI-5XH" firstAttribute="top" secondItem="PkG-7T-sQZ" secondAttribute="bottom" constant="24" id="Slm-DM-XIt"/>
+                            <constraint firstItem="osK-sI-5XH" firstAttribute="centerX" secondItem="dMs-nF-M7d" secondAttribute="centerX" id="TKy-s5-94W"/>
+                            <constraint firstItem="ECY-34-nAq" firstAttribute="centerX" secondItem="dMs-nF-M7d" secondAttribute="centerX" id="jFa-wl-bMU"/>
+                            <constraint firstItem="TGb-vy-LyO" firstAttribute="leading" secondItem="1qP-jI-XZi" secondAttribute="leading" id="rtu-oA-8iS"/>
+                            <constraint firstItem="ECY-34-nAq" firstAttribute="top" secondItem="osK-sI-5XH" secondAttribute="bottom" constant="24" id="tIK-Ay-z32"/>
+                            <constraint firstAttribute="bottom" secondItem="TGb-vy-LyO" secondAttribute="bottom" constant="-64" id="uZa-yH-dhP"/>
+                            <constraint firstItem="ECY-34-nAq" firstAttribute="centerY" secondItem="dMs-nF-M7d" secondAttribute="centerY" id="vF1-4d-bBA"/>
+                            <constraint firstItem="TGb-vy-LyO" firstAttribute="top" secondItem="1qP-jI-XZi" secondAttribute="top" id="vYB-43-WMH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dMs-nF-M7d"/>
+                    </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="PkG-7T-sQZ" id="n90-Lx-pkM"/>
+                        <outlet property="loginWithEmailButton" destination="ECY-34-nAq" id="hlO-qm-PvN"/>
+                        <outlet property="passwordTextField" destination="osK-sI-5XH" id="TBo-b0-aND"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YzQ-sx-nUq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1293.5999999999999" y="-276.61169415292358"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="z4D-es-7Fk">
+            <objects>
+                <navigationController storyboardIdentifier="OnboardingNavigationController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Eaf-a2-mvI" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="ON7-QS-u8e">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Mbi-l1-Z2k"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CMe-rt-Th0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-346" y="133"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Background-wedding" width="444.5" height="667"/>
+    </resources>
+</document>

@@ -12,10 +12,13 @@ class GuestListViewController: UITableViewController {
     
     // MARK: Properties
     
+    let mockedGuestList = [Guest(firstname: "Mattias", lastname: "Tilert Thunqvist"),
+                    Guest(firstname: "Eric", lastname: "Johansson"),
+                    Guest(firstname: "Amy", lastname: "Addams"),
+                    Guest(firstname: "Linnea", lastname: "Oxtrop"),
+                    Guest(firstname: "Jacob", lastname: "Lilja")]
     
     // MARK: IBOutlets
-    
-
     
 
     // MARK: Lifecycle
@@ -49,7 +52,7 @@ class GuestListViewController: UITableViewController {
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(didTapTableViewHeader))
         header.addGestureRecognizer(tapGesture)
-        
+        header.setTotalGuestsLabel(to: mockedGuestList.count)
         return header
     }
     
@@ -67,13 +70,15 @@ class GuestListViewController: UITableViewController {
     // MARK: Rows
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return mockedGuestList.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: GuestTableViewCell.cellIdentifier, for: indexPath) as! GuestTableViewCell
-        cell.setGuestName(to: "Mattias Tilert Thunqvist")
-        cell.setCompanyLabel(to: 1)
+        let guest = mockedGuestList[indexPath.row]
+        
+        cell.setGuestName(to: guest.firstname + " " + guest.lastname)
+        cell.setCompanyLabel(to: 0)
         return cell
     }
     

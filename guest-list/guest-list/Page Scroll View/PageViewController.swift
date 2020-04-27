@@ -31,6 +31,12 @@ class PageViewController: UIPageViewController {
         setViewControllers([orderedViewControllers[index]], direction: direction, animated: true, completion: nil)
     }
     
+    @IBAction func didTapOnboardingButton(_ sender: UIBarButtonItem) {
+        let viewController = StoryboardInstance.onboardingNavigationController()
+        viewController.modalPresentationStyle = .fullScreen
+        present(viewController, animated: true, completion: nil)
+    }
+    
     // MARK: Lifecycle
 
     override func viewDidLoad() {
