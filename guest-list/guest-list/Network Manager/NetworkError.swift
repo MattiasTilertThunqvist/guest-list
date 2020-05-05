@@ -10,6 +10,7 @@ import Foundation
 
 enum NetworkError: Error {
     case noDocument
+    case failedEncoding
 }
 
 extension NetworkError: LocalizedError {
@@ -18,6 +19,8 @@ extension NetworkError: LocalizedError {
         switch self {
         case .noDocument:
             return "Couldn't load document"
+        case .failedEncoding:
+            return "Couldn't encode object"
         }
     }
 }

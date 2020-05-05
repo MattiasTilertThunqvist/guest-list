@@ -57,34 +57,34 @@ struct Guest: Codable {
     // MARK: Custom types
     
     enum RSVP: Int, Codable {
-        case NoResponse
-        case Attending
-        case Declined
+        case noResponse
+        case attending
+        case declined
         
         var description: String {
             switch self {
-            case .NoResponse: return "No Response"
-            case .Attending: return "Attending"
-            case .Declined: return "Declined"
+            case .noResponse: return "No Response"
+            case .attending: return "Attending"
+            case .declined: return "Declined"
             }
         }
     }
     
     enum List: Int, Codable {
-        case GuestList
-        case WaitingList
+        case guestList
+        case waitingList
         
         var description: String {
             switch self {
-                case .GuestList: return "Guest List"
-                case .WaitingList: return "Waiting List"
+                case .guestList: return "Guest List"
+                case .waitingList: return "Waiting List"
             }
         }
     }
     
     enum Role: Int, Codable {
-        case Guest
-        case Toastmaster
+        case guest
+        case toastmaster
         case Bestman
         case HonoraryBridesmaid
         case Bridesmaid
@@ -92,8 +92,8 @@ struct Guest: Codable {
         
         var description: String {
             switch self {
-                case .Guest: return "Guest"
-                case .Toastmaster: return "Toastmaster/Tostmadame"
+                case .guest: return "Guest"
+                case .toastmaster: return "Toastmaster/Tostmadame"
                 case .Bestman: return "Bestman/Bestwoman"
                 case .HonoraryBridesmaid: return "Honorary Bridesmaid"
                 case .Bridesmaid: return "Bridesmaid"

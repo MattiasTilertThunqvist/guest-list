@@ -6,6 +6,7 @@ target 'guest-list' do
   use_frameworks!
 
   # Pods for guest-list
+  pod 'CodableFirebase'
   
   # add pods for desired Firebase products
   # https://firebase.google.com/docs/ios/setup#available-pods
