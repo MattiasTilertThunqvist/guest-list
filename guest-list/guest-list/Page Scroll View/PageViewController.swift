@@ -47,7 +47,15 @@ class PageViewController: UIPageViewController {
         setup()
         setupPages()
         
-        NetworkManager.shared.getGuestList { (error) in
+        //
+        // TEST
+        //
+        
+//        NetworkManager.shared.getGuestList { (error) in
+//
+//        }
+        
+        NetworkManager.shared.addGuestToList(NetworkManager.shared.mockedGuest) { (error) in
             
         }
     }

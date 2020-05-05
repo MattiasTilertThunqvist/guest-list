@@ -24,12 +24,9 @@ class NetworkManager {
     
     // MARK: Networking
     
+    let mockedGuest = Guest("2", "Erik2", "Eriksson", "mattias@tilert.com", "Bake 23", "12345", "snuva", "studid", "car", "hejsam", .NoResponse, .GuestList, .Guest, .Family, .Family, .Female, false, false)
     let mockedGuestList = [
-        Guest("1", "Mattias", "Tilert", "mattias@tilert.com", "Bake 23", "12345", "snuva", "studid", "car", "hejsam"),
-        Guest("1", "Mattias", "Tilert", "mattias@tilert.com", "Bake 23", "12345", "snuva", "studid", "car", "hejsam"),
-        Guest("1", "Mattias", "Tilert", "mattias@tilert.com", "Bake 23", "12345", "snuva", "studid", "car", "hejsam"),
-        Guest("1", "Mattias", "Tilert", "mattias@tilert.com", "Bake 23", "12345", "snuva", "studid", "car", "hejsam"),
-        Guest("1", "Mattias", "Tilert", "mattias@tilert.com", "Bake 23", "12345", "snuva", "studid", "car", "hejsam")
+        Guest("1", "Erik1", "Eriksson", "mattias@tilert.com", "Bake 23", "12345", "snuva", "studid", "car", "hejsam", .NoResponse, .GuestList, .Guest, .Family, .Family, .Female, false, false)
     ]
     
     func getGuestList(handler: @escaping (Error?) -> ()) {
@@ -60,7 +57,9 @@ class NetworkManager {
             }
             
         }
+    }
+    
+    func addGuestToList(_ guest: Guest, handler: @escaping (Error?) -> ()) {
         
-        print()
     }
 }
