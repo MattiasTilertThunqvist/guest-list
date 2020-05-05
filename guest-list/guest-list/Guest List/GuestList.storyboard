@@ -247,7 +247,7 @@
                                     <action selector="allergiesPrimaryActionTriggered:" destination="1oR-El-zCJ" eventType="primaryActionTriggered" id="LFd-ms-1Vb"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Disabilites" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xbd-FS-vPx" customClass="LargeTextField" customModule="guest_list" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Disabilities" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xbd-FS-vPx" customClass="LargeTextField" customModule="guest_list" customModuleProvider="target">
                                 <rect key="frame" x="16" y="236" width="382" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>

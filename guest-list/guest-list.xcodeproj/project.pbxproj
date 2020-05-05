@@ -19,7 +19,6 @@
 		8A33DA6E244DCF230009D9D0 /* PageScroll.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A33DA6C244DCF230009D9D0 /* PageScroll.storyboard */; };
 		8A33DA70244DCF270009D9D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A33DA6F244DCF270009D9D0 /* Assets.xcassets */; };
 		8A33DA73244DCF270009D9D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A33DA71244DCF270009D9D0 /* LaunchScreen.storyboard */; };
-		8A33DA7D244DD61A0009D9D0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8A33DA7C244DD61A0009D9D0 /* GoogleService-Info.plist */; };
 		8A33DA82244DDDE40009D9D0 /* StoryboardInstance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A33DA81244DDDE40009D9D0 /* StoryboardInstance.swift */; };
 		8A33DA85244DDE360009D9D0 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A33DA84244DDE360009D9D0 /* NetworkManager.swift */; };
 		8A33DA89244DDF2D0009D9D0 /* UIColor + Wedding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A33DA88244DDF2D0009D9D0 /* UIColor + Wedding.swift */; };
@@ -47,6 +46,7 @@
 		8ADCBA9124545B84001DE10D /* MoreGuestInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADCBA9024545B84001DE10D /* MoreGuestInfoViewController.swift */; };
 		8ADD4F4C2455D036006EF29F /* CALayer + Wedding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADD4F4B2455D036006EF29F /* CALayer + Wedding.swift */; };
 		8AF697E024618868009DB7B9 /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF697DF24618868009DB7B9 /* AuthenticationManager.swift */; };
+		8AF697E42461BB64009DB7B9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8AF697E32461BB64009DB7B9 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,7 +64,6 @@
 		8A33DA6F244DCF270009D9D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8A33DA72244DCF270009D9D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8A33DA74244DCF270009D9D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8A33DA7C244DD61A0009D9D0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8A33DA81244DDDE40009D9D0 /* StoryboardInstance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardInstance.swift; sourceTree = "<group>"; };
 		8A33DA84244DDE360009D9D0 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		8A33DA88244DDF2D0009D9D0 /* UIColor + Wedding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Wedding.swift"; sourceTree = "<group>"; };
@@ -92,6 +91,7 @@
 		8ADCBA9024545B84001DE10D /* MoreGuestInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreGuestInfoViewController.swift; sourceTree = "<group>"; };
 		8ADD4F4B2455D036006EF29F /* CALayer + Wedding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer + Wedding.swift"; sourceTree = "<group>"; };
 		8AF697DF24618868009DB7B9 /* AuthenticationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationManager.swift; sourceTree = "<group>"; };
+		8AF697E32461BB64009DB7B9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EC4C66B88AEC9EDDDF361820 /* Pods-guest-list.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-guest-list.release.xcconfig"; path = "Pods/Target Support Files/Pods-guest-list/Pods-guest-list.release.xcconfig"; sourceTree = "<group>"; };
 		F0CA2C6D4DE83932D24994EA /* Pods-guest-list.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-guest-list.debug.xcconfig"; path = "Pods/Target Support Files/Pods-guest-list/Pods-guest-list.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -198,7 +198,7 @@
 				8A33DA66244DCF230009D9D0 /* AppDelegate.swift */,
 				8A33DA71244DCF270009D9D0 /* LaunchScreen.storyboard */,
 				8A33DA74244DCF270009D9D0 /* Info.plist */,
-				8A33DA7C244DD61A0009D9D0 /* GoogleService-Info.plist */,
+				8AF697E32461BB64009DB7B9 /* GoogleService-Info.plist */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -363,8 +363,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A33DA73244DCF270009D9D0 /* LaunchScreen.storyboard in Resources */,
-				8A33DA7D244DD61A0009D9D0 /* GoogleService-Info.plist in Resources */,
 				8A75356C2452D8FD00777F3B /* GuestTableViewCell.xib in Resources */,
+				8AF697E42461BB64009DB7B9 /* GoogleService-Info.plist in Resources */,
 				8A33DA70244DCF270009D9D0 /* Assets.xcassets in Resources */,
 				8ABFDA282456D86100B9E333 /* OnboardUser.storyboard in Resources */,
 				8A252909244F1DA800ED903D /* GuestList.storyboard in Resources */,
@@ -385,7 +385,6 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-guest-list/Pods-guest-list-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/BoringSSL-GRPC/openssl_grpc.framework",
-				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
@@ -396,7 +395,6 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl_grpc.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",

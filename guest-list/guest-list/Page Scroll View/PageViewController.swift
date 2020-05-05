@@ -53,10 +53,7 @@ class PageViewController: UIPageViewController {
     }
     
     private func setup() {
-        Firestore.firestore().collection("event").document().setData(["String" : "Any"]) { (error) in
-               print()
-           }
-        print()
+
     }
     
     private func setupPages() {

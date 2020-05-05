@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import FirebaseAuth
 
 class AuthenticationManager {
     

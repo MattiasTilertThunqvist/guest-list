@@ -32,19 +32,10 @@ class RSVPDetailsViewController: UITableViewController {
         switch contentMode {
         case .inviteNotSent:
             title = "Status: Invite Not Sent"
-            mockedGuestList = [
-                Guest(id: "1", firstname: "Jacob", lastname: "Lilja", email: "@"),
-                Guest(id: "1", firstname: "Jacob", lastname: "Lilja", email: "@")
-            ]
+            mockedGuestList = NetworkManager.shared.mockedGuestList
         case .thankYouNotSent:
             title = "Status: Thank-You Not Sent"
-            mockedGuestList = [
-                            Guest(id: "1", firstname: "Jacob", lastname: "Lilja", email: "@"),
-                            Guest(id: "1", firstname: "Jacob", lastname: "Lilja", email: "@"),
-                            Guest(id: "1", firstname: "Jacob", lastname: "Lilja", email: "@"),
-                            Guest(id: "1", firstname: "Jacob", lastname: "Lilja", email: "@"),
-                            Guest(id: "1", firstname: "Jacob", lastname: "Lilja", email: "@")
-            ]
+            mockedGuestList = NetworkManager.shared.mockedGuestList
         }
     }
     

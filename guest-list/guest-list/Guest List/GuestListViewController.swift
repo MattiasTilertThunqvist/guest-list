@@ -12,13 +12,7 @@ class GuestListViewController: UITableViewController {
     
     // MARK: Properties
     
-    let mockedGuestList = [
-                    Guest(id: "1", firstname: "Jacob", lastname: "Lilja", email: "@"),
-                    Guest(id: "1", firstname: "Jacob", lastname: "Lilja", email: "@"),
-                    Guest(id: "1", firstname: "Jacob", lastname: "Lilja", email: "@"),
-                    Guest(id: "1", firstname: "Jacob", lastname: "Lilja", email: "@"),
-                    Guest(id: "1", firstname: "Jacob", lastname: "Lilja", email: "@")
-    ]
+    let mockedGuestList = NetworkManager.shared.mockedGuestList
     
     // MARK: IBOutlets
     

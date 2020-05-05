@@ -29,7 +29,7 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:892216803962:ios:2ca4e824b9acb00e4531c3</string>
+	<string>1:892216803962:ios:10775a552f2529494531c3</string>
 	<key>DATABASE_URL</key>
 	<string>https://guest-list-8dd4a.firebaseio.com</string>
 </dict>

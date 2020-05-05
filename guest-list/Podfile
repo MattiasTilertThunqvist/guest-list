@@ -6,8 +6,11 @@ target 'guest-list' do
   use_frameworks!
 
   # Pods for guest-list
-  pod 'Firebase/Firestore', '6.10.0' 
+  
+  # add pods for desired Firebase products
+  # https://firebase.google.com/docs/ios/setup#available-pods
+  pod 'Firebase/Analytics'
+  pod 'Firebase/Firestore', '6.10.0'
   pod 'FirebaseFirestoreSwift'
-  pod 'Firebase/Auth'
 
 end
