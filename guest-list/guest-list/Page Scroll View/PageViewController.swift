@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import FirebaseFirestore
+import FirebaseFirestoreSwift
+
 
 class PageViewController: UIPageViewController {
     
@@ -42,12 +45,21 @@ class PageViewController: UIPageViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
+        setupPages()
+        
+        NetworkManager.shared.getGuestList { (error) in
+            
+        }
     }
     
     private func setup() {
-        navigationController?.transparentNavigationBar()
-        navigationItem.hidesBackButton = true
-        
+        Firestore.firestore().collection("event").document().setData(["String" : "Any"]) { (error) in
+               print()
+           }
+        print()
+    }
+    
+    private func setupPages() {
         dataSource = self
         delegate = self
         
@@ -59,7 +71,7 @@ class PageViewController: UIPageViewController {
 
 // MARK: UIPageViewControllerDataSource
 
-extension PageViewController: UIPageViewControllerDataSource {
+extension PageViewController: UIPageViewControllerDataSource, UIPageViewControllerDelegate {
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         guard let viewControllerIndex = orderedViewControllers.firstIndex(of: viewController) else { return nil }
@@ -78,11 +90,4 @@ extension PageViewController: UIPageViewControllerDataSource {
         
         return orderedViewControllers[nextIndex]
     }
-}
-
-// MARK: UIPageViewControllerDelegate
-
-extension PageViewController: UIPageViewControllerDelegate {
-    
-    
 }

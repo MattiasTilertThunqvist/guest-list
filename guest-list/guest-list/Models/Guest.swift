@@ -9,7 +9,9 @@
 import Foundation
 
 struct Guest {
-//    var id: String
-    var firstname: String
-    var lastname: String
+    let id: String
+    let firstname: String
+    let lastname: String?
+    let email: String
 }
+

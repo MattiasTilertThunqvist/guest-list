@@ -41,12 +41,12 @@
 		8ABFDA2C2456D9DF00B9E333 /* SignupWithEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABFDA2B2456D9DF00B9E333 /* SignupWithEmailViewController.swift */; };
 		8ABFDA2E2456D9E800B9E333 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABFDA2D2456D9E800B9E333 /* LoginViewController.swift */; };
 		8ABFDA302456DB4F00B9E333 /* LargeStickyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABFDA2F2456DB4F00B9E333 /* LargeStickyButton.swift */; };
-		8ABFDA322456DC3000B9E333 /* UINavigationController + Wedding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABFDA312456DC3000B9E333 /* UINavigationController + Wedding.swift */; };
 		8ABFDA3A2457587F00B9E333 /* RSVPDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABFDA392457587F00B9E333 /* RSVPDetailsViewController.swift */; };
 		8ADCBA8D24542A2E001DE10D /* LargeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADCBA8C24542A2E001DE10D /* LargeTextField.swift */; };
 		8ADCBA8F24543B7A001DE10D /* GuestInfoTextFieldsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADCBA8E24543B7A001DE10D /* GuestInfoTextFieldsViewController.swift */; };
 		8ADCBA9124545B84001DE10D /* MoreGuestInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADCBA9024545B84001DE10D /* MoreGuestInfoViewController.swift */; };
 		8ADD4F4C2455D036006EF29F /* CALayer + Wedding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADD4F4B2455D036006EF29F /* CALayer + Wedding.swift */; };
+		8AF697E024618868009DB7B9 /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF697DF24618868009DB7B9 /* AuthenticationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,12 +86,12 @@
 		8ABFDA2B2456D9DF00B9E333 /* SignupWithEmailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupWithEmailViewController.swift; sourceTree = "<group>"; };
 		8ABFDA2D2456D9E800B9E333 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		8ABFDA2F2456DB4F00B9E333 /* LargeStickyButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LargeStickyButton.swift; sourceTree = "<group>"; };
-		8ABFDA312456DC3000B9E333 /* UINavigationController + Wedding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController + Wedding.swift"; sourceTree = "<group>"; };
 		8ABFDA392457587F00B9E333 /* RSVPDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSVPDetailsViewController.swift; sourceTree = "<group>"; };
 		8ADCBA8C24542A2E001DE10D /* LargeTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeTextField.swift; sourceTree = "<group>"; };
 		8ADCBA8E24543B7A001DE10D /* GuestInfoTextFieldsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestInfoTextFieldsViewController.swift; sourceTree = "<group>"; };
 		8ADCBA9024545B84001DE10D /* MoreGuestInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreGuestInfoViewController.swift; sourceTree = "<group>"; };
 		8ADD4F4B2455D036006EF29F /* CALayer + Wedding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer + Wedding.swift"; sourceTree = "<group>"; };
+		8AF697DF24618868009DB7B9 /* AuthenticationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationManager.swift; sourceTree = "<group>"; };
 		EC4C66B88AEC9EDDDF361820 /* Pods-guest-list.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-guest-list.release.xcconfig"; path = "Pods/Target Support Files/Pods-guest-list/Pods-guest-list.release.xcconfig"; sourceTree = "<group>"; };
 		F0CA2C6D4DE83932D24994EA /* Pods-guest-list.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-guest-list.debug.xcconfig"; path = "Pods/Target Support Files/Pods-guest-list/Pods-guest-list.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -226,6 +226,7 @@
 		8A33DA83244DDE180009D9D0 /* Network Manager */ = {
 			isa = PBXGroup;
 			children = (
+				8AF697DF24618868009DB7B9 /* AuthenticationManager.swift */,
 				8A33DA84244DDE360009D9D0 /* NetworkManager.swift */,
 				8A33DA8C244DE54E0009D9D0 /* NetworkError.swift */,
 			);
@@ -252,7 +253,6 @@
 				8A33DA88244DDF2D0009D9D0 /* UIColor + Wedding.swift */,
 				8A33DA8A244DE3DC0009D9D0 /* UIFont + Wedding.swift */,
 				8ADD4F4B2455D036006EF29F /* CALayer + Wedding.swift */,
-				8ABFDA312456DC3000B9E333 /* UINavigationController + Wedding.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -385,6 +385,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-guest-list/Pods-guest-list-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/BoringSSL-GRPC/openssl_grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
@@ -395,6 +396,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl_grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
@@ -456,10 +458,10 @@
 				8A75356B2452D8FD00777F3B /* GuestTableViewCell.swift in Sources */,
 				8ABFDA2A2456D9D500B9E333 /* StartOnboardingViewController.swift in Sources */,
 				8A33DA69244DCF230009D9D0 /* SceneDelegate.swift in Sources */,
-				8ABFDA322456DC3000B9E333 /* UINavigationController + Wedding.swift in Sources */,
 				8ADCBA9124545B84001DE10D /* MoreGuestInfoViewController.swift in Sources */,
 				8A33DA89244DDF2D0009D9D0 /* UIColor + Wedding.swift in Sources */,
 				8A4FA8482454AC2400E0ABC4 /* GuestStatusViewController.swift in Sources */,
+				8AF697E024618868009DB7B9 /* AuthenticationManager.swift in Sources */,
 				8A75356E2452F42000777F3B /* MediumTextLabel.swift in Sources */,
 				8A252905244F120500ED903D /* RVSPSummaryViewController.swift in Sources */,
 			);

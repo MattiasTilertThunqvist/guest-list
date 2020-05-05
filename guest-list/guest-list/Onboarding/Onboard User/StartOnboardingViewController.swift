@@ -28,10 +28,7 @@ class StartOnboardingViewController: UIViewController {
         setUp()
     }
     
-    func setUp() {
-        navigationController?.transparentNavigationBar()
-        navigationItem.hidesBackButton = true
-        
+    func setUp() {        
         signupWithEmailButton.colorScheme = .email
         loginButton.colorScheme = .whiteOnTransparent
         

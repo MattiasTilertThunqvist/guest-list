@@ -13,8 +13,8 @@ import Firebase
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
         FirebaseApp.configure()
+        styleNavigationBar()
         return true
     }
 
@@ -34,6 +34,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
 
+    // MARK: Setup
+    
+    private func styleNavigationBar() {
+        let navigationBarAppearace = UINavigationBar.appearance()
+        navigationBarAppearace.setBackgroundImage(UIImage(), for: .default)
+        navigationBarAppearace.isTranslucent = true
+        navigationBarAppearace.shadowImage = UIImage()
+        navigationBarAppearace.backgroundColor = UIColor.clear
+        navigationBarAppearace.tintColor = UIColor.weddingGray
+        navigationBarAppearace.topItem?.title = ""
+        navigationBarAppearace.titleTextAttributes = [
+            NSAttributedString.Key.foregroundColor: UIColor.weddingGray,
+            NSAttributedString.Key.font: UIFont.weddingRegularFont(17)
+        ]
+    }
+    
 
 }
 

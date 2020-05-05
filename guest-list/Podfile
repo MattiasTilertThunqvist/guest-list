@@ -7,5 +7,7 @@ target 'guest-list' do
 
   # Pods for guest-list
   pod 'Firebase/Firestore', '6.10.0' 
+  pod 'FirebaseFirestoreSwift'
+  pod 'Firebase/Auth'
 
 end

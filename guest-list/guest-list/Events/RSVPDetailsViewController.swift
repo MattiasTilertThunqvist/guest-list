@@ -32,15 +32,19 @@ class RSVPDetailsViewController: UITableViewController {
         switch contentMode {
         case .inviteNotSent:
             title = "Status: Invite Not Sent"
-            mockedGuestList = [Guest(firstname: "Mattias", lastname: "Tilert Thunqvist"),
-                            Guest(firstname: "Eric", lastname: "Johansson")]
+            mockedGuestList = [
+                Guest(id: "1", firstname: "Jacob", lastname: "Lilja", email: "@"),
+                Guest(id: "1", firstname: "Jacob", lastname: "Lilja", email: "@")
+            ]
         case .thankYouNotSent:
             title = "Status: Thank-You Not Sent"
-            mockedGuestList = [Guest(firstname: "Mattias", lastname: "Tilert Thunqvist"),
-                            Guest(firstname: "Eric", lastname: "Johansson"),
-                            Guest(firstname: "Amy", lastname: "Addams"),
-                            Guest(firstname: "Linnea", lastname: "Oxtrop"),
-                            Guest(firstname: "Jacob", lastname: "Lilja")]
+            mockedGuestList = [
+                            Guest(id: "1", firstname: "Jacob", lastname: "Lilja", email: "@"),
+                            Guest(id: "1", firstname: "Jacob", lastname: "Lilja", email: "@"),
+                            Guest(id: "1", firstname: "Jacob", lastname: "Lilja", email: "@"),
+                            Guest(id: "1", firstname: "Jacob", lastname: "Lilja", email: "@"),
+                            Guest(id: "1", firstname: "Jacob", lastname: "Lilja", email: "@")
+            ]
         }
     }
     
@@ -63,7 +67,7 @@ class RSVPDetailsViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: GuestTableViewCell.cellIdentifier, for: indexPath) as! GuestTableViewCell
         let guest = mockedGuestList[indexPath.row]
         
-        cell.setGuestName(to: guest.firstname + " " + guest.lastname)
+        cell.setGuestName(to: guest.firstname + " " + "MockedLastname")
         cell.setCompanyLabel(to: 0)
         cell.setImage(to: #imageLiteral(resourceName: "forward-arrow-lightgray"))
         return cell
