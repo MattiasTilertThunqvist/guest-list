@@ -51,13 +51,13 @@ class PageViewController: UIPageViewController {
         // TEST
         //
         
-//        NetworkManager.shared.getGuestList { (error) in
-//
-//        }
-        
-        NetworkManager.shared.addGuestToList(NetworkManager.shared.mockedGuest) { (error) in
-            
+        NetworkManager.shared.getGuestList { (error) in
+
         }
+        
+//        NetworkManager.shared.updateGuestList(with: NetworkManager.shared.mockedGuest) { (error) in
+//            
+//        }
     }
     
     private func setup() {

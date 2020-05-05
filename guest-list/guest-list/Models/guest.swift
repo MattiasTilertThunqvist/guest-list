@@ -85,61 +85,61 @@ struct Guest: Codable {
     enum Role: Int, Codable {
         case guest
         case toastmaster
-        case Bestman
-        case HonoraryBridesmaid
-        case Bridesmaid
-        case Flowergirl
+        case bestman
+        case honoraryBridesmaid
+        case bridesmaid
+        case flowergirl
         
         var description: String {
             switch self {
                 case .guest: return "Guest"
                 case .toastmaster: return "Toastmaster/Tostmadame"
-                case .Bestman: return "Bestman/Bestwoman"
-                case .HonoraryBridesmaid: return "Honorary Bridesmaid"
-                case .Bridesmaid: return "Bridesmaid"
-                case .Flowergirl: return "Flower girl/Flower boy"
+                case .bestman: return "Bestman/Bestwoman"
+                case .honoraryBridesmaid: return "Honorary Bridesmaid"
+                case .bridesmaid: return "Bridesmaid"
+                case .flowergirl: return "Flower girl/Flower boy"
             }
         }
     }
     
     enum Relation: Int, Codable {
-        case Family
-        case Relatives
-        case Friend
+        case family
+        case relatives
+        case friend
         
         var description: String {
             switch self {
-                case .Family: return "Family"
-                case .Relatives: return "Relatives"
-                case .Friend: return "Friend"
+                case .family: return "Family"
+                case .relatives: return "Relatives"
+                case .friend: return "Friend"
             }
         }
     }
     
     enum FamilyStatus: Int, Codable {
-        case Single
-        case Relationship
-        case Family
+        case single
+        case relationship
+        case family
         
         var description: String {
             switch self {
-                case .Single: return "Single"
-                case .Relationship: return "Relationship/Married"
-                case .Family: return "Family/Household"
+                case .single: return "Single"
+                case .relationship: return "Relationship/Married"
+                case .family: return "Family/Household"
             }
         }
     }
     
     enum Gender: Int, Codable {
-        case Female
-        case Male
-        case Other
+        case female
+        case male
+        case other
         
         var description: String {
             switch self {
-                case .Female: return "Female"
-                case .Male: return "Male"
-                case .Other: return "Other"
+                case .female: return "Female"
+                case .male: return "Male"
+                case .other: return "Other"
             }
         }
     }

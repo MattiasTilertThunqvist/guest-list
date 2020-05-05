@@ -25,9 +25,9 @@ class NetworkManager {
     
     // MARK: Networking
     
-    let mockedGuest = Guest("2", "Erik2", "Eriksson", "mattias@tilert.com", "Bake 23", "12345", "snuva", "studid", "car", "hejsam", .noResponse, .guestList, .guest, .Family, .Family, .Female, false, false)
+    let mockedGuest = Guest("2", "Erik2", "Eriksson", "mattias@tilert.com", "Bake 23", "12345", "snuva", "studid", "car", "hejsam", .noResponse, .guestList, .guest, .family, .family, .female, false, false)
     let mockedGuestList = [
-        Guest("1", "Erik1", "Eriksson", "mattias@tilert.com", "Bake 23", "12345", "snuva", "studid", "car", "hejsam", .noResponse, .guestList, .guest, .Family, .Family, .Female, false, false)
+        Guest("1", "Erik1", "Eriksson", "mattias@tilert.com", "Bake 23", "12345", "snuva", "studid", "car", "hejsam", .noResponse, .guestList, .guest, .family, .family, .female, false, false)
     ]
     
     func getGuestList(handler: @escaping (Error?) -> ()) {
@@ -36,13 +36,13 @@ class NetworkManager {
                 print("Error querying guest list from Firestore: \(error)")
                 handler(error)
             }
-            
+
             let result = Result {
                 try querySnapshot?.documents.compactMap {
                     try $0.data(as: Guest.self)
                 }
             }
-            
+
             switch result {
             case .success(let guests):
                 if let guests = guests {
@@ -56,11 +56,33 @@ class NetworkManager {
                 print("Error decoding guest: \(error)")
                 handler(error)
             }
-            
         }
+        
+        
+        
+        // Test case
+//            eventCollection.document(mockedEventId).collection("guestList").getDocuments { (querySnapshot, error) in
+//                if let error = error {
+//                    print("Error querying guest list from Firestore: \(error)")
+//                    handler(error)
+//                }
+//
+//                guard let documents = querySnapshot?.documents else { return }
+//
+//                do {
+//                    var guests = [Guest]()
+//                    for document in documents {
+//                        guests.append(try FirebaseDecoder().decode(Guest.self, from: document))
+//                    }
+//                    handler(nil)
+//                } catch let error {
+//                    print("Error decoding guest: \(error)")
+//                    handler(error)
+//                }
+//            }
     }
     
-    func addGuestToList(_ guest: Guest, handler: @escaping (Error?) -> ()) {
+    func updateGuestList(with guest: Guest, handler: @escaping (Error?) -> ()) {
         guard let data = try? FirebaseEncoder().encode(guest) as? [String:Any] else {
             print("Error encoding guest")
             handler(NetworkError.failedEncoding)
@@ -69,9 +91,10 @@ class NetworkManager {
         
         eventCollection.document(mockedEventId).collection("guestList").document(guest.id).setData(data, merge: true) { (error) in
             if let error = error {
-                print("Error setting guest to Firestore: \(error)")
+                print("Error adding guest to Firestore: \(error)")
                 handler(error)
             } else {
+                // TODO: Add to singelton
                 handler(nil)
             }
         }
