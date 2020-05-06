@@ -78,11 +78,6 @@ class NetworkManager {
             }
         }
     }
-    
-    // Removing guests also has to be done in linked guests
-//    func removeGuest(with id: String) {
-//
-//    }
 }
 
 

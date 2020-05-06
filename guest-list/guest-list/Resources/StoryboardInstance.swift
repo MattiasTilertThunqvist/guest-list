@@ -34,4 +34,8 @@ final class StoryboardInstance {
     static func addGuestsViewController() -> AddGuestsViewController {
         return guestListStoryboard.instantiateViewController(withIdentifier: "AddGuestsViewController") as! AddGuestsViewController
     }
+    
+    static func pickerViewControlelr() -> PickerViewController {
+        return guestListStoryboard.instantiateViewController(withIdentifier: "PickerViewController") as! PickerViewController
+    }
 }

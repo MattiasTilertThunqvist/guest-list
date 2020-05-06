@@ -9,7 +9,33 @@
 import UIKit
 
 class GuestStatusViewController: UIViewController {
-
+    
+    // MARK: IBActions
+    
+    @IBAction private func didTapNoResponseButton(_ sender: BoxButton) {
+        showPickerViewController()
+    }
+    
+    @IBAction private func didTapListButton(_ sender: BoxButton) {
+        showPickerViewController()
+    }
+    
+    @IBAction private func didTapRoleButton(_ sender: BoxButton) {
+        showPickerViewController()
+    }
+    
+    @IBAction private func didTapRelationButton(_ sender: BoxButton) {
+        showPickerViewController()
+    }
+    
+    @IBAction private func didTapFamilyStatusButton(_ sender: BoxButton) {
+        showPickerViewController()
+    }
+    
+    @IBAction private func didTapGenderButton(_ sender: BoxButton) {
+        showPickerViewController()
+    }
+    
     // MARK: Lifecycle
     
     override func viewDidLoad() {
@@ -26,5 +52,10 @@ class GuestStatusViewController: UIViewController {
                                 height: UIView.layoutFittingCompressedSize.height)
         preferredContentSize = view.systemLayoutSizeFitting(targetSize)
     }
-
+    
+    private func showPickerViewController() {
+        let viewController = StoryboardInstance.pickerViewControlelr()
+        viewController.modalPresentationStyle = .overFullScreen
+        present(viewController, animated: true, completion: nil)
+    }
 }
