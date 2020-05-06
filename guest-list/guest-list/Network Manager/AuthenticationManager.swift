@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import FirebaseAuth
 
 class AuthenticationManager {
     
@@ -20,5 +21,7 @@ class AuthenticationManager {
     
     // MARK: Networking
     
-    
+    func isAuthenticated() -> Bool {
+        return Auth.auth().currentUser != nil
+    }
 }

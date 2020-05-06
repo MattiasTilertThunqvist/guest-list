@@ -44,12 +44,25 @@ class PageViewController: UIPageViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setup()
+        checkUserAuthentication()
         setupPages()
     }
     
-    private func setup() {
-
+    func checkUserAuthentication() {
+        if AuthenticationManager.shared.isAuthenticated() {
+            // Set up
+            // Get data
+        } else {
+            // Start onboarding
+            let viewController = StoryboardInstance.onboardingNavigationController()
+            viewController.modalPresentationStyle = .fullScreen
+            present(viewController, animated: false) {
+                // User is logged in
+                // TOOD: Change database access to authorized only
+                // Set up
+                // Get data
+            }
+        }
     }
     
     private func setupPages() {
