@@ -196,6 +196,9 @@
                                                 <rect key="frame" x="33" y="24" width="348" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress" returnKeyType="next" enablesReturnKeyAutomatically="YES" textContentType="email"/>
+                                                <connections>
+                                                    <action selector="emailPrimaryActionTriggered:" destination="l8D-oi-k57" eventType="primaryActionTriggered" id="CcT-hU-VGD"/>
+                                                </connections>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ECY-34-nAq" customClass="LargeStickyButton" customModule="guest_list" customModuleProvider="target">
                                                 <rect key="frame" x="137.5" y="140" width="139" height="30"/>
@@ -208,6 +211,9 @@
                                                 <rect key="frame" x="33" y="82" width="348" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" textContentType="password"/>
+                                                <connections>
+                                                    <action selector="passwordPrimaryActionTriggered:" destination="l8D-oi-k57" eventType="primaryActionTriggered" id="lly-g7-06v"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>

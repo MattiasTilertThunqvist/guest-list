@@ -15,9 +15,17 @@ class LoginViewController: UIViewController {
     
     // MARK: IBOutlet
     
-    @IBOutlet weak var emailTextField: LargeTextField!
-    @IBOutlet weak var passwordTextField: LargeTextField!
-    @IBOutlet weak var loginWithEmailButton: LargeStickyButton!
+    @IBOutlet private weak var emailTextField: LargeTextField!
+    @IBOutlet private weak var passwordTextField: LargeTextField!
+    @IBOutlet private weak var loginWithEmailButton: LargeStickyButton!
+    
+    @IBAction private func emailPrimaryActionTriggered(_ sender: LargeTextField) {
+        passwordTextField.becomeFirstResponder()
+    }
+    
+    @IBAction private func passwordPrimaryActionTriggered(_ sender: LargeTextField) {
+        passwordTextField.resignFirstResponder()
+    }
     
     // MARK: Lifecycle
     
@@ -36,7 +44,7 @@ class LoginViewController: UIViewController {
     
     // MARK: View
     
-    func setUp() {
+    private func setUp() {
         navigationItem.title = "LOG IN"
         loginWithEmailButton.colorScheme = .email
         
@@ -47,7 +55,7 @@ class LoginViewController: UIViewController {
         loginWithEmailButton.transform = transform
     }
     
-    func animateItemsIntoView() {
+    private func animateItemsIntoView() {
         var late = Double(0.1)
         let duration = Double(0.2)
         
@@ -70,15 +78,25 @@ class LoginViewController: UIViewController {
     
     // MARK: IBAction
     
-    @IBAction func loginWithEmailButtonWasPressed(_ sender: LargeStickyButton) {
+    @IBAction private func loginWithEmailButtonWasPressed(_ sender: LargeStickyButton) {
         guard let email = emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines), !email.isEmpty else {
-            // TODO: Manage incorrect textfield input
+            emailTextField.inputIsValid = false
             return
         }
         
         guard let password = passwordTextField.text, !password.isEmpty else {
-            // TODO: Manage incorrect textfield input
+            passwordTextField.inputIsValid = false
             return
+        }
+        
+        NetworkManager.shared.signIn(withEmail: email, password: password) { (error) in
+            if let error = error {
+                let alert = UIAlertController(title: "Could not sign in", message: error.localizedDescription, preferredStyle: .alert)
+                self.present(alert, animated: true, completion: nil)
+                return
+            }
+            
+            self.dismiss(animated: true, completion: nil)
         }
     }
 }

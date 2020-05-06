@@ -29,7 +29,7 @@
                         <barButtonItem key="rightBarButtonItem" image="logout" id="WCh-Om-SGq">
                             <color key="tintColor" name="weddingGray"/>
                             <connections>
-                                <action selector="didTapOnboardingButton:" destination="IdH-xG-xSw" id="eob-Dm-7d8"/>
+                                <action selector="didTapSignOutButton:" destination="IdH-xG-xSw" id="tos-t7-acF"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

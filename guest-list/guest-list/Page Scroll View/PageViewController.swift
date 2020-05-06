@@ -33,7 +33,7 @@ class PageViewController: UIPageViewController {
         setViewControllers([orderedViewControllers[index]], direction: direction, animated: true, completion: nil)
     }
     
-    @IBAction private func didTapOnboardingButton(_ sender: UIBarButtonItem) {
+    @IBAction private func didTapSignOutButton(_ sender: UIBarButtonItem) {
         NetworkManager.shared.signOut { (_) in
             let viewController = StoryboardInstance.onboardingNavigationController()
             viewController.modalPresentationStyle = .fullScreen

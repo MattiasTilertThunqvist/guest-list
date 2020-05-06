@@ -43,4 +43,8 @@ class GuestList {
     func getGuests() -> [Guest] {
         return guests
     }
+    
+    func removeAllGuests() {
+        guests.removeAll()
+    }
 }

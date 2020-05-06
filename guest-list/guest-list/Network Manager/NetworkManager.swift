@@ -106,9 +106,22 @@ extension NetworkManager {
         }
     }
     
+    func signIn(withEmail email: String, password: String, handler: @escaping (Error?) -> ()) {
+        Auth.auth().signIn(withEmail: email, password: password) { (authResult, error) in
+            if let error = error {
+                print("Error creating user: \(error)")
+                handler(error)
+                return
+            }
+            
+            handler(nil)
+        }
+    }
+    
     func signOut(handler: @escaping (Error?) -> ()) {
         do {
             try Auth.auth().signOut()
+            GuestList.shared.removeAllGuests()
             handler(nil)
         } catch (let error) {
             print("Error signing out: \(error)")
