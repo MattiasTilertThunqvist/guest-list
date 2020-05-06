@@ -89,6 +89,7 @@ struct Guest: Codable {
         case honoraryBridesmaid
         case bridesmaid
         case flowergirl
+        case weddingCouple
         
         var description: String {
             switch self {
@@ -97,7 +98,8 @@ struct Guest: Codable {
                 case .bestman: return "Bestman/Bestwoman"
                 case .honoraryBridesmaid: return "Honorary Bridesmaid"
                 case .bridesmaid: return "Bridesmaid"
-                case .flowergirl: return "Flower girl/Flower boy"
+                case .flowergirl: return "Flower Girl/Flower Boy"
+            case .weddingCouple: return "Wedding Couple"
             }
         }
     }

@@ -7,19 +7,40 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class SignupWithEmailViewController: UIViewController {
-    
-    // MARK: Properties
-    
+        
     // MARK: IBOutlet
     
-    @IBOutlet weak var emailTextField: LargeTextField!
-    @IBOutlet weak var passwordTextField: LargeTextField!
-    @IBOutlet weak var signUpButton: LargeStickyButton!
-    @IBOutlet weak var firstnameTextField: LargeTextField!
-    @IBOutlet weak var lastnameTextField: LargeTextField!
-    @IBOutlet var textfieldsCollection: [LargeTextField]!
+    @IBOutlet weak private var firstnameTextField: LargeTextField!
+    @IBOutlet weak private var lastnameTextField: LargeTextField!
+    @IBOutlet weak private var emailTextField: LargeTextField!
+    @IBOutlet weak private var passwordTextField: LargeTextField!
+    @IBOutlet weak private var signUpButton: LargeStickyButton!
+    @IBOutlet private var textfieldsCollection: [LargeTextField]!
+    
+    // MARK: IBAction
+    
+    @IBAction private func firstnamePrimaryActionTriggered(_ sender: LargeTextField) {
+        lastnameTextField.becomeFirstResponder()
+    }
+    
+    @IBAction private func lastnamePrimaryActionTriggered(_ sender: LargeTextField) {
+        emailTextField.becomeFirstResponder()
+    }
+    
+    @IBAction private func emailPrimaryActionTriggered(_ sender: LargeTextField) {
+        passwordTextField.becomeFirstResponder()
+    }
+    
+    @IBAction private func passwordPrimaryActionTriggered(_ sender: LargeTextField) {
+        passwordTextField.resignFirstResponder()
+    }
+    
+    @IBAction private func passwordEditingDidEnd(_ sender: LargeTextField) {
+        let _ = validPassword()
+    }
     
     // MARK: Lifecycle
     
@@ -36,7 +57,7 @@ class SignupWithEmailViewController: UIViewController {
         self.firstnameTextField.becomeFirstResponder()
     }
 
-    func setUp() {        
+    private func setUp() {
         navigationItem.title = "SIGN UP"
         
         signUpButton.colorScheme = .email
@@ -50,7 +71,7 @@ class SignupWithEmailViewController: UIViewController {
         }
     }
     
-    func animateItemsIntoView() {
+    private func animateItemsIntoView() {
         var late = Double(0.1)
         let duration = Double(0.2)
         
@@ -66,29 +87,60 @@ class SignupWithEmailViewController: UIViewController {
         })
     }
     
-    
     // MARK: IBAction
     
-    @IBAction func signUpButtonWasPressed(_ sender: LargeStickyButton) {
+    @IBAction private func signUpButtonWasPressed(_ sender: LargeStickyButton) {
+        resignFirstResponder()
+        
         guard let firstname = firstnameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines), !firstname.isEmpty else {
-            // TODO: Handle empty textfield
+            firstnameTextField.inputIsValid = false
             return
         }
         
-        guard let lastname = lastnameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines), !lastname.isEmpty else {
-            // TODO: Handle empty textfield
-            return
-        }
-
+        var lastname = lastnameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
+        lastname = lastname == "" ? nil : lastname
+        
         guard let email = emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines), !email.isEmpty else {
-            // TODO: Handle empty textfield
+            emailTextField.inputIsValid = false
             return
         }
         
-        guard let password = passwordTextField.text, !password.isEmpty, password.count >= 6 else {
-            // TODO: Handle empty textfield
-            // TODO: Password need to be at least 6 cahracters
-            return
+        guard let password = validPassword() else { return }
+        createUser(with: email, password, firstname, lastname)    }
+    
+    // MARK: Helpers
+    
+    private func validPassword() -> String? {
+        let minimumCharacters = 6
+        
+        if let passwordInput = passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines),
+                passwordInput.count >= minimumCharacters {
+            passwordTextField.inputIsValid = true
+            passwordTextField.placeholder = "Password*"
+            return passwordInput
+        } else {
+            passwordTextField.inputIsValid = false
+            passwordTextField.placeholder = "Minimum 6 characters required"
+            return nil
+        }
+    }
+    
+    private func createUser(with email : String, _ password: String, _ firstname: String, _ lastname: String?) {
+        NetworkManager.shared.createUser(withEmail: email, password: password) { (user, error) in
+            if let error = error {
+                let alert = UIAlertController(title: "Could not create account", message: error.localizedDescription, preferredStyle: .alert)
+                self.present(alert, animated: true, completion: nil)
+                return
+            }
+                
+            self.addNewUserToGuestList(user!.uid, firstname, lastname, email)
+        }
+    }
+    
+    private func addNewUserToGuestList(_ uid: String, _ firstname: String, _ lastname: String?, _ email: String) {
+        let guest = Guest(uid, firstname, lastname, email, nil, nil, nil, nil, nil, nil, .attending, .guestList, .weddingCouple, .family, .relationship, .other, false, false)
+        NetworkManager.shared.updateGuestList(with: guest) { (_) in
+            self.dismiss(animated: true, completion: nil)
         }
     }
 }

@@ -9,6 +9,7 @@
 import Foundation
 import FirebaseFirestore
 import FirebaseFirestoreSwift
+import FirebaseAuth
 import CodableFirebase
 
 class NetworkManager {
@@ -16,7 +17,7 @@ class NetworkManager {
     // MARK: Properties
     
     static let shared = NetworkManager()
-    private let mockedEventId = "78fbkFIbkjFoCPzEwj73"
+    private lazy var uid = Auth.auth().currentUser!.uid
     private let eventCollection = Firestore.firestore().collection("event")
     
     // MARK: Init
@@ -31,7 +32,7 @@ class NetworkManager {
     ]
     
     func getGuestList(handler: @escaping (Error?) -> ()) {
-        eventCollection.document(mockedEventId).collection("guestList").getDocuments { (querySnapshot, error) in
+        eventCollection.document(uid).collection("guestList").getDocuments { (querySnapshot, error) in
             if let error = error {
                 print("Error querying guest list from Firestore: \(error)")
                 handler(error)
@@ -57,27 +58,6 @@ class NetworkManager {
                 handler(error)
             }
         }
-        
-        // Test case
-//            eventCollection.document(mockedEventId).collection("guestList").getDocuments { (querySnapshot, error) in
-//                if let error = error {
-//                    print("Error querying guest list from Firestore: \(error)")
-//                    handler(error)
-//                }
-//
-//                guard let documents = querySnapshot?.documents else { return }
-//
-//                do {
-//                    var guests = [Guest]()
-//                    for document in documents {
-//                        guests.append(try FirebaseDecoder().decode(Guest.self, from: document))
-//                    }
-//                    handler(nil)
-//                } catch let error {
-//                    print("Error decoding guest: \(error)")
-//                    handler(error)
-//                }
-//            }
     }
     
     /// Add new guest and update existing
@@ -88,7 +68,7 @@ class NetworkManager {
             return
         }
         
-        eventCollection.document(mockedEventId).collection("guestList").document(guest.id).setData(data, merge: true) { (error) in
+        eventCollection.document(uid).collection("guestList").document(guest.id).setData(data, merge: true) { (error) in
             if let error = error {
                 print("Error adding guest to Firestore: \(error)")
                 handler(error)
@@ -103,4 +83,36 @@ class NetworkManager {
 //    func removeGuest(with id: String) {
 //
 //    }
+}
+
+
+// MARK: Auth
+
+extension NetworkManager {
+    func isAuthenticated() -> Bool {
+        return Auth.auth().currentUser != nil
+    }
+    
+    func createUser(withEmail email: String, password: String, handler: @escaping (User?, Error?) -> ()) {
+        Auth.auth().createUser(withEmail: email, password: password) { (authResult, error) in
+            if let error = error {
+                print("Error creating user: \(error)")
+                handler(nil, error)
+                return
+            }
+        
+            let user = authResult?.user
+            handler(user, nil)
+        }
+    }
+    
+    func signOut(handler: @escaping (Error?) -> ()) {
+        do {
+            try Auth.auth().signOut()
+            handler(nil)
+        } catch (let error) {
+            print("Error signing out: \(error)")
+            handler(error)
+        }
+    }
 }

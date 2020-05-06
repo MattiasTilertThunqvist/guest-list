@@ -83,17 +83,27 @@
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Lastname" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="T9U-1w-p9W" customClass="LargeTextField" customModule="guest_list" customModuleProvider="target">
                                                 <rect key="frame" x="33" y="82" width="348" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" textContentType="name"/>
+                                                <textInputTraits key="textInputTraits" textContentType="name"/>
+                                                <connections>
+                                                    <action selector="lastnamePrimaryActionTriggered:" destination="Tka-iO-BpD" eventType="primaryActionTriggered" id="GUY-Ob-4FQ"/>
+                                                </connections>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-mail" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Hhz-T0-RWH" customClass="LargeTextField" customModule="guest_list" customModuleProvider="target">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-mail*" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Hhz-T0-RWH" customClass="LargeTextField" customModule="guest_list" customModuleProvider="target">
                                                 <rect key="frame" x="33" y="140" width="348" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress" enablesReturnKeyAutomatically="YES" textContentType="email"/>
+                                                <connections>
+                                                    <action selector="emailPrimaryActionTriggered:" destination="Tka-iO-BpD" eventType="primaryActionTriggered" id="Jwe-zj-9sZ"/>
+                                                </connections>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="yPm-C5-qfm" customClass="LargeTextField" customModule="guest_list" customModuleProvider="target">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password*" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="yPm-C5-qfm" customClass="LargeTextField" customModule="guest_list" customModuleProvider="target">
                                                 <rect key="frame" x="33" y="198" width="348" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES" textContentType="password"/>
+                                                <connections>
+                                                    <action selector="passwordEditingDidEnd:" destination="Tka-iO-BpD" eventType="editingDidEnd" id="lGN-74-GrB"/>
+                                                    <action selector="passwordPrimaryActionTriggered:" destination="Tka-iO-BpD" eventType="primaryActionTriggered" id="aLL-fI-oyn"/>
+                                                </connections>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z4u-R2-FbZ" customClass="LargeStickyButton" customModule="guest_list" customModuleProvider="target">
                                                 <rect key="frame" x="33" y="256" width="348" height="30"/>
@@ -102,10 +112,13 @@
                                                     <action selector="signUpButtonWasPressed:" destination="Tka-iO-BpD" eventType="touchUpInside" id="3v9-Yx-rj4"/>
                                                 </connections>
                                             </button>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Firstname" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="2D7-RA-Brc" customClass="LargeTextField" customModule="guest_list" customModuleProvider="target">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Firstname*" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="2D7-RA-Brc" customClass="LargeTextField" customModule="guest_list" customModuleProvider="target">
                                                 <rect key="frame" x="33" y="24" width="348" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" textContentType="name"/>
+                                                <connections>
+                                                    <action selector="firstnamePrimaryActionTriggered:" destination="Tka-iO-BpD" eventType="primaryActionTriggered" id="dSl-bC-9hS"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>

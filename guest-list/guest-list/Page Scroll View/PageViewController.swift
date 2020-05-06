@@ -10,7 +10,6 @@ import UIKit
 import FirebaseFirestore
 import FirebaseFirestoreSwift
 
-
 class PageViewController: UIPageViewController {
     
     // MARK: Properties
@@ -28,16 +27,18 @@ class PageViewController: UIPageViewController {
     
     // MARK: IBAction
     
-    @IBAction func valueChangedSegmentedControl(_ sender: UISegmentedControl) {
+    @IBAction private func valueChangedSegmentedControl(_ sender: UISegmentedControl) {
         let index = sender.selectedSegmentIndex
         let direction: UIPageViewController.NavigationDirection = index == 0 ? .reverse : .forward // Modify if nr of viewControllers increase
         setViewControllers([orderedViewControllers[index]], direction: direction, animated: true, completion: nil)
     }
     
-    @IBAction func didTapOnboardingButton(_ sender: UIBarButtonItem) {
-        let viewController = StoryboardInstance.onboardingNavigationController()
-        viewController.modalPresentationStyle = .fullScreen
-        present(viewController, animated: true, completion: nil)
+    @IBAction private func didTapOnboardingButton(_ sender: UIBarButtonItem) {
+        NetworkManager.shared.signOut { (_) in
+            let viewController = StoryboardInstance.onboardingNavigationController()
+            viewController.modalPresentationStyle = .fullScreen
+            self.present(viewController, animated: true, completion: nil)
+        }
     }
     
     // MARK: Lifecycle
@@ -49,7 +50,7 @@ class PageViewController: UIPageViewController {
     }
     
     func checkUserAuthentication() {
-        if AuthenticationManager.shared.isAuthenticated() {
+        if NetworkManager.shared.isAuthenticated() {
             // Set up
             // Get data
         } else {

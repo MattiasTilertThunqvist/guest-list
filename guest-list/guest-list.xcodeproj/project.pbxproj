@@ -46,7 +46,6 @@
 		8ADCBA8F24543B7A001DE10D /* GuestInfoTextFieldsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADCBA8E24543B7A001DE10D /* GuestInfoTextFieldsViewController.swift */; };
 		8ADCBA9124545B84001DE10D /* MoreGuestInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADCBA9024545B84001DE10D /* MoreGuestInfoViewController.swift */; };
 		8ADD4F4C2455D036006EF29F /* CALayer + Wedding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADD4F4B2455D036006EF29F /* CALayer + Wedding.swift */; };
-		8AF697E024618868009DB7B9 /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF697DF24618868009DB7B9 /* AuthenticationManager.swift */; };
 		8AF697E42461BB64009DB7B9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8AF697E32461BB64009DB7B9 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -92,7 +91,6 @@
 		8ADCBA8E24543B7A001DE10D /* GuestInfoTextFieldsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestInfoTextFieldsViewController.swift; sourceTree = "<group>"; };
 		8ADCBA9024545B84001DE10D /* MoreGuestInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreGuestInfoViewController.swift; sourceTree = "<group>"; };
 		8ADD4F4B2455D036006EF29F /* CALayer + Wedding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer + Wedding.swift"; sourceTree = "<group>"; };
-		8AF697DF24618868009DB7B9 /* AuthenticationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationManager.swift; sourceTree = "<group>"; };
 		8AF697E32461BB64009DB7B9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EC4C66B88AEC9EDDDF361820 /* Pods-guest-list.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-guest-list.release.xcconfig"; path = "Pods/Target Support Files/Pods-guest-list/Pods-guest-list.release.xcconfig"; sourceTree = "<group>"; };
 		F0CA2C6D4DE83932D24994EA /* Pods-guest-list.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-guest-list.debug.xcconfig"; path = "Pods/Target Support Files/Pods-guest-list/Pods-guest-list.debug.xcconfig"; sourceTree = "<group>"; };
@@ -228,7 +226,6 @@
 		8A33DA83244DDE180009D9D0 /* Network Manager */ = {
 			isa = PBXGroup;
 			children = (
-				8AF697DF24618868009DB7B9 /* AuthenticationManager.swift */,
 				8A33DA84244DDE360009D9D0 /* NetworkManager.swift */,
 				8A33DA8C244DE54E0009D9D0 /* NetworkError.swift */,
 			);
@@ -467,7 +464,6 @@
 				8ADCBA9124545B84001DE10D /* MoreGuestInfoViewController.swift in Sources */,
 				8A33DA89244DDF2D0009D9D0 /* UIColor + Wedding.swift in Sources */,
 				8A4FA8482454AC2400E0ABC4 /* GuestStatusViewController.swift in Sources */,
-				8AF697E024618868009DB7B9 /* AuthenticationManager.swift in Sources */,
 				8A75356E2452F42000777F3B /* MediumTextLabel.swift in Sources */,
 				8A252905244F120500ED903D /* RVSPSummaryViewController.swift in Sources */,
 			);

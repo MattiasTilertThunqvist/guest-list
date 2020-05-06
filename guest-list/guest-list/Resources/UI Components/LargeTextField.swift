@@ -26,6 +26,7 @@ class LargeTextField: UITextField {
         return label
     }()
     
+    /// When input is not valid the background color is set to red. If it's valid, background color is set to default. 
     var inputIsValid: Bool = true {
         willSet {
             if newValue {
@@ -56,6 +57,12 @@ class LargeTextField: UITextField {
     override open func layoutSubviews() {
         super.layoutSubviews()
         insertSubview(descriptionLabel, at: 0)
+    }
+    
+    override var placeholder: String? {
+        willSet {
+            descriptionLabel.text = newValue
+        }
     }
     
     // MARK: View

@@ -45,16 +45,11 @@ class GuestInfoTextFieldsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setup()
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         calculatePreferredSize()
-    }
-    
-    private func setup() {
-
     }
     
     private func calculatePreferredSize() {
