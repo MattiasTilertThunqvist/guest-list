@@ -46,7 +46,7 @@ class NetworkManager {
             switch result {
             case .success(let guests):
                 if let guests = guests {
-                    // Add list to singelton
+                    GuestList.shared.setGuests(to: guests)
                     handler(nil)
                 } else {
                     print("Error: Guest documents does not exist.")
@@ -57,8 +57,6 @@ class NetworkManager {
                 handler(error)
             }
         }
-        
-        
         
         // Test case
 //            eventCollection.document(mockedEventId).collection("guestList").getDocuments { (querySnapshot, error) in
@@ -82,6 +80,7 @@ class NetworkManager {
 //            }
     }
     
+    /// Add new guest and update existing
     func updateGuestList(with guest: Guest, handler: @escaping (Error?) -> ()) {
         guard let data = try? FirebaseEncoder().encode(guest) as? [String:Any] else {
             print("Error encoding guest")
@@ -94,9 +93,14 @@ class NetworkManager {
                 print("Error adding guest to Firestore: \(error)")
                 handler(error)
             } else {
-                // TODO: Add to singelton
+                GuestList.shared.setGuest(to: guest)
                 handler(nil)
             }
         }
     }
+    
+    // Removing guests also has to be done in linked guests
+//    func removeGuest(with id: String) {
+//
+//    }
 }

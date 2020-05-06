@@ -28,6 +28,7 @@
 		8A4FA8482454AC2400E0ABC4 /* GuestStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4FA8472454AC2400E0ABC4 /* GuestStatusViewController.swift */; };
 		8A4FA84A2454AFF100E0ABC4 /* BoxButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4FA8492454AFF100E0ABC4 /* BoxButton.swift */; };
 		8A504D502456CE03007D4C14 /* guest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A504D4F2456CE03007D4C14 /* guest.swift */; };
+		8A553D512462A8ED00261BE1 /* GuestList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A553D502462A8ED00261BE1 /* GuestList.swift */; };
 		8A55BEB62453355100672E63 /* AddGuestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A55BEB42453355100672E63 /* AddGuestsViewController.swift */; };
 		8A5DD5682455C4BF00941F6E /* ExtraLargeTextLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5DD5672455C4BF00941F6E /* ExtraLargeTextLabel.swift */; };
 		8A75356B2452D8FD00777F3B /* GuestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7535692452D8FD00777F3B /* GuestTableViewCell.swift */; };
@@ -73,6 +74,7 @@
 		8A4FA8472454AC2400E0ABC4 /* GuestStatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestStatusViewController.swift; sourceTree = "<group>"; };
 		8A4FA8492454AFF100E0ABC4 /* BoxButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxButton.swift; sourceTree = "<group>"; };
 		8A504D4F2456CE03007D4C14 /* guest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = guest.swift; sourceTree = "<group>"; };
+		8A553D502462A8ED00261BE1 /* GuestList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestList.swift; sourceTree = "<group>"; };
 		8A55BEB42453355100672E63 /* AddGuestsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGuestsViewController.swift; sourceTree = "<group>"; };
 		8A5DD5672455C4BF00941F6E /* ExtraLargeTextLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtraLargeTextLabel.swift; sourceTree = "<group>"; };
 		8A7535692452D8FD00777F3B /* GuestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestTableViewCell.swift; sourceTree = "<group>"; };
@@ -261,6 +263,7 @@
 			isa = PBXGroup;
 			children = (
 				8A504D4F2456CE03007D4C14 /* guest.swift */,
+				8A553D502462A8ED00261BE1 /* GuestList.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -442,6 +445,7 @@
 				8A33DA8D244DE54E0009D9D0 /* NetworkError.swift in Sources */,
 				8ABFDA3A2457587F00B9E333 /* RSVPDetailsViewController.swift in Sources */,
 				8A4FA8462454A9C100E0ABC4 /* LargeTextLabel.swift in Sources */,
+				8A553D512462A8ED00261BE1 /* GuestList.swift in Sources */,
 				8ADCBA8D24542A2E001DE10D /* LargeTextField.swift in Sources */,
 				8A4FA84A2454AFF100E0ABC4 /* BoxButton.swift in Sources */,
 				8ADCBA8F24543B7A001DE10D /* GuestInfoTextFieldsViewController.swift in Sources */,
