@@ -37,7 +37,9 @@ class PageViewController: UIPageViewController {
         NetworkManager.shared.signOut { (_) in
             let viewController = StoryboardInstance.onboardingNavigationController()
             viewController.modalPresentationStyle = .fullScreen
-            self.present(viewController, animated: true, completion: nil)
+            self.present(viewController, animated: true) {
+                self.loadGuestList()
+            }
         }
     }
     
@@ -46,23 +48,28 @@ class PageViewController: UIPageViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         checkUserAuthentication()
-        setupPages()
     }
     
     func checkUserAuthentication() {
         if NetworkManager.shared.isAuthenticated() {
-            // Set up
-            // Get data
+            loadGuestList()
         } else {
             // Start onboarding
             let viewController = StoryboardInstance.onboardingNavigationController()
             viewController.modalPresentationStyle = .fullScreen
             present(viewController, animated: false) {
-                // User is logged in
-                // TOOD: Change database access to authorized only
-                // Set up
-                // Get data
+                self.loadGuestList()
             }
+        }
+    }
+    
+    private func loadGuestList() {
+        NetworkManager.shared.getGuestList { (error) in
+            if let error = error {
+                fatalError("Couldn't load guest list from Firestore: \(error)")
+            }
+            
+            self.setupPages()
         }
     }
     
