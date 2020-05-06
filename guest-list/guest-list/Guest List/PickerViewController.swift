@@ -13,6 +13,7 @@ class PickerViewController: UIViewController {
     // MARK: Properties
     
     private let animationTimeInterval = 0.3
+    var pickerOption: PickerState = .RSVP
     
     // MARK: IBOutlet
     
@@ -40,13 +41,15 @@ class PickerViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         UIView.animate(withDuration: 0.3) {
-            self.backgroundDismissButton.alpha = 0.4
+            self.backgroundDismissButton.alpha = 0.5
         }
     }
     
     private func setup() {
         backgroundDismissButton.alpha = 0
         doneButton.titleLabel?.font = .weddingRegularFont(textSize: .medium)
+        
+        
     }
     
     private func animatedDismiss() {
@@ -58,9 +61,21 @@ class PickerViewController: UIViewController {
     }
 }
 
+// MARK: UIPickerViewDataSource, UIPickerViewDelegate
 
-/*
- 
-    Set up the options
- 
- */
+extension PickerViewController: UIPickerViewDataSource, UIPickerViewDelegate {
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        
+        
+        return 5
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return "Hej"
+    }
+}

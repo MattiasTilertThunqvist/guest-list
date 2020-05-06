@@ -47,7 +47,13 @@ class PageViewController: UIPageViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setup()
         checkUserAuthentication()
+    }
+    
+    private func setup() {
+        view.backgroundColor = .weddingWhite
+        navigationController?.navigationBar.isHidden = true
     }
     
     func checkUserAuthentication() {
@@ -76,6 +82,8 @@ class PageViewController: UIPageViewController {
     private func setupPages() {
         dataSource = self
         delegate = self
+        
+        navigationController?.navigationBar.isHidden = false
         
         if let firstViewController = orderedViewControllers.first {
             setViewControllers([firstViewController], direction: .forward, animated: true, completion: nil)
