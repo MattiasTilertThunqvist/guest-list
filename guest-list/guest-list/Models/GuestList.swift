@@ -44,7 +44,15 @@ class GuestList {
         return guests
     }
     
+    func getGuest(atIndex index: Int) -> Guest {
+        return guests[index]
+    }
+    
     func removeAllGuests() {
         guests.removeAll()
+    }
+    
+    func countGuests() -> Int {
+        return guests.count
     }
 }

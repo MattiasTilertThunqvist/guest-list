@@ -10,13 +10,6 @@ import UIKit
 
 class GuestListViewController: UITableViewController {
     
-    // MARK: Properties
-    
-    let mockedGuestList = NetworkManager.shared.mockedGuestList
-    
-    // MARK: IBOutlets
-    
-
     // MARK: Lifecycle
     
     override func viewDidLoad() {
@@ -48,7 +41,7 @@ class GuestListViewController: UITableViewController {
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(didTapTableViewHeader))
         header.addGestureRecognizer(tapGesture)
-        header.setTotalGuestsLabel(to: mockedGuestList.count)
+        header.setTotalGuestsLabel(to: GuestList.shared.countGuests())
         return header
     }
     
@@ -66,14 +59,14 @@ class GuestListViewController: UITableViewController {
     // MARK: Rows
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return mockedGuestList.count
+        return GuestList.shared.countGuests()
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: GuestTableViewCell.cellIdentifier, for: indexPath) as! GuestTableViewCell
-        let guest = mockedGuestList[indexPath.row]
-        
-        cell.setGuestName(to: guest.firstname + " " + "MockedLastname")
+        let guest = GuestList.shared.getGuest(atIndex: indexPath.row)
+        let lastname = guest.lastname == nil ? "" : " \(guest.lastname!)"
+        cell.setGuestName(to: guest.firstname + lastname)
         cell.setCompanyLabel(to: 0)
         return cell
     }
