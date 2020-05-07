@@ -18,6 +18,8 @@ class MoreGuestInfoViewController: UIViewController {
     @IBOutlet weak private var disabilitiesTextField: LargeTextField!
     @IBOutlet weak private var transportTextField: LargeTextField!
     @IBOutlet weak private var notesTextField: LargeTextField!
+    @IBOutlet private var invitationSentButton: UIButton!
+    @IBOutlet private var thankYouSentButton: UIButton!
     
     // MARK: IBActions
     
@@ -40,7 +42,15 @@ class MoreGuestInfoViewController: UIViewController {
     @IBAction private func notesPrimaryActionTriggered(_ sender: LargeTextField) {
         notesTextField.resignFirstResponder()
     }
-
+    
+    @IBAction private func didTapInvitationSentButton(_ sender: UIButton) {
+        
+    }
+    
+    @IBAction private func didTapThankYouSentButton(_ sender: UIButton) {
+        
+    }
+    
     // MARK: Lifecycle
 
     override func viewDidLoad() {
@@ -61,5 +71,35 @@ class MoreGuestInfoViewController: UIViewController {
         let targetSize = CGSize(width: view.bounds.width,
                                 height: UIView.layoutFittingCompressedSize.height)
         preferredContentSize = view.systemLayoutSizeFitting(targetSize)
+    }
+    
+    // MARK: Accessors
+    
+    typealias address = String?
+    typealias phoneNumber = String?
+    typealias allergies = String?
+    typealias disabilities = String?
+    typealias transport = String?
+    typealias notes = String?
+    func getGuestInfo() -> (address, phoneNumber, allergies, disabilities, transport, notes) {
+        var address = addressTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
+        address = address == "" ? nil : address
+        
+        var phoneNumber = phoneNumberTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
+        phoneNumber = phoneNumber == "" ? nil : phoneNumber
+        
+        var allergies = allergiesTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
+        allergies = allergies == "" ? nil : allergies
+        
+        var disabilities = disabilitiesTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
+        disabilities = disabilities == "" ? nil : disabilities
+        
+        var transport = transportTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
+        transport = transport == "" ? nil : transport
+        
+        var notes = notesTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
+        notes = notes == "" ? nil : notes
+        
+        return (address, phoneNumber, allergies, disabilities, transport, notes)
     }
 }

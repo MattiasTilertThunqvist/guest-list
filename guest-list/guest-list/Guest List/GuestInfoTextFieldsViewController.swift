@@ -58,10 +58,22 @@ class GuestInfoTextFieldsViewController: UIViewController {
         preferredContentSize = view.systemLayoutSizeFitting(targetSize)
     }
     
-//    typealias firstname = String
-//    typealias lastname = String
-//    typealias email = String
-//    func getGuestInfo() -> (firstname, lastname, email)? {
-//
-//    }
+    // MARK: Accessors
+    
+    typealias firstname = String
+    typealias lastname = String?
+    typealias email = String
+    func getGuestInfo() -> (firstname, lastname, email)? {
+        guard let firstname = firstnameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines), !firstname.isEmpty else {
+            return nil
+        }
+        
+        guard let email = emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines), !email.isEmpty else {
+            return nil
+        }
+        
+        var lastname = lastnameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
+        lastname = lastname == "" ? nil : lastname
+        return (firstname, lastname, email)
+    }
 }

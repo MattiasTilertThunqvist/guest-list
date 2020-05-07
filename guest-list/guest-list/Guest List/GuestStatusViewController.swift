@@ -12,12 +12,12 @@ class GuestStatusViewController: UIViewController {
     
     // MARK: Properties
     
-    private var rsvp: RSVP = .noResponse
-    private var list: List = .guestList
-    private var role: Role = .guest
-    private var relation: Relation = .family
-    private var familyStatus: FamilyStatus = .single
-    private var gender: Gender = .female
+    var rsvp: RSVP = .noResponse
+    var list: List = .guestList
+    var role: Role = .guest
+    var relation: Relation = .family
+    var familyStatus: FamilyStatus = .single
+    var gender: Gender = .female
     
     // MARK: IBOutlets
     
@@ -103,6 +103,12 @@ class GuestStatusViewController: UIViewController {
         }
         
         present(viewController, animated: true, completion: nil)
+    }
+    
+    // MARK: Accessors
+    
+    func getGuestInfo() -> (RSVP, List, Role, Relation, FamilyStatus, Gender) {
+        return (rsvp, list, role, relation, familyStatus, gender)
     }
 }
 

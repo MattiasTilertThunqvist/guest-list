@@ -23,6 +23,7 @@ class AddGuestsViewController: UIViewController {
     private var guestInfoTextFieldsViewController: GuestInfoTextFieldsViewController?
     private var guestStatusViewController: GuestStatusViewController?
     private var moreGuestInfoViewController: MoreGuestInfoViewController?
+    var guest: Guest?
     
     // MARK: IBOutlets
     
@@ -41,7 +42,7 @@ class AddGuestsViewController: UIViewController {
     }
     
     @IBAction private func didTapDoneButton(_ sender: UIButton) {
-        // TODO: Check that requiered fields are filled in 
+        addGuestToGuestList()
     }
     
     // MARK: Lifecycle
@@ -101,6 +102,14 @@ class AddGuestsViewController: UIViewController {
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    
+    private func addGuestToGuestList() {
+        guard let (firstname, lastname, email) = guestInfoTextFieldsViewController?.getGuestInfo() else { return }
+        let (rsvp, list, role, relation, familyStatus, gender) = guestStatusViewController!.getGuestInfo()
+        let (address, phoneNumber, allergies, disabilities, transport, notes) = moreGuestInfoViewController!.getGuestInfo()
+        
     }
 }
 

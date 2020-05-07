@@ -311,6 +311,9 @@
                                     <constraint firstAttribute="width" constant="50" id="eGi-jh-7nA"/>
                                 </constraints>
                                 <state key="normal" image="check-gray"/>
+                                <connections>
+                                    <action selector="didTapInvitationSentButton:" destination="1oR-El-zCJ" eventType="touchUpInside" id="jUt-RN-9dA"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thank You Sent" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uAM-Ki-qpm" customClass="MediumTextLabel" customModule="guest_list" customModuleProvider="target">
                                 <rect key="frame" x="16" y="547.5" width="316" height="21"/>
@@ -326,6 +329,9 @@
                                     <constraint firstAttribute="width" constant="50" id="tR3-4l-hWA"/>
                                 </constraints>
                                 <state key="normal" image="check-gray"/>
+                                <connections>
+                                    <action selector="didTapThankYouSentButton:" destination="1oR-El-zCJ" eventType="touchUpInside" id="hNT-zf-F9z"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bjm-Tt-Nwm">
                                 <rect key="frame" x="16" y="524" width="382" height="1"/>
@@ -398,8 +404,10 @@
                         <outlet property="addressTextField" destination="ulI-uz-0l0" id="ELo-lI-6Tj"/>
                         <outlet property="allergiesTextField" destination="pgk-ED-KlN" id="4Dr-hU-oOU"/>
                         <outlet property="disabilitiesTextField" destination="xbd-FS-vPx" id="3Fi-CC-D2F"/>
+                        <outlet property="invitationSentButton" destination="4a4-5W-uhe" id="YJN-3k-CdS"/>
                         <outlet property="notesTextField" destination="JUB-ef-F6k" id="amA-VV-afx"/>
                         <outlet property="phoneNumberTextField" destination="WPc-b7-0wL" id="pBM-UG-xzB"/>
+                        <outlet property="thankYouSentButton" destination="mXj-RA-6Bf" id="8Vc-f1-uwB"/>
                         <outlet property="transportTextField" destination="PSC-UV-YAQ" id="EJv-Ky-5vj"/>
                     </connections>
                 </viewController>

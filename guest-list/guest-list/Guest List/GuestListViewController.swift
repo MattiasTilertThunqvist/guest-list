@@ -14,12 +14,7 @@ class GuestListViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setup()
         setupTableView()
-    }
-    
-    private func setup() {
-        
     }
     
     private func setupTableView() {
