@@ -18,7 +18,7 @@ class GuestTableViewCell: UITableViewCell {
     
     @IBOutlet weak private var nameLabel: UILabel!
     @IBOutlet weak private var companyLabel: UILabel!
-    @IBOutlet private var contentImageView: UIImageView!
+    @IBOutlet private var checkboxImageView: UIImageView!
     
     // MARK: Init
     
@@ -36,7 +36,16 @@ class GuestTableViewCell: UITableViewCell {
         companyLabel.text = number == 0 ? nil : "(+\(number))"
     }
     
-    func setImage(to image: UIImage) {
-        contentImageView.image = image
+    func setCheckboxImage(toRsvp rsvp: RSVP) {
+        switch rsvp {
+        case .noResponse:
+            checkboxImageView.image = #imageLiteral(resourceName: "exclamation-mark")
+        case .attending:
+            checkboxImageView.image = #imageLiteral(resourceName: "check-green")
+        case .declined:
+            checkboxImageView.image = #imageLiteral(resourceName: "cross-red")
+        case .maybe:
+            checkboxImageView.image = #imageLiteral(resourceName: "question-mark")
+        }
     }
 }

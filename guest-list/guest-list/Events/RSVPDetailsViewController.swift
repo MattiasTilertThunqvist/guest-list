@@ -60,7 +60,7 @@ class RSVPDetailsViewController: UITableViewController {
         
         cell.setGuestName(to: guest.firstname + " " + "MockedLastname")
         cell.setCompanyLabel(to: 0)
-        cell.setImage(to: #imageLiteral(resourceName: "forward-arrow-lightgray"))
+        
         return cell
     }
     

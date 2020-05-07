@@ -129,13 +129,15 @@ extension NetworkManager {
 enum RSVP: Int, Codable, CaseIterable {
     case noResponse
     case attending
+    case maybe
     case declined
         
     var description: String {
         switch self {
-        case .noResponse: return "No Response"
-        case .attending: return "Attending"
-        case .declined: return "Declined"
+            case .noResponse: return "No Response"
+            case .attending: return "Attending"
+            case .maybe: return "Maybe"
+            case .declined: return "Declined"
         }
     }
 }

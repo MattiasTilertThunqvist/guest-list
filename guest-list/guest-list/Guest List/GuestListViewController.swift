@@ -65,6 +65,7 @@ class GuestListViewController: UITableViewController {
         let guest = GuestList.shared.getGuest(atIndex: indexPath.row)
         let lastname = guest.lastname == nil ? "" : " \(guest.lastname!)"
         cell.setGuestName(to: guest.firstname + lastname)
+        cell.setCheckboxImage(toRsvp: guest.rsvp)
         cell.setCompanyLabel(to: 0)
         return cell
     }

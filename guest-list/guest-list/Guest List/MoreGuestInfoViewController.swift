@@ -99,7 +99,7 @@ class MoreGuestInfoViewController: UIViewController {
     }
     
     private func setThankYouButtonStatus() {
-        let image: UIImage = invitationSent ? #imageLiteral(resourceName: "check-green") : #imageLiteral(resourceName: "check-gray")
+        let image: UIImage = thankYouSent ? #imageLiteral(resourceName: "check-green") : #imageLiteral(resourceName: "check-gray")
         thankYouSentButton.setImage(image, for: .normal)
     }
     

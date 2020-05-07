@@ -12,6 +12,9 @@ import UIKit
 
 extension UIColor {
     
+    // blue: #4672A0
+    // orange: #F5A961
+    
     public class var weddingWhite: UIColor {
         return #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
     }

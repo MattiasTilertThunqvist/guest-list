@@ -62,8 +62,8 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="checkboxImageView" destination="cjZ-BH-WDf" id="UJ9-0u-oMN"/>
                 <outlet property="companyLabel" destination="Kkw-eL-WVM" id="sVj-OR-pXC"/>
-                <outlet property="contentImageView" destination="cjZ-BH-WDf" id="UJ9-0u-oMN"/>
                 <outlet property="nameLabel" destination="48e-eC-qLq" id="8FU-Fl-VDt"/>
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="153.34821428571428"/>
