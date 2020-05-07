@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		1F4F7EF2E23E421E13D5C6F8 /* Pods_guest_list.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 575FC73F9547EB8B0E8C130F /* Pods_guest_list.framework */; };
 		8A252903244F118600ED903D /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A252902244F118600ED903D /* PageViewController.swift */; };
-		8A252905244F120500ED903D /* RVSPSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A252904244F120500ED903D /* RVSPSummaryViewController.swift */; };
+		8A252905244F120500ED903D /* RsvpSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A252904244F120500ED903D /* RsvpSummaryViewController.swift */; };
 		8A252909244F1DA800ED903D /* GuestList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A252908244F1DA800ED903D /* GuestList.storyboard */; };
 		8A25290B244F1DC900ED903D /* Summary.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A25290A244F1DC900ED903D /* Summary.storyboard */; };
 		8A32E9D52453412F001D585E /* WeddingSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A32E9D42453412F001D585E /* WeddingSegmentedControl.swift */; };
@@ -44,7 +44,7 @@
 		8ABFDA2C2456D9DF00B9E333 /* SignupWithEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABFDA2B2456D9DF00B9E333 /* SignupWithEmailViewController.swift */; };
 		8ABFDA2E2456D9E800B9E333 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABFDA2D2456D9E800B9E333 /* LoginViewController.swift */; };
 		8ABFDA302456DB4F00B9E333 /* LargeStickyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABFDA2F2456DB4F00B9E333 /* LargeStickyButton.swift */; };
-		8ABFDA3A2457587F00B9E333 /* RSVPDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABFDA392457587F00B9E333 /* RSVPDetailsViewController.swift */; };
+		8ABFDA3A2457587F00B9E333 /* RsvpDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABFDA392457587F00B9E333 /* RsvpDetailsViewController.swift */; };
 		8ADCBA8D24542A2E001DE10D /* LargeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADCBA8C24542A2E001DE10D /* LargeTextField.swift */; };
 		8ADCBA8F24543B7A001DE10D /* GuestInfoTextFieldsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADCBA8E24543B7A001DE10D /* GuestInfoTextFieldsViewController.swift */; };
 		8ADCBA9124545B84001DE10D /* MoreGuestInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADCBA9024545B84001DE10D /* MoreGuestInfoViewController.swift */; };
@@ -55,7 +55,7 @@
 /* Begin PBXFileReference section */
 		575FC73F9547EB8B0E8C130F /* Pods_guest_list.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_guest_list.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A252902244F118600ED903D /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
-		8A252904244F120500ED903D /* RVSPSummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RVSPSummaryViewController.swift; sourceTree = "<group>"; };
+		8A252904244F120500ED903D /* RsvpSummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RsvpSummaryViewController.swift; sourceTree = "<group>"; };
 		8A252908244F1DA800ED903D /* GuestList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GuestList.storyboard; sourceTree = "<group>"; };
 		8A25290A244F1DC900ED903D /* Summary.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Summary.storyboard; sourceTree = "<group>"; };
 		8A32E9D42453412F001D585E /* WeddingSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeddingSegmentedControl.swift; sourceTree = "<group>"; };
@@ -92,7 +92,7 @@
 		8ABFDA2B2456D9DF00B9E333 /* SignupWithEmailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupWithEmailViewController.swift; sourceTree = "<group>"; };
 		8ABFDA2D2456D9E800B9E333 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		8ABFDA2F2456DB4F00B9E333 /* LargeStickyButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LargeStickyButton.swift; sourceTree = "<group>"; };
-		8ABFDA392457587F00B9E333 /* RSVPDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSVPDetailsViewController.swift; sourceTree = "<group>"; };
+		8ABFDA392457587F00B9E333 /* RsvpDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RsvpDetailsViewController.swift; sourceTree = "<group>"; };
 		8ADCBA8C24542A2E001DE10D /* LargeTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeTextField.swift; sourceTree = "<group>"; };
 		8ADCBA8E24543B7A001DE10D /* GuestInfoTextFieldsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestInfoTextFieldsViewController.swift; sourceTree = "<group>"; };
 		8ADCBA9024545B84001DE10D /* MoreGuestInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreGuestInfoViewController.swift; sourceTree = "<group>"; };
@@ -149,8 +149,8 @@
 			isa = PBXGroup;
 			children = (
 				8A25290A244F1DC900ED903D /* Summary.storyboard */,
-				8A252904244F120500ED903D /* RVSPSummaryViewController.swift */,
-				8ABFDA392457587F00B9E333 /* RSVPDetailsViewController.swift */,
+				8A252904244F120500ED903D /* RsvpSummaryViewController.swift */,
+				8ABFDA392457587F00B9E333 /* RsvpDetailsViewController.swift */,
 			);
 			path = Events;
 			sourceTree = "<group>";
@@ -468,7 +468,7 @@
 				8A32E9D52453412F001D585E /* WeddingSegmentedControl.swift in Sources */,
 				8ADD4F4C2455D036006EF29F /* CALayer + Wedding.swift in Sources */,
 				8A33DA8D244DE54E0009D9D0 /* NetworkError.swift in Sources */,
-				8ABFDA3A2457587F00B9E333 /* RSVPDetailsViewController.swift in Sources */,
+				8ABFDA3A2457587F00B9E333 /* RsvpDetailsViewController.swift in Sources */,
 				8A4FA8462454A9C100E0ABC4 /* LargeTextLabel.swift in Sources */,
 				8A553D512462A8ED00261BE1 /* GuestList.swift in Sources */,
 				8ADCBA8D24542A2E001DE10D /* LargeTextField.swift in Sources */,
@@ -493,7 +493,7 @@
 				8A33DA89244DDF2D0009D9D0 /* UIColor + Wedding.swift in Sources */,
 				8A4FA8482454AC2400E0ABC4 /* GuestStatusViewController.swift in Sources */,
 				8A75356E2452F42000777F3B /* MediumTextLabel.swift in Sources */,
-				8A252905244F120500ED903D /* RVSPSummaryViewController.swift in Sources */,
+				8A252905244F120500ED903D /* RsvpSummaryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

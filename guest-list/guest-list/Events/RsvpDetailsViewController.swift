@@ -13,7 +13,7 @@ enum ContentType {
     case thankYouNotSent
 }
 
-class RSVPDetailsViewController: UITableViewController {
+class RsvpDetailsViewController: UITableViewController {
     
     // MARK: Properties
     

@@ -23,12 +23,12 @@ final class StoryboardInstance {
         return guestListStoryboard.instantiateViewController(withIdentifier: "GuestListViewController") as! GuestListViewController
     }
     
-    static func RVSPSummaryViewController() -> RVSPSummaryViewController {
-        return summaryStoryboard.instantiateViewController(withIdentifier: "RVSPSummaryViewController") as! RVSPSummaryViewController
+    static func RVSPSummaryViewController() -> RsvpSummaryViewController {
+        return summaryStoryboard.instantiateViewController(withIdentifier: "RVSPSummaryViewController") as! RsvpSummaryViewController
     }
     
-    static func RSVPDetailsViewController() -> RSVPDetailsViewController {
-        return summaryStoryboard.instantiateViewController(withIdentifier: "RSVPDetailsViewController") as! RSVPDetailsViewController
+    static func RSVPDetailsViewController() -> RsvpDetailsViewController {
+        return summaryStoryboard.instantiateViewController(withIdentifier: "RSVPDetailsViewController") as! RsvpDetailsViewController
     }
     
     static func addGuestsViewController() -> AddGuestsViewController {

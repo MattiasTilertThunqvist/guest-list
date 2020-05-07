@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RVSPSummaryViewController: UIViewController {
+class RsvpSummaryViewController: UIViewController {
     
     // MARK: Properties
     
@@ -41,8 +41,6 @@ class RVSPSummaryViewController: UIViewController {
     @IBAction func didTapThankYousSentButton(_ sender: UIButton) {
         displayRSVPDetailsVC(ofType: .thankYouNotSent)
     }
-    
-    
     
     // MARK: Lifecycle
 
