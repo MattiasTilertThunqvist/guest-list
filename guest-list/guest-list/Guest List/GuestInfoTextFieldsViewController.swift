@@ -10,6 +10,12 @@ import UIKit
 
 class GuestInfoTextFieldsViewController: UIViewController {
     
+    // MARK: Properties
+    
+    var firstname: String?
+    var lastname: String?
+    var email: String?
+    
     // MARK: IBOutlets
     
     @IBOutlet weak private var firstnameTextField: LargeTextField!
@@ -45,6 +51,7 @@ class GuestInfoTextFieldsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setup()
     }
     
     override func viewDidLayoutSubviews() {
@@ -58,12 +65,18 @@ class GuestInfoTextFieldsViewController: UIViewController {
         preferredContentSize = view.systemLayoutSizeFitting(targetSize)
     }
     
+    private func setup() {
+        firstnameTextField.text = firstname
+        lastnameTextField.text = lastname
+        emailTextField.text = email
+    }
+    
     // MARK: Accessors
     
-    typealias firstname = String
-    typealias lastname = String?
-    typealias email = String
-    func getGuestInfo() -> (firstname, lastname, email)? {
+    typealias guestFirstname = String
+    typealias guestLastname = String?
+    typealias guestEmail = String
+    func getGuestInfo() -> (guestFirstname, guestLastname, guestEmail)? {
         guard let firstname = firstnameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines), !firstname.isEmpty else {
             return nil
         }

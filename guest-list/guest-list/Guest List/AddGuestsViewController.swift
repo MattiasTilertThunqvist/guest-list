@@ -10,14 +10,6 @@ import UIKit
 
 class AddGuestsViewController: UIViewController {
     
-    //
-    //
-    // CREATE AN OPTIONAL GUEST OBJECT PROPERTY.
-    // IF IT'S NIL, DISPLAY VIEW AS A NEW USER SHALL BE ADDED
-    // IF ITS NOT NIL, DISPLAY USER VIEW
-    //
-    //
-    
     // MARK: Properties
     
     private var guestInfoTextFieldsViewController: GuestInfoTextFieldsViewController?
@@ -94,6 +86,29 @@ class AddGuestsViewController: UIViewController {
             fatalError("Check storyboard for missing MoreGuestInfoViewController")
         }
         
+        // Executed if user already exists and are about to be updated
+        if let guest = guest {
+            guestInfoTextFieldsViewController.firstname = guest.firstname
+            guestInfoTextFieldsViewController.lastname = guest.lastname
+            guestInfoTextFieldsViewController.email = guest.email
+            
+            guestStatusViewController.rsvp = guest.rsvp
+            guestStatusViewController.list = guest.list
+            guestStatusViewController.role = guest.role
+            guestStatusViewController.relation = guest.relation
+            guestStatusViewController.familyStatus = guest.familyStatus
+            guestStatusViewController.gender = guest.gender
+            
+            moreGuestInfoViewController.address = guest.address
+            moreGuestInfoViewController.phoneNumber = guest.phoneNumber
+            moreGuestInfoViewController.allergies = guest.allergies
+            moreGuestInfoViewController.disabilities = guest.disabilities
+            moreGuestInfoViewController.transport = guest.transport
+            moreGuestInfoViewController.notes = guest.notes
+            moreGuestInfoViewController.invitationSent = guest.invitationSent
+            moreGuestInfoViewController.thankYouSent = guest.thankYouSent
+        }
+        
         self.guestInfoTextFieldsViewController = guestInfoTextFieldsViewController
         self.guestStatusViewController = guestStatusViewController
         self.moreGuestInfoViewController = moreGuestInfoViewController
@@ -108,8 +123,31 @@ class AddGuestsViewController: UIViewController {
     private func addGuestToGuestList() {
         guard let (firstname, lastname, email) = guestInfoTextFieldsViewController?.getGuestInfo() else { return }
         let (rsvp, list, role, relation, familyStatus, gender) = guestStatusViewController!.getGuestInfo()
-        let (address, phoneNumber, allergies, disabilities, transport, notes) = moreGuestInfoViewController!.getGuestInfo()
+        let (address, phoneNumber, allergies, disabilities, transport, notes, invitationSent, thankYouSent) = moreGuestInfoViewController!.getGuestInfo()
         
+        
+        var guest: Guest {
+            if var existingGuest = self.guest {
+                // Update already existing guest
+                existingGuest.update(firstname, lastname, email, address, phoneNumber, allergies, disabilities, transport, notes, rsvp, list, role, relation, familyStatus, gender, invitationSent, thankYouSent)
+                return existingGuest
+            } else {
+                // Create new guest
+                let uid = UUID().uuidString
+                let newGuest = Guest(uid, firstname, lastname, email, address, phoneNumber, allergies, disabilities, transport, notes, rsvp, list, role, relation, familyStatus, gender, invitationSent, thankYouSent)
+                return newGuest
+            }
+        }
+        
+        NetworkManager.shared.updateGuestList(with: guest) { (error) in
+            if let error = error {
+                let alert = UIAlertController(title: nil, message: error.localizedDescription, preferredStyle: .alert)
+                self.present(alert, animated: true, completion: nil)
+                return
+            }
+            
+            self.dismiss(animated: true, completion: nil)
+        }
     }
 }
 

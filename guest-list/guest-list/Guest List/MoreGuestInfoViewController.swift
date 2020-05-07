@@ -10,6 +10,17 @@ import UIKit
 
 class MoreGuestInfoViewController: UIViewController {
     
+    // MARK: Properties
+    
+    var address: String?
+    var phoneNumber: String?
+    var allergies: String?
+    var disabilities: String?
+    var transport:String?
+    var notes: String?
+    var invitationSent = false
+    var thankYouSent = false
+    
     // MARK: IBOutlets
     
     @IBOutlet weak private var addressTextField: LargeTextField!
@@ -44,11 +55,23 @@ class MoreGuestInfoViewController: UIViewController {
     }
     
     @IBAction private func didTapInvitationSentButton(_ sender: UIButton) {
-        
+        invitationSent.toggle()
+        switch invitationSent {
+        case true:
+            invitationSentButton.setImage(#imageLiteral(resourceName: "check-green"), for: .normal)
+        case false:
+            invitationSentButton.setImage(#imageLiteral(resourceName: "check-gray"), for: .normal)
+        }
     }
     
     @IBAction private func didTapThankYouSentButton(_ sender: UIButton) {
-        
+        thankYouSent.toggle()
+        switch thankYouSent {
+        case true:
+            thankYouSentButton.setImage(#imageLiteral(resourceName: "check-green"), for: .normal)
+        case false:
+            thankYouSentButton.setImage(#imageLiteral(resourceName: "check-gray"), for: .normal)
+        }
     }
     
     // MARK: Lifecycle
@@ -75,13 +98,15 @@ class MoreGuestInfoViewController: UIViewController {
     
     // MARK: Accessors
     
-    typealias address = String?
-    typealias phoneNumber = String?
-    typealias allergies = String?
-    typealias disabilities = String?
-    typealias transport = String?
-    typealias notes = String?
-    func getGuestInfo() -> (address, phoneNumber, allergies, disabilities, transport, notes) {
+    typealias guestAddress = String?
+    typealias guestPhoneNumber = String?
+    typealias guestAllergies = String?
+    typealias guestDisabilities = String?
+    typealias guestTransport = String?
+    typealias guestNotes = String?
+    typealias guestInvitationSent = Bool
+    typealias guestThankYouSent = Bool
+    func getGuestInfo() -> (guestAddress, guestPhoneNumber, guestAllergies, guestDisabilities, guestTransport, guestNotes, guestInvitationSent, guestThankYouSent) {
         var address = addressTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
         address = address == "" ? nil : address
         
@@ -100,6 +125,6 @@ class MoreGuestInfoViewController: UIViewController {
         var notes = notesTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
         notes = notes == "" ? nil : notes
         
-        return (address, phoneNumber, allergies, disabilities, transport, notes)
+        return (address, phoneNumber, allergies, disabilities, transport, notes, invitationSent, thankYouSent)
     }
 }
