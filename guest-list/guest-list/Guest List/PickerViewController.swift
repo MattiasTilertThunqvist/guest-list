@@ -12,7 +12,7 @@ class PickerViewController: UIViewController {
     
     // MARK: Properties
     
-    private let animationTimeInterval = 0.3
+    private let animationTimeInterval = 0.2
     var pickerOptionsDelegate: PickerOptionsDelegate!
     var pickerOption: PickerOptions = .RSVP
     var currentPickerOption = 0
@@ -43,7 +43,7 @@ class PickerViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        UIView.animate(withDuration: 0.3) {
+        UIView.animate(withDuration: animationTimeInterval) {
             self.backgroundDismissButton.alpha = 0.5
         }
     }
@@ -51,7 +51,7 @@ class PickerViewController: UIViewController {
     private func setup() {
         backgroundDismissButton.alpha = 0
         doneButton.titleLabel?.font = .weddingRegularFont(textSize: .medium)
-        
+        descriptionLabel.text = pickerOption.description
         pickerView.selectRow(currentPickerOption, inComponent: 0, animated: false)
     }
     

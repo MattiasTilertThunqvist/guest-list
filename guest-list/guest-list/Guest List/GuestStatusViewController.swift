@@ -16,8 +16,8 @@ class GuestStatusViewController: UIViewController {
     private var list: List = .guestList
     private var role: Role = .guest
     private var relation: Relation = .family
-    private var familyStatus: FamilyStatus = .family
-    private var gender: Gender = .male
+    private var familyStatus: FamilyStatus = .single
+    private var gender: Gender = .female
     
     // MARK: IBOutlets
     
@@ -58,6 +58,7 @@ class GuestStatusViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setup()
     }
     
     override func viewDidLayoutSubviews() {
@@ -71,11 +72,36 @@ class GuestStatusViewController: UIViewController {
         preferredContentSize = view.systemLayoutSizeFitting(targetSize)
     }
     
+    private func setup() {
+        rsvpButton.setTitle(rsvp.description, for: .normal)
+        listButton.setTitle(list.description, for: .normal)
+        roleButton.setTitle(role.description, for: .normal)
+        relationButton.setTitle(relation.description, for: .normal)
+        familyStatusButton.setTitle(familyStatus.description, for: .normal)
+        genderButton.setTitle(gender.description, for: .normal)
+    }
+    
     private func showPickerViewController(for pickerOption: PickerOptions) {
         let viewController = StoryboardInstance.pickerViewControlelr()
         viewController.modalPresentationStyle = .overFullScreen
         viewController.pickerOptionsDelegate = self
         viewController.pickerOption = pickerOption
+        
+        switch pickerOption {
+        case .RSVP:
+            viewController.currentPickerOption = rsvp.rawValue
+        case .list:
+            viewController.currentPickerOption = list.rawValue
+        case .role:
+            viewController.currentPickerOption = role.rawValue
+        case .relation:
+            viewController.currentPickerOption = relation.rawValue
+        case .familyStatus:
+            viewController.currentPickerOption = familyStatus.rawValue
+        case .gender:
+            viewController.currentPickerOption = gender.rawValue
+        }
+        
         present(viewController, animated: true, completion: nil)
     }
 }

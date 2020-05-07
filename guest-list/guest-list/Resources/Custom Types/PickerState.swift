@@ -15,4 +15,15 @@ enum PickerOptions {
     case relation
     case familyStatus
     case gender
+    
+    var description: String {
+        switch self {
+        case .RSVP: return "RSVP"
+        case .list: return "List"
+        case .role: return "Role"
+        case .relation: return "Relation"
+        case .familyStatus: return "Family Status"
+        case .gender: return "Gender"
+        }
+    }
 }
