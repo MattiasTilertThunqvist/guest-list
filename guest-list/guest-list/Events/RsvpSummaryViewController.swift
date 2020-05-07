@@ -33,7 +33,12 @@ class RsvpSummaryViewController: UIViewController {
     
     @IBOutlet private weak var nrTotalGuestsLabel: UILabel!
     
+    @IBOutlet private var nrInvitationSentLabel: UILabel!
+    @IBOutlet private var invitationSentDescriptionLabel: MediumTextLabel!
     @IBOutlet private weak var invitationSentButton: UIButton!
+    
+    @IBOutlet private var nrThankYousSentLabel: UILabel!
+    @IBOutlet private var thankYousSentDescriptionLabel: MediumTextLabel!
     @IBOutlet private weak var thankYousSentButton: UIButton!
     
     // MARK: IBActions
@@ -63,14 +68,22 @@ class RsvpSummaryViewController: UIViewController {
     private func setup() {
         attendingLabel.font = .weddingRegularFont(textSize: .small)
         attendingNrLabel.font = .weddingRegularFont(35)
+        
         declinedLabel.font = .weddingRegularFont(textSize: .small)
         declinedNrLabel.font = .weddingRegularFont(35)
+        
         noResponseLabel.font = .weddingRegularFont(textSize: .small)
         noResponseNrLabel.font = .weddingRegularFont(35)
+        
         maybeLabel.font = .weddingRegularFont(textSize: .small)
         maybeNrLabel.font = .weddingRegularFont(35)
+        
         nrTotalGuestsLabel.font = .weddingRegularFont(textSize: .small)
+        
+        nrInvitationSentLabel.font = .weddingRegularFont(35)
         invitationSentButton.titleLabel?.font = .weddingRegularFont(textSize: .medium)
+        
+        nrThankYousSentLabel.font = .weddingRegularFont(35)
         thankYousSentButton.titleLabel?.font = .weddingRegularFont(textSize: .medium)
         
         setContent()
@@ -79,13 +92,22 @@ class RsvpSummaryViewController: UIViewController {
     }
     
     private func setContent() {
+        let nrOfGuests = GuestList.shared.countGuests()
         attendingNrLabel.text = "\(GuestList.shared.countAcceptedRsvps())"
         declinedNrLabel.text = "\(GuestList.shared.countDeclingedRsvps())"
         noResponseNrLabel.text = "\(GuestList.shared.countNoResponsRsvps())"
         maybeNrLabel.text = "\(GuestList.shared.countMaybeRsvps())"
-        nrTotalGuestsLabel.text = "\(GuestList.shared.countGuests()) TOTAL GUESTS"
+        nrTotalGuestsLabel.text = "\(nrOfGuests) TOTAL GUESTS"
         
+        let nrInvitationsSent = GuestList.shared.countInvitationsSent()
+        nrInvitationSentLabel.text = "\(nrInvitationsSent)/\(nrOfGuests)"
+        let inviteText = nrInvitationsSent > 1 ? "invites" : "invite"
+        invitationSentDescriptionLabel.text = "\(nrInvitationsSent) \(inviteText) are already out the door - you're breezing through this!"
         
+        let nrThankYousSent = GuestList.shared.countThankYousSent()
+        nrThankYousSentLabel.text = "\(nrThankYousSent)/\(nrOfGuests)"
+        let thankYouSentText = nrThankYousSent > 1 ? "thank-yous" : "thank-you"
+        thankYousSentDescriptionLabel.text = "You've already sent \(nrThankYousSent) \(thankYouSentText) notes - you've got this!"
     }
     
     // MARK: Helpers

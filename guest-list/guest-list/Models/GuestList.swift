@@ -79,4 +79,16 @@ class GuestList {
         guests.forEach({ $0.rsvp == .maybe ? count += 1 : nil})
         return count
     }
+    
+    func countInvitationsSent() -> Int {
+        var count = 0
+        guests.forEach({ $0.invitationSent == true ? count += 1 : nil })
+        return count
+    }
+    
+    func countThankYousSent() -> Int {
+        var count = 0
+        guests.forEach({ $0.thankYouSent == true ? count += 1 : nil })
+        return count
+    }
 }

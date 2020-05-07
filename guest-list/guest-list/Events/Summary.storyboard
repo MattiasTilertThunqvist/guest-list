@@ -147,13 +147,16 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="GSn-n8-8Yi">
                                                 <rect key="frame" x="16" y="447.5" width="382" height="120"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Circle diagram" translatesAutoresizingMaskIntoConstraints="NO" id="wb1-8l-dvR">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1000/1000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6h8-4B-Da8">
                                                         <rect key="frame" x="0.0" y="0.0" width="183" height="120"/>
-                                                    </imageView>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" name="weddingGold"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="QCp-3R-mgi">
                                                         <rect key="frame" x="199" y="0.0" width="183" height="120"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="1 invite are already out the door - you're breezing through this!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Xf-9B-TsO" customClass="MediumTextLabel" customModule="guest_list" customModuleProvider="target">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="1000 invites are already out the door - you're breezing through this!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Xf-9B-TsO" customClass="MediumTextLabel" customModule="guest_list" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="183" height="60"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                 <nil key="textColor"/>
@@ -184,13 +187,16 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="saG-lP-Jot">
                                                 <rect key="frame" x="16" y="662" width="382" height="120"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Circle diagram" translatesAutoresizingMaskIntoConstraints="NO" id="FlK-Ip-Ivq">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1000/1000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5RA-r6-xYZ">
                                                         <rect key="frame" x="0.0" y="0.0" width="188" height="120"/>
-                                                    </imageView>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" name="weddingGold"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Oaj-7R-aK9">
                                                         <rect key="frame" x="194" y="0.0" width="188" height="120"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="You've already sent 0 thank-you notes - you've got this!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kx1-DI-Nj5" customClass="MediumTextLabel" customModule="guest_list" customModuleProvider="target">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="You've already sent 1000 thank-yous notes - you've got this!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kx1-DI-Nj5" customClass="MediumTextLabel" customModule="guest_list" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="188" height="60"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                 <nil key="textColor"/>
@@ -273,14 +279,18 @@
                         <outlet property="declinedNrLabel" destination="CFj-Wz-m6p" id="NEI-3w-YTc"/>
                         <outlet property="declinedStackView" destination="mqp-5q-8WS" id="1QB-5H-Gf9"/>
                         <outlet property="invitationSentButton" destination="vWI-xI-1AX" id="7KM-ae-08N"/>
+                        <outlet property="invitationSentDescriptionLabel" destination="1Xf-9B-TsO" id="7cy-A4-056"/>
                         <outlet property="maybeLabel" destination="ao0-U8-dJD" id="i8r-Zl-dH7"/>
                         <outlet property="maybeNrLabel" destination="5US-ks-EHZ" id="EB8-hd-Gqx"/>
                         <outlet property="maybeStackView" destination="BlQ-L3-7sR" id="zon-oK-nL9"/>
                         <outlet property="noResponseLabel" destination="rhJ-Mv-jxa" id="fRI-kX-Xw9"/>
                         <outlet property="noResponseNrLabel" destination="cag-of-wqw" id="UtB-65-v7t"/>
                         <outlet property="noResponseStackView" destination="XyC-FX-Y0D" id="aY4-Jf-Nob"/>
+                        <outlet property="nrInvitationSentLabel" destination="6h8-4B-Da8" id="JvW-YF-Fbn"/>
+                        <outlet property="nrThankYousSentLabel" destination="5RA-r6-xYZ" id="Pgu-rB-QFm"/>
                         <outlet property="nrTotalGuestsLabel" destination="CfW-0F-e3N" id="ekP-1s-5Eb"/>
                         <outlet property="thankYousSentButton" destination="9Ia-4W-6pd" id="UgO-e3-g3C"/>
+                        <outlet property="thankYousSentDescriptionLabel" destination="kx1-DI-Nj5" id="L3j-k3-mTu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hhy-uw-o7c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -308,7 +318,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Circle diagram" width="320" height="320"/>
         <namedColor name="weddingGold">
             <color red="0.90980392156862744" green="0.76470588235294112" blue="0.46666666666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
