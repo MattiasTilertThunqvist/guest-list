@@ -10,9 +10,27 @@ import UIKit
 
 class GuestStatusViewController: UIViewController {
     
+    // MARK: Properties
+    
+    private var rsvp: RSVP = .noResponse
+    private var list: List = .guestList
+    private var role: Role = .guest
+    private var relation: Relation = .family
+    private var familyStatus: FamilyStatus = .family
+    private var gender: Gender = .male
+    
+    // MARK: IBOutlets
+    
+    @IBOutlet private var rsvpButton: BoxButton!
+    @IBOutlet private var listButton: BoxButton!
+    @IBOutlet private var roleButton: BoxButton!
+    @IBOutlet private var relationButton: BoxButton!
+    @IBOutlet private var familyStatusButton: BoxButton!
+    @IBOutlet private var genderButton: BoxButton!
+    
     // MARK: IBActions
     
-    @IBAction private func didTapRSVPButton(_ sender: BoxButton) {
+    @IBAction private func didTapRsvpButton(_ sender: BoxButton) {
         showPickerViewController(for: .RSVP)
     }
     
@@ -53,10 +71,39 @@ class GuestStatusViewController: UIViewController {
         preferredContentSize = view.systemLayoutSizeFitting(targetSize)
     }
     
-    private func showPickerViewController(for pickerOption: PickerState) {
+    private func showPickerViewController(for pickerOption: PickerOptions) {
         let viewController = StoryboardInstance.pickerViewControlelr()
         viewController.modalPresentationStyle = .overFullScreen
+        viewController.pickerOptionsDelegate = self
         viewController.pickerOption = pickerOption
         present(viewController, animated: true, completion: nil)
+    }
+}
+
+// MARK: PickerOptionsDelegate
+
+extension GuestStatusViewController: PickerOptionsDelegate {
+    
+    func pickerOptions(_ pickerOption: PickerOptions, didSelectRowAtIndex index: Int) {
+        switch pickerOption {
+        case .RSVP:
+            self.rsvp = RSVP(rawValue: index)!
+            rsvpButton.setTitle(rsvp.description, for: .normal)
+        case .list:
+            self.list = List(rawValue: index)!
+            listButton.setTitle(list.description, for: .normal)
+        case .role:
+            self.role = Role(rawValue: index)!
+            roleButton.setTitle(role.description, for: .normal)
+        case .relation:
+            self.relation = Relation(rawValue: index)!
+            relationButton.setTitle(relation.description, for: .normal)
+        case .familyStatus:
+            self.familyStatus = FamilyStatus(rawValue: index)!
+            familyStatusButton.setTitle(familyStatus.description, for: .normal)
+        case .gender:
+            self.gender = Gender(rawValue: index)!
+            genderButton.setTitle(gender.description, for: .normal)
+        }
     }
 }

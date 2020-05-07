@@ -13,7 +13,9 @@ class PickerViewController: UIViewController {
     // MARK: Properties
     
     private let animationTimeInterval = 0.3
-    var pickerOption: PickerState = .RSVP
+    var pickerOptionsDelegate: PickerOptionsDelegate!
+    var pickerOption: PickerOptions = .RSVP
+    var currentPickerOption = 0
     
     // MARK: IBOutlet
     
@@ -29,7 +31,8 @@ class PickerViewController: UIViewController {
     }
     
     @IBAction private func didTapDoneButton(_ sender: UIButton) {
-        
+        pickerOptionsDelegate.pickerOptions(pickerOption, didSelectRowAtIndex: currentPickerOption)
+        animatedDismiss()
     }
     
     // MARK: Lifecycle
@@ -49,7 +52,7 @@ class PickerViewController: UIViewController {
         backgroundDismissButton.alpha = 0
         doneButton.titleLabel?.font = .weddingRegularFont(textSize: .medium)
         
-        
+        pickerView.selectRow(currentPickerOption, inComponent: 0, animated: false)
     }
     
     private func animatedDismiss() {
@@ -70,12 +73,40 @@ extension PickerViewController: UIPickerViewDataSource, UIPickerViewDelegate {
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        
-        
-        return 5
+        switch pickerOption {
+        case .RSVP:
+            return RSVP.allCases.count
+        case .list:
+            return List.allCases.count
+        case .role:
+            return Role.allCases.count
+        case .relation:
+            return Relation.allCases.count
+        case .familyStatus:
+            return FamilyStatus.allCases.count
+        case .gender:
+            return Gender.allCases.count
+        }
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return "Hej"
+        switch pickerOption {
+        case .RSVP:
+            return RSVP.allCases[row].description
+        case .list:
+            return List.allCases[row].description
+        case .role:
+            return Role.allCases[row].description
+        case .relation:
+            return Relation.allCases[row].description
+        case .familyStatus:
+            return FamilyStatus.allCases[row].description
+        case .gender:
+            return Gender.allCases[row].description
+        }
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        currentPickerOption = row
     }
 }

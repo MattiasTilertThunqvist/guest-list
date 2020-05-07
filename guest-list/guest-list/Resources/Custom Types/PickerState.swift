@@ -8,10 +8,11 @@
 
 import Foundation
 
-enum PickerState {
-    case RSVP, list, role, relation, familyStatus, gender
-    
-    enum Options {
-        
-    }
+enum PickerOptions {
+    case RSVP
+    case list
+    case role
+    case relation
+    case familyStatus
+    case gender
 }

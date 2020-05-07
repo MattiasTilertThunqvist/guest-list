@@ -463,7 +463,7 @@
                                     <color key="titleColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="didTapRSVPButton:" destination="9DJ-8x-6s1" eventType="touchUpInside" id="XZ9-tG-PPq"/>
+                                    <action selector="didTapRsvpButton:" destination="9DJ-8x-6s1" eventType="touchUpInside" id="XZ9-tG-PPq"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jkH-9S-1WW" customClass="BoxButton" customModule="guest_list" customModuleProvider="target">
@@ -617,6 +617,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fZJ-R8-tZL"/>
                     </view>
+                    <connections>
+                        <outlet property="familyStatusButton" destination="F3V-bU-8TZ" id="Cul-HK-o0c"/>
+                        <outlet property="genderButton" destination="tDk-AI-MIy" id="CdO-bR-BiM"/>
+                        <outlet property="listButton" destination="jkH-9S-1WW" id="JC3-tD-zXc"/>
+                        <outlet property="relationButton" destination="I6T-OW-zvw" id="8NF-dV-CdH"/>
+                        <outlet property="roleButton" destination="FhB-uD-kck" id="z19-3K-Aqs"/>
+                        <outlet property="rsvpButton" destination="LfY-OP-eoj" id="3CC-MH-h5Z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MaO-27-Xgu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

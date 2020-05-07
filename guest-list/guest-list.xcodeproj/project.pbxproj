@@ -38,6 +38,7 @@
 		8A75356E2452F42000777F3B /* MediumTextLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A75356D2452F42000777F3B /* MediumTextLabel.swift */; };
 		8A7535712452F66B00777F3B /* GuestTableViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A7535702452F66B00777F3B /* GuestTableViewHeader.xib */; };
 		8A7535732452F6DE00777F3B /* GuestTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7535722452F6DE00777F3B /* GuestTableViewHeader.swift */; };
+		8AABA8DB24640EC20043A05F /* PickerOptionsDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AABA8DA24640EC20043A05F /* PickerOptionsDelegate.swift */; };
 		8ABFDA282456D86100B9E333 /* OnboardUser.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8ABFDA272456D86100B9E333 /* OnboardUser.storyboard */; };
 		8ABFDA2A2456D9D500B9E333 /* StartOnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABFDA292456D9D500B9E333 /* StartOnboardingViewController.swift */; };
 		8ABFDA2C2456D9DF00B9E333 /* SignupWithEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABFDA2B2456D9DF00B9E333 /* SignupWithEmailViewController.swift */; };
@@ -85,6 +86,7 @@
 		8A75356D2452F42000777F3B /* MediumTextLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumTextLabel.swift; sourceTree = "<group>"; };
 		8A7535702452F66B00777F3B /* GuestTableViewHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GuestTableViewHeader.xib; sourceTree = "<group>"; };
 		8A7535722452F6DE00777F3B /* GuestTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestTableViewHeader.swift; sourceTree = "<group>"; };
+		8AABA8DA24640EC20043A05F /* PickerOptionsDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerOptionsDelegate.swift; sourceTree = "<group>"; };
 		8ABFDA272456D86100B9E333 /* OnboardUser.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = OnboardUser.storyboard; sourceTree = "<group>"; };
 		8ABFDA292456D9D500B9E333 /* StartOnboardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartOnboardingViewController.swift; sourceTree = "<group>"; };
 		8ABFDA2B2456D9DF00B9E333 /* SignupWithEmailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupWithEmailViewController.swift; sourceTree = "<group>"; };
@@ -211,6 +213,7 @@
 		8A33DA7F244DDD410009D9D0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8AABA8D924640EAF0043A05F /* Protocols */,
 				8A553D5624635C1800261BE1 /* Custom Types */,
 				8A33DA87244DDEED0009D9D0 /* Extensions */,
 				8A33DA86244DDEC60009D9D0 /* UI Components */,
@@ -303,6 +306,14 @@
 				8A7535722452F6DE00777F3B /* GuestTableViewHeader.swift */,
 			);
 			path = "Guest Table View Header";
+			sourceTree = "<group>";
+		};
+		8AABA8D924640EAF0043A05F /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				8AABA8DA24640EC20043A05F /* PickerOptionsDelegate.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		8ABFDA352456F82200B9E333 /* Onboard User */ = {
@@ -450,6 +461,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AABA8DB24640EC20043A05F /* PickerOptionsDelegate.swift in Sources */,
 				8ABFDA302456DB4F00B9E333 /* LargeStickyButton.swift in Sources */,
 				8ABFDA2E2456D9E800B9E333 /* LoginViewController.swift in Sources */,
 				8A33DA6B244DCF230009D9D0 /* GuestListViewController.swift in Sources */,
