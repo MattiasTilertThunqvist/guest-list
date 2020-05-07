@@ -7,8 +7,6 @@
 //
 
 import UIKit
-import FirebaseFirestore
-import FirebaseFirestoreSwift
 
 class PageViewController: UIPageViewController {
     
@@ -103,7 +101,7 @@ extension PageViewController: UIPageViewControllerDataSource, UIPageViewControll
         
         let previousIndex = viewControllerIndex - 1
         guard previousIndex >= 0 else { return nil }
-        
+                
         return orderedViewControllers[previousIndex]
     }
     
@@ -112,7 +110,15 @@ extension PageViewController: UIPageViewControllerDataSource, UIPageViewControll
         
         let nextIndex = viewControllerIndex + 1
         guard nextIndex < orderedViewControllers.count else { return nil }
-        
+                
         return orderedViewControllers[nextIndex]
+    }
+    
+    func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
+        
+        if completed {
+            guard let currentIndex = orderedViewControllers.firstIndex(where: { $0 == pageViewController.viewControllers?.last }) else { return }
+            segmentedControl.selectedSegmentIndex = currentIndex
+        }
     }
 }
