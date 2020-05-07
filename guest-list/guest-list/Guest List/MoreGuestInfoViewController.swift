@@ -56,22 +56,12 @@ class MoreGuestInfoViewController: UIViewController {
     
     @IBAction private func didTapInvitationSentButton(_ sender: UIButton) {
         invitationSent.toggle()
-        switch invitationSent {
-        case true:
-            invitationSentButton.setImage(#imageLiteral(resourceName: "check-green"), for: .normal)
-        case false:
-            invitationSentButton.setImage(#imageLiteral(resourceName: "check-gray"), for: .normal)
-        }
+        setInvitationSentButtonStatus()
     }
     
     @IBAction private func didTapThankYouSentButton(_ sender: UIButton) {
         thankYouSent.toggle()
-        switch thankYouSent {
-        case true:
-            thankYouSentButton.setImage(#imageLiteral(resourceName: "check-green"), for: .normal)
-        case false:
-            thankYouSentButton.setImage(#imageLiteral(resourceName: "check-gray"), for: .normal)
-        }
+        setThankYouButtonStatus()
     }
     
     // MARK: Lifecycle
@@ -87,13 +77,30 @@ class MoreGuestInfoViewController: UIViewController {
     }
     
     private func setup() {
-
+        addressTextField.text = address
+        phoneNumberTextField.text = phoneNumber
+        allergiesTextField.text = allergies
+        disabilitiesTextField.text = disabilities
+        transportTextField.text = transport
+        notesTextField.text = notes
+        setInvitationSentButtonStatus()
+        setThankYouButtonStatus()
     }
     
     private func calculatePreferredSize() {
         let targetSize = CGSize(width: view.bounds.width,
                                 height: UIView.layoutFittingCompressedSize.height)
         preferredContentSize = view.systemLayoutSizeFitting(targetSize)
+    }
+    
+    private func setInvitationSentButtonStatus() {
+        let image: UIImage = invitationSent ? #imageLiteral(resourceName: "check-green") : #imageLiteral(resourceName: "check-gray")
+        invitationSentButton.setImage(image, for: .normal)
+    }
+    
+    private func setThankYouButtonStatus() {
+        let image: UIImage = invitationSent ? #imageLiteral(resourceName: "check-green") : #imageLiteral(resourceName: "check-gray")
+        thankYouSentButton.setImage(image, for: .normal)
     }
     
     // MARK: Accessors

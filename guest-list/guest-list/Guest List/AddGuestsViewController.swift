@@ -16,6 +16,7 @@ class AddGuestsViewController: UIViewController {
     private var guestStatusViewController: GuestStatusViewController?
     private var moreGuestInfoViewController: MoreGuestInfoViewController?
     var guest: Guest?
+    var guestListProtocol: GuestListProtocol!
     
     // MARK: IBOutlets
     
@@ -62,8 +63,14 @@ class AddGuestsViewController: UIViewController {
     
     private func setup() {
         titleLabel.font = .weddingRegularFont(textSize: .large)
+        titleLabel.text = guest == nil ? "Add Guest" : "Update Guest"
+        
         cancelButton.titleLabel?.font = .weddingRegularFont(textSize: .medium)
+        
         doneButton.titleLabel?.font = .weddingRegularFont(textSize: .medium)
+        let buttonTitle = guest == nil ? "Add" : "Update"
+        doneButton.setTitle(buttonTitle, for: .normal)
+        
         scrollView.keyboardDismissMode = .interactive
         
         // Children
@@ -85,38 +92,44 @@ class AddGuestsViewController: UIViewController {
         }) as? MoreGuestInfoViewController else {
             fatalError("Check storyboard for missing MoreGuestInfoViewController")
         }
-        
-        // Executed if user already exists and are about to be updated
-        if let guest = guest {
-            guestInfoTextFieldsViewController.firstname = guest.firstname
-            guestInfoTextFieldsViewController.lastname = guest.lastname
-            guestInfoTextFieldsViewController.email = guest.email
-            
-            guestStatusViewController.rsvp = guest.rsvp
-            guestStatusViewController.list = guest.list
-            guestStatusViewController.role = guest.role
-            guestStatusViewController.relation = guest.relation
-            guestStatusViewController.familyStatus = guest.familyStatus
-            guestStatusViewController.gender = guest.gender
-            
-            moreGuestInfoViewController.address = guest.address
-            moreGuestInfoViewController.phoneNumber = guest.phoneNumber
-            moreGuestInfoViewController.allergies = guest.allergies
-            moreGuestInfoViewController.disabilities = guest.disabilities
-            moreGuestInfoViewController.transport = guest.transport
-            moreGuestInfoViewController.notes = guest.notes
-            moreGuestInfoViewController.invitationSent = guest.invitationSent
-            moreGuestInfoViewController.thankYouSent = guest.thankYouSent
-        }
-        
+                
         self.guestInfoTextFieldsViewController = guestInfoTextFieldsViewController
         self.guestStatusViewController = guestStatusViewController
         self.moreGuestInfoViewController = moreGuestInfoViewController
         
         // Keyboard
-        
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Executed if user already exists and are about to be updated
+        if let guest = self.guest {
+            if segue.identifier == "guestInfoSeque" {
+                let child = segue.destination as! GuestInfoTextFieldsViewController
+                child.firstname = guest.firstname
+                child.lastname = guest.lastname
+                child.email = guest.email
+            } else if segue.identifier == "guestStatusSegue" {
+                let child = segue.destination as! GuestStatusViewController
+                child.rsvp = guest.rsvp
+                child.list = guest.list
+                child.role = guest.role
+                child.relation = guest.relation
+                child.familyStatus = guest.familyStatus
+                child.gender = guest.gender
+            } else if segue.identifier == "moreGuestInfoSegue" {
+                let child = segue.destination as! MoreGuestInfoViewController
+                child.address = guest.address
+                child.phoneNumber = guest.phoneNumber
+                child.allergies = guest.allergies
+                child.disabilities = guest.disabilities
+                child.transport = guest.transport
+                child.notes = guest.notes
+                child.invitationSent = guest.invitationSent
+                child.thankYouSent = guest.thankYouSent
+            }
+        }
     }
     
     
@@ -146,6 +159,7 @@ class AddGuestsViewController: UIViewController {
                 return
             }
             
+            self.guestListProtocol.guestListDidChange()
             self.dismiss(animated: true, completion: nil)
         }
     }

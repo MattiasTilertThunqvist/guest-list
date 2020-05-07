@@ -83,7 +83,7 @@
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Lastname" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="T9U-1w-p9W" customClass="LargeTextField" customModule="guest_list" customModuleProvider="target">
                                                 <rect key="frame" x="33" y="82" width="348" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" textContentType="name"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="words" textContentType="name"/>
                                                 <connections>
                                                     <action selector="lastnamePrimaryActionTriggered:" destination="Tka-iO-BpD" eventType="primaryActionTriggered" id="GUY-Ob-4FQ"/>
                                                 </connections>
@@ -115,7 +115,7 @@
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Firstname*" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="2D7-RA-Brc" customClass="LargeTextField" customModule="guest_list" customModuleProvider="target">
                                                 <rect key="frame" x="33" y="24" width="348" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" textContentType="name"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="words" enablesReturnKeyAutomatically="YES" textContentType="name"/>
                                                 <connections>
                                                     <action selector="firstnamePrimaryActionTriggered:" destination="Tka-iO-BpD" eventType="primaryActionTriggered" id="dSl-bC-9hS"/>
                                                 </connections>

@@ -33,8 +33,7 @@ class GuestListViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: GuestTableViewHeader.headerIdentifier) as! GuestTableViewHeader
-        
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(didTapTableViewHeader))
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTableViewHeaderTap))
         header.addGestureRecognizer(tapGesture)
         header.setTotalGuestsLabel(to: GuestList.shared.countGuests())
         return header
@@ -44,11 +43,15 @@ class GuestListViewController: UITableViewController {
         return 100
     }
     
-    @objc private func didTapTableViewHeader() {
+    @objc func handleTableViewHeaderTap() {
+        presentAddGuestViewController(withGuest: nil)
+    }
+    
+    private func presentAddGuestViewController(withGuest guest: Guest?) {
         let viewController = StoryboardInstance.addGuestsViewController()
-        present(viewController, animated: true) {
-            // TODO: Reload data
-        }
+        viewController.guest = guest
+        viewController.guestListProtocol = self
+        present(viewController, animated: true, completion: nil)
     }
     
     // MARK: Rows
@@ -69,5 +72,23 @@ class GuestListViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 60
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let guest = GuestList.shared.getGuest(atIndex: indexPath.row)
+        presentAddGuestViewController(withGuest: guest)
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
 }
- 
+
+// MARK: GuestListProtocol
+
+extension GuestListViewController: GuestListProtocol {
+    
+    func guestListDidChange() {
+        tableView.reloadData()
+    }
+}
+
+protocol GuestListProtocol {
+    func guestListDidChange()
+}

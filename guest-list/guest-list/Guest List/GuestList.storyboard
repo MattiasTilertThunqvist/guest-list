@@ -47,7 +47,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pqb-Co-m0q">
                                 <rect key="frame" x="361" y="60" width="37" height="30"/>
                                 <state key="normal" title="Done">
-                                    <color key="titleColor" name="weddingLightGray"/>
+                                    <color key="titleColor" name="weddingGold"/>
                                 </state>
                                 <connections>
                                     <action selector="didTapDoneButton:" destination="N7h-o9-dli" eventType="touchUpInside" id="Awa-sW-3Rf"/>
@@ -78,7 +78,7 @@
                                                     <constraint firstAttribute="height" constant="200" id="bPW-5v-zh2"/>
                                                 </constraints>
                                                 <connections>
-                                                    <segue destination="gjm-Oy-tHE" kind="embed" id="6en-AB-HX4"/>
+                                                    <segue destination="gjm-Oy-tHE" kind="embed" identifier="guestInfoSeque" id="6en-AB-HX4"/>
                                                 </connections>
                                             </containerView>
                                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KGO-jd-6Ch">
@@ -87,7 +87,7 @@
                                                     <constraint firstAttribute="height" constant="300" id="NEu-Ol-SKi"/>
                                                 </constraints>
                                                 <connections>
-                                                    <segue destination="9DJ-8x-6s1" kind="embed" id="baY-Tx-dzQ"/>
+                                                    <segue destination="9DJ-8x-6s1" kind="embed" identifier="guestStatusSegue" id="baY-Tx-dzQ"/>
                                                 </connections>
                                             </containerView>
                                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KnV-GH-8eV" userLabel="More Guest Info Container View">
@@ -96,7 +96,7 @@
                                                     <constraint firstAttribute="height" constant="600" id="51Y-39-ods"/>
                                                 </constraints>
                                                 <connections>
-                                                    <segue destination="1oR-El-zCJ" kind="embed" id="M8e-T4-kgv"/>
+                                                    <segue destination="1oR-El-zCJ" kind="embed" identifier="moreGuestInfoSegue" id="M8e-T4-kgv"/>
                                                 </connections>
                                             </containerView>
                                         </subviews>
@@ -169,7 +169,7 @@
                             <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="252" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Firstname*" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hUX-M7-IIN" customClass="LargeTextField" customModule="guest_list" customModuleProvider="target">
                                 <rect key="frame" x="16" y="24" width="382" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="words" keyboardType="namePhonePad" returnKeyType="next" enablesReturnKeyAutomatically="YES" textContentType="given-name"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="next" enablesReturnKeyAutomatically="YES" textContentType="given-name"/>
                                 <connections>
                                     <action selector="firstnameDidEndEditing:" destination="gjm-Oy-tHE" eventType="editingDidEnd" id="Ykf-bg-cX3"/>
                                     <action selector="firstnamePrimaryActionTriggered:" destination="gjm-Oy-tHE" eventType="primaryActionTriggered" id="Ztr-Zt-Jux"/>
@@ -178,7 +178,7 @@
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Lastname" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Uu7-UR-npC" customClass="LargeTextField" customModule="guest_list" customModuleProvider="target">
                                 <rect key="frame" x="16" y="82" width="382" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="words" keyboardType="namePhonePad" returnKeyType="next" textContentType="family-name"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="next" textContentType="family-name"/>
                                 <connections>
                                     <action selector="lastnamePrimaryActionTriggered:" destination="gjm-Oy-tHE" eventType="primaryActionTriggered" id="pcf-Fg-Xgg"/>
                                 </connections>
@@ -721,6 +721,9 @@
         <image name="check-gray" width="24" height="24"/>
         <namedColor name="weddingBlack">
             <color red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="weddingGold">
+            <color red="0.90980392156862744" green="0.76470588235294112" blue="0.46666666666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="weddingGray">
             <color red="0.49803921568627452" green="0.49803921568627452" blue="0.49803921568627452" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

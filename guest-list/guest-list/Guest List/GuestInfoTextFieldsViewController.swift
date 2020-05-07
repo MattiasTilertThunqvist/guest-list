@@ -46,7 +46,6 @@ class GuestInfoTextFieldsViewController: UIViewController {
         emailTextField.inputIsValid = isValid
     }
     
-    
     // MARK: Lifecycle
 
     override func viewDidLoad() {
