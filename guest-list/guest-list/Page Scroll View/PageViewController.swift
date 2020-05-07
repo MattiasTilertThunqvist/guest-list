@@ -54,6 +54,9 @@ class PageViewController: UIPageViewController {
     private func setup() {
         view.backgroundColor = .weddingWhite
         navigationController?.navigationBar.isHidden = true
+        navigationController?.navigationBar.backgroundColor = .weddingWhite
+        navigationController?.navigationBar.isTranslucent = false
+        extendedLayoutIncludesOpaqueBars = true // Set contentview top constrain to navbar
     }
     
     func checkUserAuthentication() {
