@@ -38,6 +38,7 @@
 		8A75356E2452F42000777F3B /* MediumTextLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A75356D2452F42000777F3B /* MediumTextLabel.swift */; };
 		8A7535712452F66B00777F3B /* GuestTableViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A7535702452F66B00777F3B /* GuestTableViewHeader.xib */; };
 		8A7535732452F6DE00777F3B /* GuestTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7535722452F6DE00777F3B /* GuestTableViewHeader.swift */; };
+		8A9B49CF2464A9A6000C0A08 /* Notification + Wedding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9B49CE2464A9A6000C0A08 /* Notification + Wedding.swift */; };
 		8AABA8DB24640EC20043A05F /* PickerOptionsDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AABA8DA24640EC20043A05F /* PickerOptionsDelegate.swift */; };
 		8ABFDA282456D86100B9E333 /* OnboardUser.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8ABFDA272456D86100B9E333 /* OnboardUser.storyboard */; };
 		8ABFDA2A2456D9D500B9E333 /* StartOnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABFDA292456D9D500B9E333 /* StartOnboardingViewController.swift */; };
@@ -86,6 +87,7 @@
 		8A75356D2452F42000777F3B /* MediumTextLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumTextLabel.swift; sourceTree = "<group>"; };
 		8A7535702452F66B00777F3B /* GuestTableViewHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GuestTableViewHeader.xib; sourceTree = "<group>"; };
 		8A7535722452F6DE00777F3B /* GuestTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestTableViewHeader.swift; sourceTree = "<group>"; };
+		8A9B49CE2464A9A6000C0A08 /* Notification + Wedding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification + Wedding.swift"; sourceTree = "<group>"; };
 		8AABA8DA24640EC20043A05F /* PickerOptionsDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerOptionsDelegate.swift; sourceTree = "<group>"; };
 		8ABFDA272456D86100B9E333 /* OnboardUser.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = OnboardUser.storyboard; sourceTree = "<group>"; };
 		8ABFDA292456D9D500B9E333 /* StartOnboardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartOnboardingViewController.swift; sourceTree = "<group>"; };
@@ -261,6 +263,7 @@
 				8A33DA88244DDF2D0009D9D0 /* UIColor + Wedding.swift */,
 				8A33DA8A244DE3DC0009D9D0 /* UIFont + Wedding.swift */,
 				8ADD4F4B2455D036006EF29F /* CALayer + Wedding.swift */,
+				8A9B49CE2464A9A6000C0A08 /* Notification + Wedding.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -493,6 +496,7 @@
 				8A33DA89244DDF2D0009D9D0 /* UIColor + Wedding.swift in Sources */,
 				8A4FA8482454AC2400E0ABC4 /* GuestStatusViewController.swift in Sources */,
 				8A75356E2452F42000777F3B /* MediumTextLabel.swift in Sources */,
+				8A9B49CF2464A9A6000C0A08 /* Notification + Wedding.swift in Sources */,
 				8A252905244F120500ED903D /* RsvpSummaryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

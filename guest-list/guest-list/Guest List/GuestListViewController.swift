@@ -14,12 +14,23 @@ class GuestListViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setup()
         setupTableView()
+    }
+    
+    private func setup() {
+        NotificationCenter.default.addObserver(self, selector: #selector(guestListDidChange), name: .GuestListDidChange, object: nil)
     }
     
     private func setupTableView() {
         registerNibs()
     }
+    
+    @objc private func guestListDidChange() {
+        tableView.reloadData()
+    }
+    
+    // MARK: TableView
     
     private func registerNibs() {
         let headerNib = UINib(nibName: GuestTableViewHeader.headerIdentifier, bundle: nil)
@@ -29,7 +40,7 @@ class GuestListViewController: UITableViewController {
         tableView.register(cellNib, forCellReuseIdentifier: GuestTableViewCell.cellIdentifier)
     }
     
-    // MARK: Header
+    // MARK: TableView Header
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: GuestTableViewHeader.headerIdentifier) as! GuestTableViewHeader
@@ -50,11 +61,10 @@ class GuestListViewController: UITableViewController {
     private func presentAddGuestViewController(withGuest guest: Guest?) {
         let viewController = StoryboardInstance.addGuestsViewController()
         viewController.guest = guest
-        viewController.guestListProtocol = self
         present(viewController, animated: true, completion: nil)
     }
     
-    // MARK: Rows
+    // MARK: TableView Rows
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return GuestList.shared.countGuests()
@@ -79,17 +89,4 @@ class GuestListViewController: UITableViewController {
         presentAddGuestViewController(withGuest: guest)
         tableView.deselectRow(at: indexPath, animated: true)
     }
-}
-
-// MARK: GuestListProtocol
-
-extension GuestListViewController: GuestListProtocol {
-    
-    func guestListDidChange() {
-        tableView.reloadData()
-    }
-}
-
-protocol GuestListProtocol {
-    func guestListDidChange()
 }

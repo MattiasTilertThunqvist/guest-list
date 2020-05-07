@@ -16,7 +16,6 @@ class AddGuestsViewController: UIViewController {
     private var guestStatusViewController: GuestStatusViewController?
     private var moreGuestInfoViewController: MoreGuestInfoViewController?
     var guest: Guest?
-    var guestListProtocol: GuestListProtocol!
     
     // MARK: IBOutlets
     
@@ -159,7 +158,7 @@ class AddGuestsViewController: UIViewController {
                 return
             }
             
-            self.guestListProtocol.guestListDidChange()
+            NotificationCenter.default.post(name: .GuestListDidChange, object: nil)
             self.dismiss(animated: true, completion: nil)
         }
     }

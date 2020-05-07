@@ -15,9 +15,9 @@ class RsvpSummaryViewController: UIViewController {
     
     // MARK: IBOutlets
     
-    @IBOutlet weak var acceptedStackView: UIStackView!
-    @IBOutlet weak var acceptedLabel: UILabel!
-    @IBOutlet weak var acceptedNrLabel: UILabel!
+    @IBOutlet weak var attendingStackView: UIStackView!
+    @IBOutlet weak var attendingLabel: UILabel!
+    @IBOutlet weak var attendingNrLabel: UILabel!
     
     @IBOutlet weak var noResponseStackView: UIStackView!
     @IBOutlet weak var noResponseLabel: UILabel!
@@ -55,10 +55,10 @@ class RsvpSummaryViewController: UIViewController {
         noResponseStackView.layer.addBorder(edge: .left, color: .weddingVeryLightGray, thickness: 1)
         noResponseStackView.layer.addBorder(edge: .right, color: .weddingVeryLightGray, thickness: 1)
     }
-    
+
     private func setup() {
-        acceptedLabel.font = .weddingRegularFont(textSize: .small)
-        acceptedNrLabel.font = .weddingRegularFont(35)
+        attendingLabel.font = .weddingRegularFont(textSize: .small)
+        attendingNrLabel.font = .weddingRegularFont(35)
         noResponseLabel.font = .weddingRegularFont(textSize: .small)
         noResponseNrLabel.font = .weddingRegularFont(35)
         declinedLabel.font = .weddingRegularFont(textSize: .small)
@@ -66,10 +66,24 @@ class RsvpSummaryViewController: UIViewController {
         nrTotalGuestsLabel.font = .weddingRegularFont(textSize: .small)
         invitationSentButton.titleLabel?.font = .weddingRegularFont(textSize: .medium)
         thankYousSentButton.titleLabel?.font = .weddingRegularFont(textSize: .medium)
-
+        
+        setContent()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(guestListDidChange), name: .GuestListDidChange, object: nil)
+    }
+    
+    private func setContent() {
+        attendingNrLabel.text = String(GuestList.shared.countAcceptedRsvps())
+        noResponseNrLabel.text = String(GuestList.shared.countNoResponsRsvps())
+        declinedNrLabel.text = String(GuestList.shared.countDeclingedRsvps())
+        nrTotalGuestsLabel.text = String(GuestList.shared.countGuests())
     }
     
     // MARK: Helpers
+    
+    @objc private func guestListDidChange() {
+        setContent()
+    }
     
     private func displayRSVPDetailsVC(ofType contentType: ContentType) {
         let viewController = StoryboardInstance.RSVPDetailsViewController()

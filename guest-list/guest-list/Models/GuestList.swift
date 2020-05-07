@@ -55,4 +55,28 @@ class GuestList {
     func countGuests() -> Int {
         return guests.count
     }
+    
+    func countAcceptedRsvps() -> Int {
+        var count = 0
+        guests.forEach({ $0.rsvp == .attending ? count += 1 : nil})
+        return count
+    }
+    
+    func countNoResponsRsvps() -> Int {
+        var count = 0
+        guests.forEach({ $0.rsvp == .noResponse ? count += 1 : nil})
+        return count
+    }
+    
+    func countDeclingedRsvps() -> Int {
+        var count = 0
+        guests.forEach({ $0.rsvp == .declined ? count += 1 : nil})
+        return count
+    }
+    
+    func countMaybeRsvps() -> Int {
+        var count = 0
+        guests.forEach({ $0.rsvp == .maybe ? count += 1 : nil})
+        return count
+    }
 }
