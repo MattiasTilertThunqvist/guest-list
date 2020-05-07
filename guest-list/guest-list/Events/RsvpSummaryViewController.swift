@@ -15,30 +15,34 @@ class RsvpSummaryViewController: UIViewController {
     
     // MARK: IBOutlets
     
-    @IBOutlet weak var attendingStackView: UIStackView!
-    @IBOutlet weak var attendingLabel: UILabel!
-    @IBOutlet weak var attendingNrLabel: UILabel!
+    @IBOutlet private weak var attendingStackView: UIStackView!
+    @IBOutlet private weak var attendingLabel: UILabel!
+    @IBOutlet private weak var attendingNrLabel: UILabel!
     
-    @IBOutlet weak var noResponseStackView: UIStackView!
-    @IBOutlet weak var noResponseLabel: UILabel!
-    @IBOutlet weak var noResponseNrLabel: UILabel!
+    @IBOutlet private weak var declinedStackView: UIStackView!
+    @IBOutlet private weak var declinedLabel: UILabel!
+    @IBOutlet private weak var declinedNrLabel: UILabel!
     
-    @IBOutlet weak var declinedStackView: UIStackView!
-    @IBOutlet weak var declinedLabel: UILabel!
-    @IBOutlet weak var declinedNrLabel: UILabel!
+    @IBOutlet private weak var noResponseStackView: UIStackView!
+    @IBOutlet private weak var noResponseLabel: UILabel!
+    @IBOutlet private weak var noResponseNrLabel: UILabel!
     
-    @IBOutlet weak var nrTotalGuestsLabel: UILabel!
+    @IBOutlet private weak var maybeStackView: UIStackView!
+    @IBOutlet private weak var maybeLabel: UILabel!
+    @IBOutlet private weak var maybeNrLabel: UILabel!
     
-    @IBOutlet weak var invitationSentButton: UIButton!
-    @IBOutlet weak var thankYousSentButton: UIButton!
+    @IBOutlet private weak var nrTotalGuestsLabel: UILabel!
+    
+    @IBOutlet private weak var invitationSentButton: UIButton!
+    @IBOutlet private weak var thankYousSentButton: UIButton!
     
     // MARK: IBActions
     
-    @IBAction func didTapInvitationSentButton(_ sender: UIButton) {
+    @IBAction private func didTapInvitationSentButton(_ sender: UIButton) {
         displayRSVPDetailsVC(ofType: .inviteNotSent)
     }
     
-    @IBAction func didTapThankYousSentButton(_ sender: UIButton) {
+    @IBAction private func didTapThankYousSentButton(_ sender: UIButton) {
         displayRSVPDetailsVC(ofType: .thankYouNotSent)
     }
     
@@ -52,17 +56,19 @@ class RsvpSummaryViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         view.layoutIfNeeded()
-        noResponseStackView.layer.addBorder(edge: .left, color: .weddingVeryLightGray, thickness: 1)
+        attendingStackView.layer.addBorder(edge: .right, color: .weddingVeryLightGray, thickness: 1)
         noResponseStackView.layer.addBorder(edge: .right, color: .weddingVeryLightGray, thickness: 1)
     }
 
     private func setup() {
         attendingLabel.font = .weddingRegularFont(textSize: .small)
         attendingNrLabel.font = .weddingRegularFont(35)
-        noResponseLabel.font = .weddingRegularFont(textSize: .small)
-        noResponseNrLabel.font = .weddingRegularFont(35)
         declinedLabel.font = .weddingRegularFont(textSize: .small)
         declinedNrLabel.font = .weddingRegularFont(35)
+        noResponseLabel.font = .weddingRegularFont(textSize: .small)
+        noResponseNrLabel.font = .weddingRegularFont(35)
+        maybeLabel.font = .weddingRegularFont(textSize: .small)
+        maybeNrLabel.font = .weddingRegularFont(35)
         nrTotalGuestsLabel.font = .weddingRegularFont(textSize: .small)
         invitationSentButton.titleLabel?.font = .weddingRegularFont(textSize: .medium)
         thankYousSentButton.titleLabel?.font = .weddingRegularFont(textSize: .medium)
@@ -73,10 +79,13 @@ class RsvpSummaryViewController: UIViewController {
     }
     
     private func setContent() {
-        attendingNrLabel.text = String(GuestList.shared.countAcceptedRsvps())
-        noResponseNrLabel.text = String(GuestList.shared.countNoResponsRsvps())
-        declinedNrLabel.text = String(GuestList.shared.countDeclingedRsvps())
-        nrTotalGuestsLabel.text = String(GuestList.shared.countGuests())
+        attendingNrLabel.text = "\(GuestList.shared.countAcceptedRsvps())"
+        declinedNrLabel.text = "\(GuestList.shared.countDeclingedRsvps())"
+        noResponseNrLabel.text = "\(GuestList.shared.countNoResponsRsvps())"
+        maybeNrLabel.text = "\(GuestList.shared.countMaybeRsvps())"
+        nrTotalGuestsLabel.text = "\(GuestList.shared.countGuests()) TOTAL GUESTS"
+        
+        
     }
     
     // MARK: Helpers
