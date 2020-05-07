@@ -48,4 +48,10 @@ class GuestTableViewCell: UITableViewCell {
             checkboxImageView.image = #imageLiteral(resourceName: "question-mark")
         }
     }
+    
+    var checkboxImageIsHidden = false {
+        willSet {
+            checkboxImageView.isHidden = newValue
+        }
+    }
 }

@@ -37,8 +37,8 @@
                             <constraint firstAttribute="bottom" secondItem="Ajt-1E-Yjc" secondAttribute="bottom" constant="5" id="V0N-Zg-0r0"/>
                         </constraints>
                     </view>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add More Guests" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fxu-SK-mCv">
-                        <rect key="frame" x="16" y="56" width="133" height="18"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Guest" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fxu-SK-mCv">
+                        <rect key="frame" x="16" y="56" width="80.5" height="18"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" name="weddingGold"/>
                         <nil key="highlightedColor"/>

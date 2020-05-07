@@ -26,11 +26,6 @@ class NetworkManager {
     
     // MARK: Networking
     
-    let mockedGuest = Guest("2", "Erik2", "Eriksson", "mattias@tilert.com", "Bake 23", "12345", "snuva", "studid", "car", "hejsam", .noResponse, .guestList, .guest, .family, .family, .female, false, false)
-    let mockedGuestList = [
-        Guest("1", "Erik1", "Eriksson", "mattias@tilert.com", "Bake 23", "12345", "snuva", "studid", "car", "hejsam", .noResponse, .guestList, .guest, .family, .family, .female, false, false)
-    ]
-    
     func getGuestList(handler: @escaping (Error?) -> ()) {
         eventCollection.document(uid).collection("guestList").getDocuments { (querySnapshot, error) in
             if let error = error {

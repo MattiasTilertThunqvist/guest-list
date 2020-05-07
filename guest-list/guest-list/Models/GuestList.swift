@@ -91,4 +91,16 @@ class GuestList {
         guests.forEach({ $0.thankYouSent == true ? count += 1 : nil })
         return count
     }
+    
+    func getGuestsWithNoInvitations() -> [Guest] {
+        var guests: [Guest] = []
+        self.guests.forEach({ $0.invitationSent == false ? guests.append($0) : nil })
+        return guests
+    }
+    
+    func getGuestsWithNoThankYousSent() -> [Guest] {
+        var guests: [Guest] = []
+        self.guests.forEach({ $0.thankYouSent == false ? guests.append($0) : nil })
+        return guests
+    }
 }

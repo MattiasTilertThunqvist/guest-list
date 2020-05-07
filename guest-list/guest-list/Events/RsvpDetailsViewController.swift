@@ -18,7 +18,7 @@ class RsvpDetailsViewController: UITableViewController {
     // MARK: Properties
     
     var contentMode: ContentType = .inviteNotSent
-    var mockedGuestList: [Guest] = []
+    var guests: [Guest] = []
     
     // MARK: Lifecycle
 
@@ -29,13 +29,15 @@ class RsvpDetailsViewController: UITableViewController {
     }
     
     private func setup() {
+        tableView.allowsSelection = false
+        
         switch contentMode {
         case .inviteNotSent:
             title = "Status: Invite Not Sent"
-            mockedGuestList = NetworkManager.shared.mockedGuestList
+            guests = GuestList.shared.getGuestsWithNoInvitations()
         case .thankYouNotSent:
             title = "Status: Thank-You Not Sent"
-            mockedGuestList = NetworkManager.shared.mockedGuestList
+            guests = GuestList.shared.getGuestsWithNoThankYousSent()
         }
     }
     
@@ -51,16 +53,16 @@ class RsvpDetailsViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return mockedGuestList.count
+        return guests.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: GuestTableViewCell.cellIdentifier, for: indexPath) as! GuestTableViewCell
-        let guest = mockedGuestList[indexPath.row]
-        
-        cell.setGuestName(to: guest.firstname + " " + "MockedLastname")
+        let guest = guests[indexPath.row]
+        let lastname = guest.lastname == nil ? "" : " \(guest.lastname!)"
+        cell.setGuestName(to: guest.firstname + " " + lastname)
         cell.setCompanyLabel(to: 0)
-        
+        cell.checkboxImageIsHidden = true
         return cell
     }
     
