@@ -140,6 +140,7 @@ class SignupWithEmailViewController: UIViewController {
     private func addNewUserToGuestList(_ uid: String, _ firstname: String, _ lastname: String?, _ email: String) {
         let guest = Guest(uid, firstname, lastname, email, nil, nil, nil, nil, nil, nil, .attending, .guestList, .weddingCouple, .family, .relationship, .other, false, false)
         NetworkManager.shared.updateGuestList(with: guest) { (_) in
+            NotificationCenter.default.post(name: .OnboardingDidFinish, object: nil)
             self.dismiss(animated: true, completion: nil)
         }
     }

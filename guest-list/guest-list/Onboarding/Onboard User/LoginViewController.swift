@@ -96,6 +96,7 @@ class LoginViewController: UIViewController {
                 return
             }
             
+            NotificationCenter.default.post(name: .OnboardingDidFinish, object: nil)
             self.dismiss(animated: true, completion: nil)
         }
     }

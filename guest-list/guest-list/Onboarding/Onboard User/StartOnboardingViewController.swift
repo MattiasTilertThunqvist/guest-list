@@ -10,25 +10,20 @@ import UIKit
 
 class StartOnboardingViewController: UIViewController {
     
-    // MARK: Properties
-    
-    // MARK: IBOutlet
+    // MARK: IBOutlets
     
     @IBOutlet weak var backgroundImage: UIImageView!
     @IBOutlet weak var signupWithEmailButton: LargeStickyButton!
     @IBOutlet weak var loginButton: LargeStickyButton!
     
-    // MARK: IBActions
-    
-    
-    // MARK: View
+    // MARK: Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUp()
+        setup()
     }
     
-    func setUp() {        
+    func setup() {
         signupWithEmailButton.colorScheme = .email
         loginButton.colorScheme = .whiteOnTransparent
         

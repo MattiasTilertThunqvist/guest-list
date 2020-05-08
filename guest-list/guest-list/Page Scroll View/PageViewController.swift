@@ -35,9 +35,7 @@ class PageViewController: UIPageViewController {
         NetworkManager.shared.signOut { (_) in
             let viewController = StoryboardInstance.onboardingNavigationController()
             viewController.modalPresentationStyle = .fullScreen
-            self.present(viewController, animated: true) {
-                self.loadGuestList()
-            }
+            self.present(viewController, animated: true, completion: nil)
         }
     }
     
@@ -55,19 +53,22 @@ class PageViewController: UIPageViewController {
         navigationController?.navigationBar.backgroundColor = .weddingWhite
         navigationController?.navigationBar.isTranslucent = false
         extendedLayoutIncludesOpaqueBars = true // Set contentview top constrain to navbar
+        NotificationCenter.default.addObserver(self, selector: #selector(onboardingDidFinish), name: .OnboardingDidFinish, object: nil)
     }
     
-    func checkUserAuthentication() {
+    private func checkUserAuthentication() {
         if NetworkManager.shared.isAuthenticated() {
             loadGuestList()
         } else {
             // Start onboarding
             let viewController = StoryboardInstance.onboardingNavigationController()
             viewController.modalPresentationStyle = .fullScreen
-            present(viewController, animated: false) {
-                self.loadGuestList()
-            }
+            present(viewController, animated: false, completion: nil)
         }
+    }
+    
+    @objc private func onboardingDidFinish() {
+        self.loadGuestList()
     }
     
     private func loadGuestList() {
