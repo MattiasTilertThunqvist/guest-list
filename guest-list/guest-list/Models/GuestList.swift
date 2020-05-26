@@ -15,7 +15,10 @@ class GuestList {
     static let shared = GuestList()
     private var guests: [Guest] = [] {
         didSet {
-            guests.sort { $0.firstname < $1.firstname }
+            guests.sort { (guest1, guest2) -> Bool in
+                if guest1.role == .weddingCouple { return true } // Place weddingcouple at first in stack
+                return guest1.firstname < guest2.firstname
+            }
         }
     }
     

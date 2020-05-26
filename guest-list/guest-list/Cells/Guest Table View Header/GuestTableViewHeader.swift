@@ -28,7 +28,7 @@ class GuestTableViewHeader: UITableViewHeaderFooterView {
     
     private func setup() {
         totalGuestsLabel.font = .weddingRegularFont(textSize: .small)
-        addMoreGuestsLabel.font = .weddingRegularFont(textSize: .medium)
+        addMoreGuestsLabel.font = .weddingRegularFont(textSize: .large)
     }
     
     // MARK: Accessors
