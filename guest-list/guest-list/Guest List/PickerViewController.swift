@@ -89,21 +89,28 @@ extension PickerViewController: UIPickerViewDataSource, UIPickerViewDelegate {
         }
     }
     
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
+        let label = (view as? UILabel) ?? UILabel()
+        label.textColor = .weddingGray
+        label.font = .weddingRegularFont(textSize: .large)
+        label.textAlignment = .center
+        
         switch pickerOption {
         case .RSVP:
-            return RSVP.allCases[row].description
+            label.text = RSVP.allCases[row].description
         case .list:
-            return List.allCases[row].description
+            label.text = List.allCases[row].description
         case .role:
-            return Role.allCases[row].description
+            label.text = Role.allCases[row].description
         case .relation:
-            return Relation.allCases[row].description
+            label.text = Relation.allCases[row].description
         case .familyStatus:
-            return FamilyStatus.allCases[row].description
+            label.text = FamilyStatus.allCases[row].description
         case .gender:
-            return Gender.allCases[row].description
+            label.text = Gender.allCases[row].description
         }
+        
+        return label
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
