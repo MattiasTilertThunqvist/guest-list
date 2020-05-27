@@ -35,19 +35,18 @@ class RsvpSummaryViewController: UIViewController {
     
     @IBOutlet private var nrInvitationSentLabel: UILabel!
     @IBOutlet private var invitationSentDescriptionLabel: MediumTextLabel!
-    @IBOutlet private weak var invitationSentButton: UIButton!
+    @IBOutlet private var InvitationSentTappableLabel: MediumTextLabel!
     
     @IBOutlet private var nrThankYousSentLabel: UILabel!
     @IBOutlet private var thankYousSentDescriptionLabel: MediumTextLabel!
-    @IBOutlet private weak var thankYousSentButton: UIButton!
+    @IBOutlet private var thankYousSentTappableLabel: MediumTextLabel!
     
     // MARK: IBActions
     
-    @IBAction private func didTapInvitationSentButton(_ sender: UIButton) {
+    @IBAction func invitationSentTapGesture(_ sender: UITapGestureRecognizer) {
         displayRSVPDetailsVC(ofType: .inviteNotSent)
     }
-    
-    @IBAction private func didTapThankYousSentButton(_ sender: UIButton) {
+    @IBAction func thankYousSentTapGesture(_ sender: UITapGestureRecognizer) {
         displayRSVPDetailsVC(ofType: .thankYouNotSent)
     }
     
@@ -81,10 +80,10 @@ class RsvpSummaryViewController: UIViewController {
         nrTotalGuestsLabel.font = .weddingRegularFont(textSize: .small)
         
         nrInvitationSentLabel.font = .weddingRegularFont(35)
-        invitationSentButton.titleLabel?.font = .weddingRegularFont(textSize: .medium)
+        InvitationSentTappableLabel.textColor = .weddingGold
         
         nrThankYousSentLabel.font = .weddingRegularFont(35)
-        thankYousSentButton.titleLabel?.font = .weddingRegularFont(textSize: .medium)
+        thankYousSentTappableLabel.textColor = .weddingGold
         
         setContent()
         

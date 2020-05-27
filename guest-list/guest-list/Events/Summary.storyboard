@@ -162,15 +162,16 @@
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vWI-xI-1AX">
+                                                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="See Who's Left" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LtT-Up-Qkh" customClass="MediumTextLabel" customModule="guest_list" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="60" width="183" height="60"/>
-                                                                <state key="normal" title="See Who's Left">
-                                                                    <color key="titleColor" name="weddingGold"/>
-                                                                </state>
+                                                                <gestureRecognizers/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <color key="textColor" name="weddingGold"/>
+                                                                <nil key="highlightedColor"/>
                                                                 <connections>
-                                                                    <action selector="didTapInvitationSentButton:" destination="ctq-5x-t9a" eventType="touchUpInside" id="zTh-Qu-Gc1"/>
+                                                                    <outletCollection property="gestureRecognizers" destination="oLj-wq-Dpb" appends="YES" id="Ctk-CI-tDx"/>
                                                                 </connections>
-                                                            </button>
+                                                            </label>
                                                         </subviews>
                                                     </stackView>
                                                 </subviews>
@@ -202,16 +203,16 @@
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="9Ia-4W-6pd">
+                                                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="See Who's Left" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZUk-JA-kqe" customClass="MediumTextLabel" customModule="guest_list" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="60" width="188" height="60"/>
-                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                <state key="normal" title="See Who's Left">
-                                                                    <color key="titleColor" name="weddingGold"/>
-                                                                </state>
+                                                                <gestureRecognizers/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <color key="textColor" name="weddingGold"/>
+                                                                <nil key="highlightedColor"/>
                                                                 <connections>
-                                                                    <action selector="didTapThankYousSentButton:" destination="ctq-5x-t9a" eventType="touchUpInside" id="YxQ-hB-hHc"/>
+                                                                    <outletCollection property="gestureRecognizers" destination="NqH-ey-R19" appends="YES" id="ZUn-lM-fF1"/>
                                                                 </connections>
-                                                            </button>
+                                                            </label>
                                                         </subviews>
                                                     </stackView>
                                                 </subviews>
@@ -272,13 +273,13 @@
                         <viewLayoutGuide key="safeArea" id="1C9-vn-dki"/>
                     </view>
                     <connections>
+                        <outlet property="InvitationSentTappableLabel" destination="LtT-Up-Qkh" id="emN-Gs-zKK"/>
                         <outlet property="attendingLabel" destination="uIg-l6-frU" id="abH-6x-17v"/>
                         <outlet property="attendingNrLabel" destination="iMr-JW-nP8" id="VmR-vJ-D6N"/>
                         <outlet property="attendingStackView" destination="8BQ-T6-XXW" id="r0D-93-otA"/>
                         <outlet property="declinedLabel" destination="38C-J2-7eq" id="2Zn-h0-UkS"/>
                         <outlet property="declinedNrLabel" destination="CFj-Wz-m6p" id="NEI-3w-YTc"/>
                         <outlet property="declinedStackView" destination="mqp-5q-8WS" id="1QB-5H-Gf9"/>
-                        <outlet property="invitationSentButton" destination="vWI-xI-1AX" id="7KM-ae-08N"/>
                         <outlet property="invitationSentDescriptionLabel" destination="1Xf-9B-TsO" id="7cy-A4-056"/>
                         <outlet property="maybeLabel" destination="ao0-U8-dJD" id="i8r-Zl-dH7"/>
                         <outlet property="maybeNrLabel" destination="5US-ks-EHZ" id="EB8-hd-Gqx"/>
@@ -289,11 +290,21 @@
                         <outlet property="nrInvitationSentLabel" destination="6h8-4B-Da8" id="JvW-YF-Fbn"/>
                         <outlet property="nrThankYousSentLabel" destination="5RA-r6-xYZ" id="Pgu-rB-QFm"/>
                         <outlet property="nrTotalGuestsLabel" destination="CfW-0F-e3N" id="ekP-1s-5Eb"/>
-                        <outlet property="thankYousSentButton" destination="9Ia-4W-6pd" id="UgO-e3-g3C"/>
                         <outlet property="thankYousSentDescriptionLabel" destination="kx1-DI-Nj5" id="L3j-k3-mTu"/>
+                        <outlet property="thankYousSentTappableLabel" destination="ZUk-JA-kqe" id="vGP-VS-eHj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hhy-uw-o7c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="oLj-wq-Dpb">
+                    <connections>
+                        <action selector="invitationSentTapGesture:" destination="ctq-5x-t9a" id="YGE-vL-A56"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="NqH-ey-R19">
+                    <connections>
+                        <action selector="thankYousSentTapGesture:" destination="ctq-5x-t9a" id="RKm-KB-XPd"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2362.3188405797105" y="116.51785714285714"/>
         </scene>
