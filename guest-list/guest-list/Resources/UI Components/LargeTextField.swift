@@ -12,8 +12,8 @@ class LargeTextField: UITextField {
     
     // MARK: Properties
     
+    lazy private var generator = UINotificationFeedbackGenerator()
     private let animationDuration = 0.3
-    
     private let textFieldHeight = CGFloat(46)
     private lazy var descriptionLabel: UILabel = {
         let label = UILabel()
@@ -33,6 +33,7 @@ class LargeTextField: UITextField {
                 backgroundColor = .white
             } else {
                 backgroundColor = .weddingRed
+                generator.notificationOccurred(.error)
             }
         }
     }
