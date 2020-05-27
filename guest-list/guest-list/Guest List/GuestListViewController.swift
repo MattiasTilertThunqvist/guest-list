@@ -77,12 +77,6 @@ class GuestListViewController: UITableViewController {
         cell.setGuestName(to: guest.firstname + lastname)
         cell.setCheckboxImage(toRsvp: guest.rsvp)
         cell.setCompanyLabel(to: 0)
-        
-        // User can't modify info about themselves, it can only be done in settings. 
-        if guest.role == .weddingCouple {
-            cell.isUserInteractionEnabled = false
-        }
-        
         return cell
     }
     

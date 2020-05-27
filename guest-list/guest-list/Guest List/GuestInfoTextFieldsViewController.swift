@@ -77,10 +77,12 @@ class GuestInfoTextFieldsViewController: UIViewController {
     typealias guestEmail = String
     func getGuestInfo() -> (guestFirstname, guestLastname, guestEmail)? {
         guard let firstname = firstnameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines), !firstname.isEmpty else {
+            firstnameTextField.inputIsValid = false
             return nil
         }
         
         guard let email = emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines), !email.isEmpty else {
+            emailTextField.inputIsValid = false
             return nil
         }
         

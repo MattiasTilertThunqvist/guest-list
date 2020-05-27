@@ -131,12 +131,10 @@ class AddGuestsViewController: UIViewController {
         }
     }
     
-    
     private func addGuestToGuestList() {
         guard let (firstname, lastname, email) = guestInfoTextFieldsViewController?.getGuestInfo() else { return }
         let (rsvp, list, role, relation, familyStatus, gender) = guestStatusViewController!.getGuestInfo()
         let (address, phoneNumber, allergies, disabilities, transport, notes, invitationSent, thankYouSent) = moreGuestInfoViewController!.getGuestInfo()
-        
         
         var guest: Guest {
             if var existingGuest = self.guest {
