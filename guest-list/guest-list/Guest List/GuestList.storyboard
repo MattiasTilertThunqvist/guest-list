@@ -10,22 +10,54 @@
     </dependencies>
     <scenes>
         <!--Guest List View Controller-->
-        <scene sceneID="pVt-XY-daw">
+        <scene sceneID="0Yi-SX-dzn">
             <objects>
-                <tableViewController storyboardIdentifier="GuestListViewController" id="msn-i7-9xr" customClass="GuestListViewController" customModule="guest_list" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="p6I-63-2WI">
+                <viewController storyboardIdentifier="GuestListViewController" id="IKS-rS-PPm" customClass="GuestListViewController" customModule="guest_list" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Noo-0E-d3w">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" placeholder="&quot;Search For Guests&quot;" translatesAutoresizingMaskIntoConstraints="NO" id="Xjx-sn-czI">
+                                <rect key="frame" x="0.0" y="44" width="414" height="56"/>
+                                <color key="tintColor" name="weddingGray"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <scopeButtonTitles>
+                                    <string>Title</string>
+                                    <string>Title</string>
+                                </scopeButtonTitles>
+                                <connections>
+                                    <outlet property="delegate" destination="IKS-rS-PPm" id="xmI-qN-KZR"/>
+                                </connections>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="YPm-ys-6dg">
+                                <rect key="frame" x="0.0" y="100" width="414" height="796"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="IKS-rS-PPm" id="cON-Mi-vTB"/>
+                                    <outlet property="delegate" destination="IKS-rS-PPm" id="xhV-bm-C7B"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <connections>
-                            <outlet property="dataSource" destination="msn-i7-9xr" id="O0H-V9-X1O"/>
-                            <outlet property="delegate" destination="msn-i7-9xr" id="qdg-bR-H3i"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="P0o-1w-RlL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                        <constraints>
+                            <constraint firstItem="YPm-ys-6dg" firstAttribute="leading" secondItem="zhp-GR-P5m" secondAttribute="leading" id="2ka-4L-sx4"/>
+                            <constraint firstItem="YPm-ys-6dg" firstAttribute="top" secondItem="Xjx-sn-czI" secondAttribute="bottom" id="Aw0-2d-7IB"/>
+                            <constraint firstItem="Xjx-sn-czI" firstAttribute="trailing" secondItem="zhp-GR-P5m" secondAttribute="trailing" id="I2x-hH-XF9"/>
+                            <constraint firstItem="Xjx-sn-czI" firstAttribute="top" secondItem="zhp-GR-P5m" secondAttribute="top" id="b44-Z7-iQe"/>
+                            <constraint firstAttribute="bottom" secondItem="YPm-ys-6dg" secondAttribute="bottom" id="bbQ-0L-m0j"/>
+                            <constraint firstItem="Xjx-sn-czI" firstAttribute="leading" secondItem="zhp-GR-P5m" secondAttribute="leading" id="dKb-6h-Gvy"/>
+                            <constraint firstItem="YPm-ys-6dg" firstAttribute="trailing" secondItem="zhp-GR-P5m" secondAttribute="trailing" id="rc9-mj-8mr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="zhp-GR-P5m"/>
+                    </view>
+                    <connections>
+                        <outlet property="searchBar" destination="Xjx-sn-czI" id="XCd-YG-X22"/>
+                        <outlet property="tableView" destination="YPm-ys-6dg" id="EQ2-A3-gX8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ee6-z2-Ul9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2426" y="117"/>
+            <point key="canvasLocation" x="2439.130434782609" y="116.51785714285714"/>
         </scene>
         <!--Add Guests View Controller-->
         <scene sceneID="O2B-Bf-33p">

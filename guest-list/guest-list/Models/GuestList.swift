@@ -48,6 +48,21 @@ class GuestList {
         return guests[index]
     }
     
+    func getGuest(withId id: String) -> Guest {
+        return guests.first(where: { $0.id == id })!
+    }
+    
+    func getGuestIds(forSearchText searchText: String) -> [String] {
+        let filteredGuests = guests.filter { (guest) -> Bool in
+            let firstname = guest.firstname.lowercased()
+            let lastname = guest.lastname?.lowercased()
+            let currentSearchText = searchText.lowercased()
+            return firstname.contains(currentSearchText) || lastname?.contains(currentSearchText) ?? false
+        }
+        
+        return filteredGuests.map{ $0.id }
+    }
+    
     func removeAllGuests() {
         guests.removeAll()
     }

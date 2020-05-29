@@ -58,6 +58,7 @@
                         </constraints>
                     </view>
                 </subviews>
+                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="xTz-05-Kp7" secondAttribute="trailing" id="3Nf-R3-Kfe"/>
                     <constraint firstItem="gal-9N-yNY" firstAttribute="centerY" secondItem="fxu-SK-mCv" secondAttribute="centerY" id="9TE-Tm-Rds"/>
