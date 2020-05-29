@@ -70,15 +70,17 @@ extension GuestListViewController: UITableViewDataSource, UITableViewDelegate {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTableViewHeaderTap))
         header.addGestureRecognizer(tapGesture)
         
-        let nrOfGuests: Int = {
+        let headerText: String = {
+            let totalGuests = GuestList.shared.countGuests()
+            
             if isFiltering {
-                return filteredGuests.count
+                return "FILTERING \(filteredGuests.count) OF \(totalGuests)"
             } else {
-                return GuestList.shared.countGuests()
+                return "\(totalGuests) TOTAL GUESTS"
             }
         }()
-        
-        header.setTotalGuestsLabel(to: nrOfGuests)
+
+        header.setHeaderLabel(to: headerText)
         return header
     }
     
