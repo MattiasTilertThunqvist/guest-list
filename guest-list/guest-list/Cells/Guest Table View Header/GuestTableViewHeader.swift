@@ -16,7 +16,7 @@ class GuestTableViewHeader: UITableViewHeaderFooterView {
     
     // MARK: IBOutlets
     
-    @IBOutlet weak private var totalGuestsLabel: UILabel!
+    @IBOutlet weak private var headerLabel: UILabel!
     @IBOutlet weak private var addMoreGuestsLabel: UILabel!
     
     // MARK: Init
@@ -27,13 +27,13 @@ class GuestTableViewHeader: UITableViewHeaderFooterView {
     }
     
     private func setup() {
-        totalGuestsLabel.font = .weddingRegularFont(textSize: .small)
+        headerLabel.font = .weddingRegularFont(textSize: .small)
         addMoreGuestsLabel.font = .weddingRegularFont(textSize: .large)
     }
     
     // MARK: Accessors
     
-    func setTotalGuestsLabel(to number: Int) {
-        totalGuestsLabel.text = "\(number) TOTAL GUESTS"
+    func setHeaderLabel(to text: String) {
+        headerLabel.text = text.uppercased()
     }
 }
