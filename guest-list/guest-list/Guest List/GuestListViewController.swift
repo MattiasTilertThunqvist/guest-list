@@ -89,10 +89,10 @@ extension GuestListViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     @objc func handleTableViewHeaderTap() {
-        presentAddGuestViewController(withGuest: nil)
+        presentManageGuestViewController(withGuest: nil)
     }
     
-    private func presentAddGuestViewController(withGuest guest: Guest?) {
+    private func presentManageGuestViewController(withGuest guest: Guest?) {
         let viewController = StoryboardInstance.addGuestsViewController()
         viewController.guest = guest
         present(viewController, animated: true, completion: nil)
@@ -140,7 +140,7 @@ extension GuestListViewController: UITableViewDataSource, UITableViewDelegate {
                 return GuestList.shared.getGuest(atIndex: indexPath.row)
             }
         }()
-        presentAddGuestViewController(withGuest: guest)
+        presentManageGuestViewController(withGuest: guest)
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }

@@ -1,5 +1,5 @@
 //
-//  AddGuestsViewController.swift
+//  ManageGuestsViewController.swift
 //  guest-list
 //
 //  Created by Mattias Tilert Thunqvist on 2020-04-24.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddGuestsViewController: UIViewController {
+class ManageGuestsViewController: UIViewController {
     
     // MARK: Properties
     
@@ -164,7 +164,7 @@ class AddGuestsViewController: UIViewController {
 
 // MARK: Keyboard appearance
 
-extension AddGuestsViewController {
+extension ManageGuestsViewController {
     
     @objc private func keyboardWillShow(notification: NSNotification) {
         guard let userInfo = notification.userInfo else { return }

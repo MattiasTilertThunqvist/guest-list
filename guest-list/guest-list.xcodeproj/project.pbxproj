@@ -31,7 +31,7 @@
 		8A553D512462A8ED00261BE1 /* GuestList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A553D502462A8ED00261BE1 /* GuestList.swift */; };
 		8A553D552463240200261BE1 /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A553D542463240200261BE1 /* PickerViewController.swift */; };
 		8A553D5824635C4E00261BE1 /* PickerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A553D5724635C4E00261BE1 /* PickerState.swift */; };
-		8A55BEB62453355100672E63 /* AddGuestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A55BEB42453355100672E63 /* AddGuestsViewController.swift */; };
+		8A55BEB62453355100672E63 /* ManageGuestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A55BEB42453355100672E63 /* ManageGuestsViewController.swift */; };
 		8A5DD5682455C4BF00941F6E /* ExtraLargeTextLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5DD5672455C4BF00941F6E /* ExtraLargeTextLabel.swift */; };
 		8A75356B2452D8FD00777F3B /* GuestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7535692452D8FD00777F3B /* GuestTableViewCell.swift */; };
 		8A75356C2452D8FD00777F3B /* GuestTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A75356A2452D8FD00777F3B /* GuestTableViewCell.xib */; };
@@ -80,7 +80,7 @@
 		8A553D502462A8ED00261BE1 /* GuestList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestList.swift; sourceTree = "<group>"; };
 		8A553D542463240200261BE1 /* PickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
 		8A553D5724635C4E00261BE1 /* PickerState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerState.swift; sourceTree = "<group>"; };
-		8A55BEB42453355100672E63 /* AddGuestsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGuestsViewController.swift; sourceTree = "<group>"; };
+		8A55BEB42453355100672E63 /* ManageGuestsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageGuestsViewController.swift; sourceTree = "<group>"; };
 		8A5DD5672455C4BF00941F6E /* ExtraLargeTextLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtraLargeTextLabel.swift; sourceTree = "<group>"; };
 		8A7535692452D8FD00777F3B /* GuestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestTableViewCell.swift; sourceTree = "<group>"; };
 		8A75356A2452D8FD00777F3B /* GuestTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GuestTableViewCell.xib; sourceTree = "<group>"; };
@@ -138,7 +138,7 @@
 			children = (
 				8A252908244F1DA800ED903D /* GuestList.storyboard */,
 				8A33DA6A244DCF230009D9D0 /* GuestListViewController.swift */,
-				8A55BEB42453355100672E63 /* AddGuestsViewController.swift */,
+				8A55BEB42453355100672E63 /* ManageGuestsViewController.swift */,
 				8ADCBA8E24543B7A001DE10D /* GuestInfoTextFieldsViewController.swift */,
 				8ADCBA9024545B84001DE10D /* MoreGuestInfoViewController.swift */,
 				8A4FA8472454AC2400E0ABC4 /* GuestStatusViewController.swift */,
@@ -486,7 +486,7 @@
 				8A33DA67244DCF230009D9D0 /* AppDelegate.swift in Sources */,
 				8A5DD5682455C4BF00941F6E /* ExtraLargeTextLabel.swift in Sources */,
 				8A504D502456CE03007D4C14 /* Guest.swift in Sources */,
-				8A55BEB62453355100672E63 /* AddGuestsViewController.swift in Sources */,
+				8A55BEB62453355100672E63 /* ManageGuestsViewController.swift in Sources */,
 				8A252903244F118600ED903D /* PageViewController.swift in Sources */,
 				8A75356B2452D8FD00777F3B /* GuestTableViewCell.swift in Sources */,
 				8A553D5824635C4E00261BE1 /* PickerState.swift in Sources */,
