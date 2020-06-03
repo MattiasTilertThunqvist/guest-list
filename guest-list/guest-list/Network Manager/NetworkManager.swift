@@ -17,8 +17,9 @@ class NetworkManager {
     // MARK: Properties
     
     static let shared = NetworkManager()
-    private lazy var uid = Auth.auth().currentUser!.uid
-    private let eventCollection = Firestore.firestore().collection("event")
+    private lazy var uid = Auth.auth().currentUser!.uid //Shall always be initialized, force crash if not.
+    private lazy var eventCollection = Firestore.firestore().collection("event").document(uid).collection("guestList")
+    
     
     // MARK: Init
     
@@ -27,7 +28,7 @@ class NetworkManager {
     // MARK: Networking
     
     func getGuestList(handler: @escaping (Error?) -> ()) {
-        eventCollection.document(uid).collection("guestList").getDocuments { (querySnapshot, error) in
+        eventCollection.getDocuments { (querySnapshot, error) in
             if let error = error {
                 print("Error querying guest list from Firestore: \(error)")
                 handler(error)
@@ -63,7 +64,7 @@ class NetworkManager {
             return
         }
         
-        eventCollection.document(uid).collection("guestList").document(guest.id).setData(data, merge: true) { (error) in
+        eventCollection.document(guest.id).setData(data, merge: true) { (error) in
             if let error = error {
                 print("Error adding guest to Firestore: \(error)")
                 handler(error)
@@ -71,6 +72,19 @@ class NetworkManager {
                 GuestList.shared.setGuest(to: guest)
                 handler(nil)
             }
+        }
+    }
+    
+    func remove(_ guest: Guest, handler: @escaping (Error?) -> ()) {
+        eventCollection.document(guest.id).delete { (error) in
+            if let error = error {
+                print("Error deleting guest with id \(guest.id): \(error)")
+                handler(error)
+                return
+            }
+            
+            GuestList.shared.remove(guest)
+            handler(nil)
         }
     }
 }
@@ -81,6 +95,10 @@ class NetworkManager {
 extension NetworkManager {
     func isAuthenticated() -> Bool {
         return Auth.auth().currentUser != nil
+    }
+    
+    func getUserId() -> String? {
+        return Auth.auth().currentUser?.uid
     }
     
     func createUser(withEmail email: String, password: String, handler: @escaping (User?, Error?) -> ()) {

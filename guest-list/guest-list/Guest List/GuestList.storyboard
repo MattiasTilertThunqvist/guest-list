@@ -102,7 +102,7 @@
                                 <rect key="frame" x="0.0" y="107" width="414" height="789"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HiV-nw-nSq" userLabel="Content View">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1124"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1206"/>
                                         <subviews>
                                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="stb-pe-9XV" userLabel="Guest Info Container View">
                                                 <rect key="frame" x="0.0" y="8" width="414" height="200"/>
@@ -131,6 +131,16 @@
                                                     <segue destination="1oR-El-zCJ" kind="embed" identifier="moreGuestInfoSegue" id="M8e-T4-kgv"/>
                                                 </connections>
                                             </containerView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dfr-lS-dHH" customClass="LargeStickyButton" customModule="guest_list" customModuleProvider="target">
+                                                <rect key="frame" x="157" y="1140" width="100" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" placeholder="YES" id="noN-Z6-FVz"/>
+                                                </constraints>
+                                                <state key="normal" title="Remove Guest"/>
+                                                <connections>
+                                                    <action selector="didTapRemoveButton:" destination="N7h-o9-dli" eventType="touchUpInside" id="nFM-lG-OGx"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
@@ -138,11 +148,13 @@
                                             <constraint firstAttribute="trailing" secondItem="KGO-jd-6Ch" secondAttribute="trailing" id="4QM-le-HuS"/>
                                             <constraint firstItem="stb-pe-9XV" firstAttribute="top" secondItem="HiV-nw-nSq" secondAttribute="top" constant="8" id="IaA-CX-5b6"/>
                                             <constraint firstItem="stb-pe-9XV" firstAttribute="leading" secondItem="HiV-nw-nSq" secondAttribute="leading" id="Pjq-lf-raR"/>
+                                            <constraint firstAttribute="bottom" secondItem="dfr-lS-dHH" secondAttribute="bottom" constant="16" id="QCS-t1-8AY"/>
                                             <constraint firstAttribute="trailing" secondItem="stb-pe-9XV" secondAttribute="trailing" id="X2w-Qk-tsH"/>
                                             <constraint firstItem="KnV-GH-8eV" firstAttribute="leading" secondItem="HiV-nw-nSq" secondAttribute="leading" id="ZQP-pd-pN6"/>
                                             <constraint firstAttribute="trailing" secondItem="KnV-GH-8eV" secondAttribute="trailing" id="aEQ-dE-sSW"/>
-                                            <constraint firstAttribute="bottom" secondItem="KnV-GH-8eV" secondAttribute="bottom" id="ebG-t9-aTI"/>
                                             <constraint firstItem="KGO-jd-6Ch" firstAttribute="top" secondItem="stb-pe-9XV" secondAttribute="bottom" constant="8" id="jT2-e6-eHV"/>
+                                            <constraint firstItem="dfr-lS-dHH" firstAttribute="top" secondItem="KnV-GH-8eV" secondAttribute="bottom" constant="16" id="kCc-sA-ghe"/>
+                                            <constraint firstItem="dfr-lS-dHH" firstAttribute="centerX" secondItem="HiV-nw-nSq" secondAttribute="centerX" id="mXq-8q-V9t"/>
                                             <constraint firstItem="KGO-jd-6Ch" firstAttribute="leading" secondItem="HiV-nw-nSq" secondAttribute="leading" id="u3Y-vG-Cxe"/>
                                         </constraints>
                                     </view>
@@ -182,6 +194,7 @@
                         <outlet property="guestInfoContainerHeightConstraint" destination="bPW-5v-zh2" id="TqI-NW-bjk"/>
                         <outlet property="guestStatusContainerHeightConstraint" destination="NEu-Ol-SKi" id="YST-Lo-cQq"/>
                         <outlet property="moreGuestInfoContainerHeightConstraint" destination="51Y-39-ods" id="brl-1x-aEz"/>
+                        <outlet property="removeGuestButton" destination="dfr-lS-dHH" id="faP-1T-w1q"/>
                         <outlet property="scrollView" destination="FQd-8p-LeK" id="Lp1-IS-Fxw"/>
                         <outlet property="titleLabel" destination="BPe-5Y-JRy" id="4aA-Jy-3oc"/>
                     </connections>

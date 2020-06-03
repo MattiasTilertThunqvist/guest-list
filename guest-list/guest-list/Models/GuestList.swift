@@ -67,6 +67,10 @@ class GuestList {
         guests.removeAll()
     }
     
+    func remove(_ guest: Guest) {
+        guests.removeAll(where: { $0.id == guest.id })
+    }
+    
     func countGuests() -> Int {
         return guests.count
     }

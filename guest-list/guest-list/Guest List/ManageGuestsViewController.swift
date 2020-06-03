@@ -26,6 +26,8 @@ class ManageGuestsViewController: UIViewController {
     @IBOutlet weak private var guestInfoContainerHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak private var guestStatusContainerHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak private var moreGuestInfoContainerHeightConstraint: NSLayoutConstraint!
+    @IBOutlet private var removeGuestButton: LargeStickyButton!
+    
     
     // MARK: IBActions
 
@@ -35,6 +37,10 @@ class ManageGuestsViewController: UIViewController {
     
     @IBAction private func didTapDoneButton(_ sender: UIButton) {
         addGuestToGuestList()
+    }
+    
+    @IBAction private func didTapRemoveButton(_ sender: LargeStickyButton) {
+        handleRemoveGuestButtonTap()
     }
     
     // MARK: Lifecycle
@@ -67,8 +73,16 @@ class ManageGuestsViewController: UIViewController {
         cancelButton.titleLabel?.font = .weddingRegularFont(textSize: .medium)
         
         doneButton.titleLabel?.font = .weddingRegularFont(textSize: .medium)
-        let buttonTitle = guest == nil ? "Add" : "Update"
-        doneButton.setTitle(buttonTitle, for: .normal)
+        let doneButtonTitle = guest == nil ? "Add" : "Update"
+        doneButton.setTitle(doneButtonTitle, for: .normal)
+        
+        if let guest = guest, guest.id != NetworkManager.shared.getUserId() {
+            // Executed if there is a guest. Except from if the guest is the logged in user. User can't delete itself from the guest list.
+            removeGuestButton.colorScheme = .whiteOnRed
+            removeGuestButton.setTitle("Remove \(guest.firstname)", for: .normal)
+        } else {
+            removeGuestButton.isHidden = true
+        }
         
         scrollView.keyboardDismissMode = .interactive
         
@@ -152,6 +166,30 @@ class ManageGuestsViewController: UIViewController {
         NetworkManager.shared.updateGuestList(with: guest) { (error) in
             if let error = error {
                 let alert = UIAlertController(title: nil, message: error.localizedDescription, preferredStyle: .alert)
+                self.present(alert, animated: true, completion: nil)
+                return
+            }
+            
+            NotificationCenter.default.post(name: .GuestListDidChange, object: nil)
+            self.dismiss(animated: true, completion: nil)
+        }
+    }
+    
+    private func handleRemoveGuestButtonTap() {
+        guard let guest = guest else { return }
+        let alert = UIAlertController(title: "", message: "Are you sure you want to remove \(guest.firstname) from the event?", preferredStyle: .alert)
+        alert.view.tintColor = .weddingGray
+        let yesAction = UIAlertAction(title: "Yes", style: .default) { (_) in self.remove(guest) }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alert.addAction(yesAction)
+        alert.addAction(cancelAction)
+        present(alert, animated: true, completion: nil)
+    }
+    
+    private func remove(_ guest: Guest) {
+        NetworkManager.shared.remove(guest) { (error) in
+            if let error = error {
+                let alert = UIAlertController(title: "Couldn't remove guest", message: error.localizedDescription, preferredStyle: .alert)
                 self.present(alert, animated: true, completion: nil)
                 return
             }

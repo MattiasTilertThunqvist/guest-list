@@ -33,6 +33,7 @@ class LargeStickyButton: UIButton {
     public enum ColorScheme{
         case whiteOnGold
         case whiteOnTransparent
+        case whiteOnRed
         case email
     }
     
@@ -41,14 +42,17 @@ class LargeStickyButton: UIButton {
         didSet {
             switch colorScheme {
             case .whiteOnGold:
-                setTitleColor(UIColor.weddingWhite, for: .normal)
-                backgroundColor = UIColor.weddingGold
+                setTitleColor(.weddingWhite, for: .normal)
+                backgroundColor = .weddingGold
             case .whiteOnTransparent:
-                setTitleColor(UIColor.weddingWhite, for: .normal)
+                setTitleColor(.weddingWhite, for: .normal)
                 backgroundColor = UIColor.weddingBlack.withAlphaComponent(0.4)
+            case .whiteOnRed:
+                setTitleColor(.weddingWhite, for: .normal)
+                backgroundColor = .weddingRed
             case .email:
-                setTitleColor(UIColor.weddingWhite, for: .normal)
-                backgroundColor = UIColor.weddingGold
+                setTitleColor(.weddingWhite, for: .normal)
+                backgroundColor = .weddingGold
                 useIcon = email
             }
         }
