@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="ipad10_2" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -14,38 +14,38 @@
             <objects>
                 <viewController storyboardIdentifier="RVSPSummaryViewController" id="ctq-5x-t9a" userLabel="RSVP Summary View Controller" customClass="RsvpSummaryViewController" customModule="guest_list" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cVi-Fl-Fgh">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="810" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oXT-Sk-BlJ">
-                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <rect key="frame" x="0.0" y="0.0" width="810" height="1080"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UWY-xb-3zH">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="832"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="810" height="840"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RSVP Summary" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tFf-EL-kuo" customClass="ExtraLargeTextLabel" customModule="guest_list" customModuleProvider="target">
-                                                <rect key="frame" x="16" y="40" width="382" height="20.5"/>
+                                                <rect key="frame" x="32" y="40" width="746" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="T8B-f5-7Cw" userLabel="RSVP Summary Stack View">
-                                                <rect key="frame" x="16" y="84.5" width="382" height="224"/>
+                                                <rect key="frame" x="32" y="84.5" width="746" height="224"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Q5d-wj-M9w" userLabel="Upper Stack View">
-                                                        <rect key="frame" x="0.0" y="0.0" width="382" height="100"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="746" height="100"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="8BQ-T6-XXW">
-                                                                <rect key="frame" x="0.0" y="0.0" width="191" height="100"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="373" height="100"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ATTENDING" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uIg-l6-frU">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="191" height="50"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="373" height="50"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                         <color key="textColor" name="weddingGray"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iMr-JW-nP8">
-                                                                        <rect key="frame" x="0.0" y="50" width="191" height="50"/>
+                                                                        <rect key="frame" x="0.0" y="50" width="373" height="50"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                         <color key="textColor" name="weddingGold"/>
                                                                         <nil key="highlightedColor"/>
@@ -53,16 +53,16 @@
                                                                 </subviews>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="mqp-5q-8WS">
-                                                                <rect key="frame" x="191" y="0.0" width="191" height="100"/>
+                                                                <rect key="frame" x="373" y="0.0" width="373" height="100"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DECLINED" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="38C-J2-7eq">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="191" height="50"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="373" height="50"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                         <color key="textColor" name="weddingGray"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CFj-Wz-m6p">
-                                                                        <rect key="frame" x="0.0" y="50" width="191" height="50"/>
+                                                                        <rect key="frame" x="0.0" y="50" width="373" height="50"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                         <color key="textColor" name="weddingGold"/>
                                                                         <nil key="highlightedColor"/>
@@ -75,19 +75,19 @@
                                                         </constraints>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="l6H-nw-LYP" userLabel="Lower Stack View">
-                                                        <rect key="frame" x="0.0" y="124" width="382" height="100"/>
+                                                        <rect key="frame" x="0.0" y="124" width="746" height="100"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="XyC-FX-Y0D">
-                                                                <rect key="frame" x="0.0" y="0.0" width="191" height="100"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="373" height="100"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NO RESPONSE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rhJ-Mv-jxa">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="191" height="50"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="373" height="50"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                         <color key="textColor" name="weddingGray"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cag-of-wqw">
-                                                                        <rect key="frame" x="0.0" y="50" width="191" height="50"/>
+                                                                        <rect key="frame" x="0.0" y="50" width="373" height="50"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                         <color key="textColor" name="weddingGold"/>
                                                                         <nil key="highlightedColor"/>
@@ -95,16 +95,16 @@
                                                                 </subviews>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="BlQ-L3-7sR">
-                                                                <rect key="frame" x="191" y="0.0" width="191" height="100"/>
+                                                                <rect key="frame" x="373" y="0.0" width="373" height="100"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MAYBE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ao0-U8-dJD">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="191" height="50"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="373" height="50"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                         <color key="textColor" name="weddingGray"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5US-ks-EHZ">
-                                                                        <rect key="frame" x="0.0" y="50" width="191" height="50"/>
+                                                                        <rect key="frame" x="0.0" y="50" width="373" height="50"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                         <color key="textColor" name="weddingGold"/>
                                                                         <nil key="highlightedColor"/>
@@ -119,51 +119,51 @@
                                                 </subviews>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1000 TOTAL GUESTS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CfW-0F-e3N">
-                                                <rect key="frame" x="125" y="332.5" width="164.5" height="20.5"/>
+                                                <rect key="frame" x="323" y="340.5" width="164.5" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" name="weddingGray"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pGO-71-gli" userLabel="Left Border View">
-                                                <rect key="frame" x="16" y="342.5" width="93" height="1"/>
+                                                <rect key="frame" x="32" y="350.5" width="259" height="1"/>
                                                 <color key="backgroundColor" name="weddingVeryLightGray"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="uu2-jr-ar8"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F5w-ti-uuW" userLabel="Right Border View">
-                                                <rect key="frame" x="305.5" y="342.5" width="92.5" height="1"/>
+                                                <rect key="frame" x="519.5" y="350.5" width="258.5" height="1"/>
                                                 <color key="backgroundColor" name="weddingVeryLightGray"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="sGg-T6-tdg"/>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Invitation Sent" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7uH-z1-X77" customClass="ExtraLargeTextLabel" customModule="guest_list" customModuleProvider="target">
-                                                <rect key="frame" x="16" y="403" width="382" height="20.5"/>
+                                                <rect key="frame" x="32" y="411" width="746" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="GSn-n8-8Yi">
-                                                <rect key="frame" x="16" y="447.5" width="382" height="120"/>
+                                                <rect key="frame" x="32" y="455.5" width="746" height="120"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1000/1000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6h8-4B-Da8">
-                                                        <rect key="frame" x="0.0" y="0.0" width="183" height="120"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="365" height="120"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" name="weddingGold"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="QCp-3R-mgi">
-                                                        <rect key="frame" x="199" y="0.0" width="183" height="120"/>
+                                                        <rect key="frame" x="381" y="0.0" width="365" height="120"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="1000 invites are already out the door - you're breezing through this!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Xf-9B-TsO" customClass="MediumTextLabel" customModule="guest_list" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="183" height="60"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="365" height="60"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="See Who's Left" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LtT-Up-Qkh" customClass="MediumTextLabel" customModule="guest_list" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="60" width="183" height="60"/>
+                                                                <rect key="frame" x="0.0" y="60" width="365" height="60"/>
                                                                 <gestureRecognizers/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <color key="textColor" name="weddingGold"/>
@@ -180,31 +180,31 @@
                                                 </constraints>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thank-Yous Sent" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bqg-rf-LwA" customClass="ExtraLargeTextLabel" customModule="guest_list" customModuleProvider="target">
-                                                <rect key="frame" x="16" y="617.5" width="130" height="20.5"/>
+                                                <rect key="frame" x="32" y="625.5" width="746" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="saG-lP-Jot">
-                                                <rect key="frame" x="16" y="662" width="382" height="120"/>
+                                                <rect key="frame" x="32" y="670" width="746" height="120"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1000/1000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5RA-r6-xYZ">
-                                                        <rect key="frame" x="0.0" y="0.0" width="188" height="120"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="370" height="120"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" name="weddingGold"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Oaj-7R-aK9">
-                                                        <rect key="frame" x="194" y="0.0" width="188" height="120"/>
+                                                        <rect key="frame" x="376" y="0.0" width="370" height="120"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="You've already sent 1000 thank-yous notes - you've got this!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kx1-DI-Nj5" customClass="MediumTextLabel" customModule="guest_list" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="0.0" width="188" height="60"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="370" height="60"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="See Who's Left" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZUk-JA-kqe" customClass="MediumTextLabel" customModule="guest_list" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="60" width="188" height="60"/>
+                                                                <rect key="frame" x="0.0" y="60" width="370" height="60"/>
                                                                 <gestureRecognizers/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <color key="textColor" name="weddingGold"/>
@@ -224,31 +224,66 @@
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
                                             <constraint firstItem="tFf-EL-kuo" firstAttribute="top" secondItem="UWY-xb-3zH" secondAttribute="top" constant="40" id="0Wh-hC-Rn4"/>
-                                            <constraint firstAttribute="trailing" secondItem="saG-lP-Jot" secondAttribute="trailing" constant="16" id="4ws-da-s7u"/>
+                                            <constraint firstAttribute="trailing" secondItem="saG-lP-Jot" secondAttribute="trailing" constant="16" id="4ws-da-s7u">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="32"/>
+                                            </constraint>
                                             <constraint firstItem="CfW-0F-e3N" firstAttribute="centerX" secondItem="UWY-xb-3zH" secondAttribute="centerX" id="7Tn-s6-fNg"/>
-                                            <constraint firstAttribute="trailing" secondItem="7uH-z1-X77" secondAttribute="trailing" constant="16" id="7qo-Dg-KqL"/>
-                                            <constraint firstItem="Bqg-rf-LwA" firstAttribute="leading" secondItem="UWY-xb-3zH" secondAttribute="leading" constant="16" id="AN5-Xc-U7M"/>
+                                            <constraint firstAttribute="trailing" secondItem="7uH-z1-X77" secondAttribute="trailing" constant="16" id="7qo-Dg-KqL">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="32"/>
+                                            </constraint>
+                                            <constraint firstItem="Bqg-rf-LwA" firstAttribute="leading" secondItem="UWY-xb-3zH" secondAttribute="leading" constant="16" id="AN5-Xc-U7M">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="32"/>
+                                            </constraint>
                                             <constraint firstItem="7uH-z1-X77" firstAttribute="top" secondItem="CfW-0F-e3N" secondAttribute="bottom" constant="50" id="CqM-Y9-dAm"/>
-                                            <constraint firstItem="saG-lP-Jot" firstAttribute="leading" secondItem="UWY-xb-3zH" secondAttribute="leading" constant="16" id="Dwl-VB-N50"/>
-                                            <constraint firstItem="F5w-ti-uuW" firstAttribute="leading" secondItem="CfW-0F-e3N" secondAttribute="trailing" constant="16" id="FLo-zm-gIG"/>
-                                            <constraint firstAttribute="trailing" secondItem="F5w-ti-uuW" secondAttribute="trailing" constant="16" id="Gp6-Dv-IBX"/>
+                                            <constraint firstItem="saG-lP-Jot" firstAttribute="leading" secondItem="UWY-xb-3zH" secondAttribute="leading" constant="16" id="Dwl-VB-N50">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="32"/>
+                                            </constraint>
+                                            <constraint firstItem="F5w-ti-uuW" firstAttribute="leading" secondItem="CfW-0F-e3N" secondAttribute="trailing" constant="16" id="FLo-zm-gIG">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="32"/>
+                                            </constraint>
+                                            <constraint firstAttribute="trailing" secondItem="F5w-ti-uuW" secondAttribute="trailing" constant="16" id="Gp6-Dv-IBX">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="32"/>
+                                            </constraint>
                                             <constraint firstItem="Bqg-rf-LwA" firstAttribute="top" secondItem="GSn-n8-8Yi" secondAttribute="bottom" constant="50" id="Gsu-cY-Gz7"/>
-                                            <constraint firstItem="T8B-f5-7Cw" firstAttribute="leading" secondItem="UWY-xb-3zH" secondAttribute="leading" constant="16" id="H71-AI-yy2"/>
-                                            <constraint firstItem="7uH-z1-X77" firstAttribute="leading" secondItem="UWY-xb-3zH" secondAttribute="leading" constant="16" id="HjE-cv-Tp1"/>
+                                            <constraint firstItem="T8B-f5-7Cw" firstAttribute="leading" secondItem="UWY-xb-3zH" secondAttribute="leading" constant="16" id="H71-AI-yy2">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="32"/>
+                                            </constraint>
+                                            <constraint firstItem="7uH-z1-X77" firstAttribute="leading" secondItem="UWY-xb-3zH" secondAttribute="leading" constant="16" id="HjE-cv-Tp1">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="32"/>
+                                            </constraint>
                                             <constraint firstAttribute="bottom" secondItem="saG-lP-Jot" secondAttribute="bottom" constant="50" id="IEH-Bt-JVc"/>
-                                            <constraint firstItem="pGO-71-gli" firstAttribute="leading" secondItem="UWY-xb-3zH" secondAttribute="leading" constant="16" id="Nuy-eC-cX6"/>
-                                            <constraint firstItem="CfW-0F-e3N" firstAttribute="top" secondItem="T8B-f5-7Cw" secondAttribute="bottom" constant="24" id="OI7-6H-ger"/>
-                                            <constraint firstItem="tFf-EL-kuo" firstAttribute="leading" secondItem="UWY-xb-3zH" secondAttribute="leading" constant="16" id="Sag-SJ-UOF"/>
+                                            <constraint firstItem="pGO-71-gli" firstAttribute="leading" secondItem="UWY-xb-3zH" secondAttribute="leading" constant="16" id="Nuy-eC-cX6">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="32"/>
+                                            </constraint>
+                                            <constraint firstItem="CfW-0F-e3N" firstAttribute="top" secondItem="T8B-f5-7Cw" secondAttribute="bottom" constant="24" id="OI7-6H-ger">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="32"/>
+                                            </constraint>
+                                            <constraint firstItem="tFf-EL-kuo" firstAttribute="leading" secondItem="UWY-xb-3zH" secondAttribute="leading" constant="16" id="Sag-SJ-UOF">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="32"/>
+                                            </constraint>
                                             <constraint firstItem="GSn-n8-8Yi" firstAttribute="top" secondItem="7uH-z1-X77" secondAttribute="bottom" constant="24" id="Upj-j8-gbH"/>
-                                            <constraint firstAttribute="trailing" secondItem="T8B-f5-7Cw" secondAttribute="trailing" constant="16" id="ZmI-bp-NWa"/>
-                                            <constraint firstAttribute="trailing" secondItem="tFf-EL-kuo" secondAttribute="trailing" constant="16" id="fGg-Kl-arT"/>
+                                            <constraint firstAttribute="trailing" secondItem="T8B-f5-7Cw" secondAttribute="trailing" constant="16" id="ZmI-bp-NWa">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="32"/>
+                                            </constraint>
+                                            <constraint firstAttribute="trailing" secondItem="Bqg-rf-LwA" secondAttribute="trailing" constant="16" id="cHq-jX-FTf">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="32"/>
+                                            </constraint>
+                                            <constraint firstAttribute="trailing" secondItem="tFf-EL-kuo" secondAttribute="trailing" constant="16" id="fGg-Kl-arT">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="32"/>
+                                            </constraint>
                                             <constraint firstItem="T8B-f5-7Cw" firstAttribute="top" secondItem="tFf-EL-kuo" secondAttribute="bottom" constant="24" id="iYP-Aa-uf2"/>
                                             <constraint firstItem="pGO-71-gli" firstAttribute="centerY" secondItem="CfW-0F-e3N" secondAttribute="centerY" id="ivN-uB-UtG"/>
                                             <constraint firstItem="saG-lP-Jot" firstAttribute="top" secondItem="Bqg-rf-LwA" secondAttribute="bottom" constant="24" id="lIk-xX-o0w"/>
                                             <constraint firstItem="F5w-ti-uuW" firstAttribute="centerY" secondItem="CfW-0F-e3N" secondAttribute="centerY" id="pF9-Rt-r0a"/>
-                                            <constraint firstItem="GSn-n8-8Yi" firstAttribute="leading" secondItem="UWY-xb-3zH" secondAttribute="leading" constant="16" id="tDT-uL-HCm"/>
-                                            <constraint firstAttribute="trailing" secondItem="GSn-n8-8Yi" secondAttribute="trailing" constant="16" id="u3U-P3-9D0"/>
-                                            <constraint firstItem="CfW-0F-e3N" firstAttribute="leading" secondItem="pGO-71-gli" secondAttribute="trailing" constant="16" id="vX9-Qq-WlK"/>
+                                            <constraint firstItem="GSn-n8-8Yi" firstAttribute="leading" secondItem="UWY-xb-3zH" secondAttribute="leading" constant="16" id="tDT-uL-HCm">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="32"/>
+                                            </constraint>
+                                            <constraint firstAttribute="trailing" secondItem="GSn-n8-8Yi" secondAttribute="trailing" constant="16" id="u3U-P3-9D0">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="32"/>
+                                            </constraint>
+                                            <constraint firstItem="CfW-0F-e3N" firstAttribute="leading" secondItem="pGO-71-gli" secondAttribute="trailing" constant="16" id="vX9-Qq-WlK">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="32"/>
+                                            </constraint>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -313,7 +348,7 @@
             <objects>
                 <tableViewController storyboardIdentifier="RSVPDetailsViewController" id="mbA-by-w2W" customClass="RsvpDetailsViewController" customModule="guest_list" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Ta1-0t-al3">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="810" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <connections>

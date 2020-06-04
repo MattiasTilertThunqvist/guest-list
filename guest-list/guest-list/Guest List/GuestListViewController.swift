@@ -94,6 +94,7 @@ extension GuestListViewController: UITableViewDataSource, UITableViewDelegate {
     
     private func presentManageGuestViewController(withGuest guest: Guest?) {
         let viewController = StoryboardInstance.addGuestsViewController()
+        viewController.modalPresentationStyle = .fullScreen
         viewController.guest = guest
         present(viewController, animated: true, completion: nil)
     }
