@@ -12,7 +12,7 @@ class GuestStatusViewController: UIViewController {
     
     // MARK: Properties
     
-    var rsvp: RSVP = .noResponse
+    var rsvp: Rsvp = .noResponse
     var list: List = .guestList
     var role: Role = .guest
     var relation: Relation = .family
@@ -31,7 +31,7 @@ class GuestStatusViewController: UIViewController {
     // MARK: IBActions
     
     @IBAction private func didTapRsvpButton(_ sender: BoxButton) {
-        showPickerViewController(for: .RSVP)
+        showPickerViewController(for: .rsvp)
     }
     
     @IBAction private func didTapListButton(_ sender: BoxButton) {
@@ -88,7 +88,7 @@ class GuestStatusViewController: UIViewController {
         viewController.pickerOption = pickerOption
         
         switch pickerOption {
-        case .RSVP:
+        case .rsvp:
             viewController.currentPickerOption = rsvp.rawValue
         case .list:
             viewController.currentPickerOption = list.rawValue
@@ -107,7 +107,7 @@ class GuestStatusViewController: UIViewController {
     
     // MARK: Accessors
     
-    func getGuestInfo() -> (RSVP, List, Role, Relation, FamilyStatus, Gender) {
+    func getGuestInfo() -> (Rsvp, List, Role, Relation, FamilyStatus, Gender) {
         return (rsvp, list, role, relation, familyStatus, gender)
     }
 }
@@ -118,8 +118,8 @@ extension GuestStatusViewController: PickerOptionsDelegate {
     
     func pickerOptions(_ pickerOption: PickerOptions, didSelectRowAtIndex index: Int) {
         switch pickerOption {
-        case .RSVP:
-            self.rsvp = RSVP(rawValue: index)!
+        case .rsvp:
+            self.rsvp = Rsvp(rawValue: index)!
             rsvpButton.setTitle(rsvp.description, for: .normal)
         case .list:
             self.list = List(rawValue: index)!

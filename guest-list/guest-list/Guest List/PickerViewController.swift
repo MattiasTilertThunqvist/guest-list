@@ -14,7 +14,7 @@ class PickerViewController: UIViewController {
     
     private let animationTimeInterval = 0.2
     var pickerOptionsDelegate: PickerOptionsDelegate!
-    var pickerOption: PickerOptions = .RSVP
+    var pickerOption: PickerOptions = .rsvp
     var currentPickerOption = 0
     
     // MARK: IBOutlet
@@ -78,8 +78,8 @@ extension PickerViewController: UIPickerViewDataSource, UIPickerViewDelegate {
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         switch pickerOption {
-        case .RSVP:
-            return RSVP.allCases.count
+        case .rsvp:
+            return Rsvp.allCases.count
         case .list:
             return List.allCases.count
         case .role:
@@ -105,9 +105,9 @@ extension PickerViewController: UIPickerViewDataSource, UIPickerViewDelegate {
         imageView.isHidden = true // Hidden by default
         
         switch pickerOption {
-        case .RSVP:
-            label.text = RSVP.allCases[row].description
-            imageView.image = RSVP.allCases[row].icon
+        case .rsvp:
+            label.text = Rsvp.allCases[row].description
+            imageView.image = Rsvp.allCases[row].icon
             imageView.isHidden = false
         case .list:
             label.text = List.allCases[row].description

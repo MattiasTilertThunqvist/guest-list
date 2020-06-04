@@ -139,7 +139,7 @@ extension NetworkManager {
 }
 
 
-enum RSVP: Int, Codable, CaseIterable {
+enum Rsvp: Int, Codable, CaseIterable {
     case noResponse
     case attending
     case maybe

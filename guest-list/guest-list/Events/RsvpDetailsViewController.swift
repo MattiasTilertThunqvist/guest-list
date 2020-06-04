@@ -1,5 +1,5 @@
 //
-//  RSVPDetailsViewController.swift
+//  RsvpDetailsViewController.swift
 //  guest-list
 //
 //  Created by Mattias Tilert Thunqvist on 2020-04-27.

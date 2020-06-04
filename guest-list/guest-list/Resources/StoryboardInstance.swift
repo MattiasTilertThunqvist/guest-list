@@ -27,8 +27,8 @@ final class StoryboardInstance {
         return summaryStoryboard.instantiateViewController(withIdentifier: "RVSPSummaryViewController") as! RsvpSummaryViewController
     }
     
-    static func RSVPDetailsViewController() -> RsvpDetailsViewController {
-        return summaryStoryboard.instantiateViewController(withIdentifier: "RSVPDetailsViewController") as! RsvpDetailsViewController
+    static func rsvpDetailsViewController() -> RsvpDetailsViewController {
+        return summaryStoryboard.instantiateViewController(withIdentifier: "RsvpDetailsViewController") as! RsvpDetailsViewController
     }
     
     static func addGuestsViewController() -> ManageGuestsViewController {

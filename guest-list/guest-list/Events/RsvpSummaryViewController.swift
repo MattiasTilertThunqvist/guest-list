@@ -44,10 +44,10 @@ class RsvpSummaryViewController: UIViewController {
     // MARK: IBActions
     
     @IBAction func invitationSentTapGesture(_ sender: UITapGestureRecognizer) {
-        displayRSVPDetailsVC(ofType: .inviteNotSent)
+        displayRsvpDetailsVC(ofType: .inviteNotSent)
     }
     @IBAction func thankYousSentTapGesture(_ sender: UITapGestureRecognizer) {
-        displayRSVPDetailsVC(ofType: .thankYouNotSent)
+        displayRsvpDetailsVC(ofType: .thankYouNotSent)
     }
     
     // MARK: Lifecycle
@@ -115,8 +115,8 @@ class RsvpSummaryViewController: UIViewController {
         setContent()
     }
     
-    private func displayRSVPDetailsVC(ofType contentType: ContentType) {
-        let viewController = StoryboardInstance.RSVPDetailsViewController()
+    private func displayRsvpDetailsVC(ofType contentType: ContentType) {
+        let viewController = StoryboardInstance.rsvpDetailsViewController()
         viewController.contentMode = contentType
         navigationController?.pushViewController(viewController, animated: true)
     }

@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--RSVP Summary View Controller-->
+        <!--Rsvp Summary View Controller-->
         <scene sceneID="0Qc-DQ-nJ8">
             <objects>
-                <viewController storyboardIdentifier="RVSPSummaryViewController" id="ctq-5x-t9a" userLabel="RSVP Summary View Controller" customClass="RsvpSummaryViewController" customModule="guest_list" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RVSPSummaryViewController" id="ctq-5x-t9a" customClass="RsvpSummaryViewController" customModule="guest_list" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cVi-Fl-Fgh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -29,7 +29,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="T8B-f5-7Cw" userLabel="RSVP Summary Stack View">
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="T8B-f5-7Cw" userLabel="Rsvp Summary Stack View">
                                                 <rect key="frame" x="16" y="84.5" width="382" height="224"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Q5d-wj-M9w" userLabel="Upper Stack View">
@@ -346,7 +346,7 @@
         <!--Rsvp Details View Controller-->
         <scene sceneID="Lfz-h1-H3I">
             <objects>
-                <tableViewController storyboardIdentifier="RSVPDetailsViewController" id="mbA-by-w2W" customClass="RsvpDetailsViewController" customModule="guest_list" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="RsvpDetailsViewController" id="mbA-by-w2W" customClass="RsvpDetailsViewController" customModule="guest_list" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Ta1-0t-al3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -9,7 +9,7 @@
 import Foundation
 
 enum PickerOptions {
-    case RSVP
+    case rsvp
     case list
     case role
     case relation
@@ -18,7 +18,7 @@ enum PickerOptions {
     
     var description: String {
         switch self {
-        case .RSVP: return "RSVP"
+        case .rsvp: return "RSVP"
         case .list: return "List"
         case .role: return "Role"
         case .relation: return "Relation"

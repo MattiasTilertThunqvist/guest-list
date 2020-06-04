@@ -36,7 +36,7 @@ class GuestTableViewCell: UITableViewCell {
         companyLabel.text = number == 0 ? nil : "(+\(number))"
     }
     
-    func setCheckboxImage(toRsvp rsvp: RSVP) {
+    func setCheckboxImage(toRsvp rsvp: Rsvp) {
         switch rsvp {
         case .noResponse:
             checkboxImageView.image = #imageLiteral(resourceName: "exclamation-mark")
