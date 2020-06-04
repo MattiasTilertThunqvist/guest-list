@@ -38,6 +38,12 @@
 		8A75356E2452F42000777F3B /* MediumTextLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A75356D2452F42000777F3B /* MediumTextLabel.swift */; };
 		8A7535712452F66B00777F3B /* GuestTableViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A7535702452F66B00777F3B /* GuestTableViewHeader.xib */; };
 		8A7535732452F6DE00777F3B /* GuestTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7535722452F6DE00777F3B /* GuestTableViewHeader.swift */; };
+		8A88CBCD24897BA80098C618 /* Rsvp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A88CBCC24897BA80098C618 /* Rsvp.swift */; };
+		8A88CBCF24897BEE0098C618 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A88CBCE24897BEE0098C618 /* List.swift */; };
+		8A88CBD124897C090098C618 /* Role.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A88CBD024897C090098C618 /* Role.swift */; };
+		8A88CBD324897C320098C618 /* Relation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A88CBD224897C320098C618 /* Relation.swift */; };
+		8A88CBD524897C480098C618 /* FamilyStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A88CBD424897C480098C618 /* FamilyStatus.swift */; };
+		8A88CBD724897C600098C618 /* Gender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A88CBD624897C600098C618 /* Gender.swift */; };
 		8A9B49CF2464A9A6000C0A08 /* Notification + Wedding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9B49CE2464A9A6000C0A08 /* Notification + Wedding.swift */; };
 		8AABA8DB24640EC20043A05F /* PickerOptionsDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AABA8DA24640EC20043A05F /* PickerOptionsDelegate.swift */; };
 		8ABFDA282456D86100B9E333 /* OnboardUser.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8ABFDA272456D86100B9E333 /* OnboardUser.storyboard */; };
@@ -87,6 +93,12 @@
 		8A75356D2452F42000777F3B /* MediumTextLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumTextLabel.swift; sourceTree = "<group>"; };
 		8A7535702452F66B00777F3B /* GuestTableViewHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GuestTableViewHeader.xib; sourceTree = "<group>"; };
 		8A7535722452F6DE00777F3B /* GuestTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestTableViewHeader.swift; sourceTree = "<group>"; };
+		8A88CBCC24897BA80098C618 /* Rsvp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rsvp.swift; sourceTree = "<group>"; };
+		8A88CBCE24897BEE0098C618 /* List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
+		8A88CBD024897C090098C618 /* Role.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Role.swift; sourceTree = "<group>"; };
+		8A88CBD224897C320098C618 /* Relation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Relation.swift; sourceTree = "<group>"; };
+		8A88CBD424897C480098C618 /* FamilyStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyStatus.swift; sourceTree = "<group>"; };
+		8A88CBD624897C600098C618 /* Gender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gender.swift; sourceTree = "<group>"; };
 		8A9B49CE2464A9A6000C0A08 /* Notification + Wedding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification + Wedding.swift"; sourceTree = "<group>"; };
 		8AABA8DA24640EC20043A05F /* PickerOptionsDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerOptionsDelegate.swift; sourceTree = "<group>"; };
 		8ABFDA272456D86100B9E333 /* OnboardUser.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = OnboardUser.storyboard; sourceTree = "<group>"; };
@@ -289,6 +301,12 @@
 			isa = PBXGroup;
 			children = (
 				8A553D5724635C4E00261BE1 /* PickerState.swift */,
+				8A88CBCC24897BA80098C618 /* Rsvp.swift */,
+				8A88CBCE24897BEE0098C618 /* List.swift */,
+				8A88CBD024897C090098C618 /* Role.swift */,
+				8A88CBD224897C320098C618 /* Relation.swift */,
+				8A88CBD424897C480098C618 /* FamilyStatus.swift */,
+				8A88CBD624897C600098C618 /* Gender.swift */,
 			);
 			path = "Custom Types";
 			sourceTree = "<group>";
@@ -467,11 +485,13 @@
 				8AABA8DB24640EC20043A05F /* PickerOptionsDelegate.swift in Sources */,
 				8ABFDA302456DB4F00B9E333 /* LargeStickyButton.swift in Sources */,
 				8ABFDA2E2456D9E800B9E333 /* LoginViewController.swift in Sources */,
+				8A88CBD324897C320098C618 /* Relation.swift in Sources */,
 				8A33DA6B244DCF230009D9D0 /* GuestListViewController.swift in Sources */,
 				8A32E9D52453412F001D585E /* WeddingSegmentedControl.swift in Sources */,
 				8ADD4F4C2455D036006EF29F /* CALayer + Wedding.swift in Sources */,
 				8A33DA8D244DE54E0009D9D0 /* NetworkError.swift in Sources */,
 				8ABFDA3A2457587F00B9E333 /* RsvpDetailsViewController.swift in Sources */,
+				8A88CBD524897C480098C618 /* FamilyStatus.swift in Sources */,
 				8A4FA8462454A9C100E0ABC4 /* LargeTextLabel.swift in Sources */,
 				8A553D512462A8ED00261BE1 /* GuestList.swift in Sources */,
 				8ADCBA8D24542A2E001DE10D /* LargeTextField.swift in Sources */,
@@ -481,20 +501,24 @@
 				8A7535732452F6DE00777F3B /* GuestTableViewHeader.swift in Sources */,
 				8ABFDA2C2456D9DF00B9E333 /* SignupWithEmailViewController.swift in Sources */,
 				8A33DA82244DDDE40009D9D0 /* StoryboardInstance.swift in Sources */,
+				8A88CBCF24897BEE0098C618 /* List.swift in Sources */,
 				8A553D552463240200261BE1 /* PickerViewController.swift in Sources */,
 				8A33DA85244DDE360009D9D0 /* NetworkManager.swift in Sources */,
 				8A33DA67244DCF230009D9D0 /* AppDelegate.swift in Sources */,
 				8A5DD5682455C4BF00941F6E /* ExtraLargeTextLabel.swift in Sources */,
 				8A504D502456CE03007D4C14 /* Guest.swift in Sources */,
 				8A55BEB62453355100672E63 /* ManageGuestsViewController.swift in Sources */,
+				8A88CBCD24897BA80098C618 /* Rsvp.swift in Sources */,
 				8A252903244F118600ED903D /* PageViewController.swift in Sources */,
 				8A75356B2452D8FD00777F3B /* GuestTableViewCell.swift in Sources */,
+				8A88CBD124897C090098C618 /* Role.swift in Sources */,
 				8A553D5824635C4E00261BE1 /* PickerState.swift in Sources */,
 				8ABFDA2A2456D9D500B9E333 /* StartOnboardingViewController.swift in Sources */,
 				8A33DA69244DCF230009D9D0 /* SceneDelegate.swift in Sources */,
 				8ADCBA9124545B84001DE10D /* MoreGuestInfoViewController.swift in Sources */,
 				8A33DA89244DDF2D0009D9D0 /* UIColor + Wedding.swift in Sources */,
 				8A4FA8482454AC2400E0ABC4 /* GuestStatusViewController.swift in Sources */,
+				8A88CBD724897C600098C618 /* Gender.swift in Sources */,
 				8A75356E2452F42000777F3B /* MediumTextLabel.swift in Sources */,
 				8A9B49CF2464A9A6000C0A08 /* Notification + Wedding.swift in Sources */,
 				8A252905244F120500ED903D /* RsvpSummaryViewController.swift in Sources */,
