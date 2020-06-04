@@ -72,6 +72,10 @@ extension PickerViewController: UIPickerViewDataSource, UIPickerViewDelegate {
         return 1
     }
     
+    func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
+        return 40
+    }
+    
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         switch pickerOption {
         case .RSVP:
@@ -90,14 +94,21 @@ extension PickerViewController: UIPickerViewDataSource, UIPickerViewDelegate {
     }
     
     func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
-        let label = (view as? UILabel) ?? UILabel()
-        label.textColor = .weddingGray
-        label.font = .weddingRegularFont(textSize: .large)
-        label.textAlignment = .center
+        // Container view
+        let customView = view ?? UIView()
+        let rowSize = pickerView.rowSize(forComponent: component)
+        customView.frame.size = rowSize
+        
+        // Subviews
+        let label = UILabel()
+        let imageView = UIImageView()
+        imageView.isHidden = true // Hidden by default
         
         switch pickerOption {
         case .RSVP:
             label.text = RSVP.allCases[row].description
+            imageView.image = RSVP.allCases[row].icon
+            imageView.isHidden = false
         case .list:
             label.text = List.allCases[row].description
         case .role:
@@ -110,7 +121,22 @@ extension PickerViewController: UIPickerViewDataSource, UIPickerViewDelegate {
             label.text = Gender.allCases[row].description
         }
         
-        return label
+        let spacing: CGFloat = 16
+        let height = rowSize.height - spacing
+        
+        label.textColor = .weddingGray
+        label.font = .weddingRegularFont(textSize: .large)
+        label.sizeToFit()
+        label.frame.size.height = height
+        label.center = customView.center
+        
+        imageView.frame.size = CGSize(width: height, height: height)
+        imageView.frame.origin.x = label.frame.maxX + spacing
+        imageView.frame.origin.y = label.frame.origin.y
+        
+        customView.addSubview(imageView)
+        customView.addSubview(label)
+        return customView
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {

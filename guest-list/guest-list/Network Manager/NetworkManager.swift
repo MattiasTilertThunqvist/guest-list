@@ -153,6 +153,15 @@ enum RSVP: Int, Codable, CaseIterable {
             case .declined: return "Declined"
         }
     }
+    
+    var icon: UIImage {
+        switch self {
+            case .noResponse: return #imageLiteral(resourceName: "exclamation-mark")
+            case .attending: return #imageLiteral(resourceName: "check-green")
+            case .maybe: return #imageLiteral(resourceName: "question-mark")
+            case .declined: return #imageLiteral(resourceName: "cross-red")
+        }
+    }
 }
     
 enum List: Int, Codable, CaseIterable {
