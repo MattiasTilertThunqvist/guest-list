@@ -51,11 +51,15 @@
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="6yU-BH-I1m" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="8DE-Wv-IYY"/>
+                    <constraint firstItem="6yU-BH-I1m" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="8DE-Wv-IYY">
+                        <variation key="heightClass=regular-widthClass=regular" constant="32"/>
+                    </constraint>
                     <constraint firstItem="6yU-BH-I1m" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="ACr-CU-YbZ"/>
                     <constraint firstItem="JoM-zx-VQV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="AIp-gJ-jlw"/>
                     <constraint firstAttribute="trailing" secondItem="JoM-zx-VQV" secondAttribute="trailing" id="Igh-4w-zDz"/>
-                    <constraint firstAttribute="trailing" secondItem="cjZ-BH-WDf" secondAttribute="trailing" constant="16" id="TuA-Ne-fJo"/>
+                    <constraint firstAttribute="trailing" secondItem="cjZ-BH-WDf" secondAttribute="trailing" constant="16" id="TuA-Ne-fJo">
+                        <variation key="heightClass=regular-widthClass=regular" constant="32"/>
+                    </constraint>
                     <constraint firstItem="cjZ-BH-WDf" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="a2q-wb-DWA"/>
                     <constraint firstAttribute="bottom" secondItem="JoM-zx-VQV" secondAttribute="bottom" id="oQs-bU-Ruy"/>
                 </constraints>
