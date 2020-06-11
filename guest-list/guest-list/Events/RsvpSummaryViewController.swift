@@ -33,11 +33,11 @@ class RsvpSummaryViewController: UIViewController {
     
     @IBOutlet private weak var nrTotalGuestsLabel: UILabel!
     
-    @IBOutlet private var nrInvitationSentLabel: UILabel!
+    @IBOutlet private var nrInvitationSentCircleView: CircleView!
     @IBOutlet private var invitationSentDescriptionLabel: MediumTextLabel!
     @IBOutlet private var InvitationSentTappableLabel: MediumTextLabel!
     
-    @IBOutlet private var nrThankYousSentLabel: UILabel!
+    @IBOutlet var nrThankYousSentCicleView: CircleView!
     @IBOutlet private var thankYousSentDescriptionLabel: MediumTextLabel!
     @IBOutlet private var thankYousSentTappableLabel: MediumTextLabel!
     
@@ -63,6 +63,20 @@ class RsvpSummaryViewController: UIViewController {
         attendingStackView.layer.addBorder(edge: .right, color: .weddingVeryLightGray, thickness: 1)
         noResponseStackView.layer.addBorder(edge: .right, color: .weddingVeryLightGray, thickness: 1)
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        let nrOfGuests = GuestList.shared.countGuests()
+        
+        let nrInvitationsSent = GuestList.shared.countInvitationsSent()
+        nrInvitationSentCircleView.setTitle(to: "\(nrInvitationsSent)")
+        nrInvitationSentCircleView.setSubTitle(to: "of \(nrOfGuests)")
+        nrInvitationSentCircleView.animate(toValue: GuestList.shared.percentageOfInvitationsSent())
+        
+        let nrThankYousSent = GuestList.shared.countThankYousSent()
+        nrThankYousSentCicleView.setTitle(to: "\(nrThankYousSent)")
+        nrThankYousSentCicleView.setSubTitle(to: "of \(nrOfGuests)")
+        nrThankYousSentCicleView.animate(toValue: GuestList.shared.percentageOfThankYousSent())
+    }
 
     private func setup() {
         attendingLabel.font = .weddingRegularFont(textSize: .small)
@@ -79,10 +93,8 @@ class RsvpSummaryViewController: UIViewController {
         
         nrTotalGuestsLabel.font = .weddingRegularFont(textSize: .small)
         
-        nrInvitationSentLabel.font = .weddingRegularFont(35)
         InvitationSentTappableLabel.textColor = .weddingGold
         
-        nrThankYousSentLabel.font = .weddingRegularFont(35)
         thankYousSentTappableLabel.textColor = .weddingGold
         
         setContent()
@@ -99,12 +111,10 @@ class RsvpSummaryViewController: UIViewController {
         nrTotalGuestsLabel.text = "\(nrOfGuests) TOTAL GUESTS"
         
         let nrInvitationsSent = GuestList.shared.countInvitationsSent()
-        nrInvitationSentLabel.text = "\(nrInvitationsSent)/\(nrOfGuests)"
         let inviteText = nrInvitationsSent > 1 ? "invites" : "invite"
         invitationSentDescriptionLabel.text = "\(nrInvitationsSent) \(inviteText) are already out the door - you're breezing through this!"
         
         let nrThankYousSent = GuestList.shared.countThankYousSent()
-        nrThankYousSentLabel.text = "\(nrThankYousSent)/\(nrOfGuests)"
         let thankYouSentText = nrThankYousSent > 1 ? "thank-yous" : "thank-you"
         thankYousSentDescriptionLabel.text = "You've already sent \(nrThankYousSent) \(thankYouSentText) notes - you've got this!"
     }

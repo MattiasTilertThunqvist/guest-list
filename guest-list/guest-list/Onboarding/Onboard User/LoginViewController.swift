@@ -92,6 +92,8 @@ class LoginViewController: UIViewController {
         NetworkManager.shared.signIn(withEmail: email, password: password) { (error) in
             if let error = error {
                 let alert = UIAlertController(title: "Could not sign in", message: error.localizedDescription, preferredStyle: .alert)
+                let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+                alert.addAction(action)
                 self.present(alert, animated: true, completion: nil)
                 return
             }

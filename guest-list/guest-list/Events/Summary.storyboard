@@ -147,12 +147,10 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="GSn-n8-8Yi">
                                                 <rect key="frame" x="16" y="447.5" width="382" height="120"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1000/1000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6h8-4B-Da8">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WD3-I2-5Yz" customClass="CircleView" customModule="guest_list" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="183" height="120"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <color key="textColor" name="weddingGold"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                    </view>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="QCp-3R-mgi">
                                                         <rect key="frame" x="199" y="0.0" width="183" height="120"/>
                                                         <subviews>
@@ -188,12 +186,10 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="saG-lP-Jot">
                                                 <rect key="frame" x="16" y="662" width="382" height="120"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1000/1000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5RA-r6-xYZ">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sPO-Ug-8xd" customClass="CircleView" customModule="guest_list" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="188" height="120"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <color key="textColor" name="weddingGold"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                    </view>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Oaj-7R-aK9">
                                                         <rect key="frame" x="194" y="0.0" width="188" height="120"/>
                                                         <subviews>
@@ -322,8 +318,8 @@
                         <outlet property="noResponseLabel" destination="rhJ-Mv-jxa" id="fRI-kX-Xw9"/>
                         <outlet property="noResponseNrLabel" destination="cag-of-wqw" id="UtB-65-v7t"/>
                         <outlet property="noResponseStackView" destination="XyC-FX-Y0D" id="aY4-Jf-Nob"/>
-                        <outlet property="nrInvitationSentLabel" destination="6h8-4B-Da8" id="JvW-YF-Fbn"/>
-                        <outlet property="nrThankYousSentLabel" destination="5RA-r6-xYZ" id="Pgu-rB-QFm"/>
+                        <outlet property="nrInvitationSentCircleView" destination="WD3-I2-5Yz" id="14v-DP-syh"/>
+                        <outlet property="nrThankYousSentCicleView" destination="sPO-Ug-8xd" id="PWR-Ay-yJ9"/>
                         <outlet property="nrTotalGuestsLabel" destination="CfW-0F-e3N" id="ekP-1s-5Eb"/>
                         <outlet property="thankYousSentDescriptionLabel" destination="kx1-DI-Nj5" id="L3j-k3-mTu"/>
                         <outlet property="thankYousSentTappableLabel" destination="ZUk-JA-kqe" id="vGP-VS-eHj"/>

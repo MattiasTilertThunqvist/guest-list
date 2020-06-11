@@ -105,6 +105,14 @@ class GuestList {
         return count
     }
     
+    func percentageOfInvitationsSent() -> Double {
+        return Double(countInvitationsSent()) / Double(countGuests())
+    }
+    
+    func percentageOfThankYousSent() -> Double {
+        return Double(countThankYousSent()) / Double(countGuests())
+    }
+    
     func countThankYousSent() -> Int {
         var count = 0
         guests.forEach({ $0.thankYouSent == true ? count += 1 : nil })
