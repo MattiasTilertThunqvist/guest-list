@@ -33,6 +33,7 @@ class RsvpDetailsViewController: UITableViewController {
         setup()
         setupTableView()
         setupSearchController()
+        NotificationCenter.default.addObserver(self, selector: #selector(guestListDidChange), name: .GuestListDidChange, object: nil)
     }
     
     private func setup() {
@@ -44,6 +45,12 @@ class RsvpDetailsViewController: UITableViewController {
             title = "Status: Thank-You Not Sent"
             guests = GuestList.shared.getGuestsWithNoThankYousSent()
         }
+    }
+    
+    @objc private func guestListDidChange() {
+        setup()
+        filterContentForSearchText(searchController.searchBar.text!) // Update filteredGuests
+        tableView.reloadSections(IndexSet(integer: 0), with: .automatic)
     }
     
     private func setupTableView() {
