@@ -36,8 +36,6 @@ class RsvpDetailsViewController: UITableViewController {
     }
     
     private func setup() {
-        tableView.allowsSelection = false
-        
         switch contentMode {
         case .inviteNotSent:
             title = "Status: Invite Not Sent"
@@ -89,6 +87,31 @@ class RsvpDetailsViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 60
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let guest: Guest = {
+            if isFiltering {
+                let guestId = filteredGuests[indexPath.row]
+                return GuestList.shared.getGuest(withId: guestId)
+            } else {
+                return guests[indexPath.row]
+            }
+        }()
+        presentManageGuestViewController(withGuest: guest)
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+}
+
+// MARK: Helpers
+
+extension RsvpDetailsViewController {
+    
+    private func presentManageGuestViewController(withGuest guest: Guest?) {
+        let viewController = StoryboardInstance.addGuestsViewController()
+        viewController.modalPresentationStyle = .fullScreen
+        viewController.guest = guest
+        present(viewController, animated: true, completion: nil)
+    }
 }
 
 // MARK: SearchController
@@ -109,7 +132,7 @@ extension RsvpDetailsViewController : UISearchResultsUpdating, UISearchBarDelega
     }
     
     private func filterContentForSearchText(_ searchText: String) {
-        filteredGuests = GuestList.shared.getGuestIds(forSearchText: searchText)
+        filteredGuests = GuestList.shared.filter(guests, forSearchText: searchText)
     }
     
     func updateSearchResults(for searchController: UISearchController) {
