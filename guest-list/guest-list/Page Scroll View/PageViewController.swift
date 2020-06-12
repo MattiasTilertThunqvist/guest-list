@@ -48,6 +48,7 @@ class PageViewController: UIPageViewController {
     }
     
     private func setup() {
+        navigationController?.navigationBar.topItem?.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         view.backgroundColor = .weddingWhite
         navigationController?.navigationBar.isHidden = true
         navigationController?.navigationBar.backgroundColor = .weddingWhite

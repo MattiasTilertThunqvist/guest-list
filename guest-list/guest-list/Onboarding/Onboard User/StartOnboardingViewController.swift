@@ -27,6 +27,7 @@ class StartOnboardingViewController: UIViewController {
         signupWithEmailButton.colorScheme = .email
         loginButton.colorScheme = .whiteOnTransparent
         
+        navigationController?.navigationBar.topItem?.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         signupWithEmailButton.setTitle("SIGN UP WITH EMAIL", for: .normal)
         loginButton.setTitle("LOG IN", for: .normal)
     }

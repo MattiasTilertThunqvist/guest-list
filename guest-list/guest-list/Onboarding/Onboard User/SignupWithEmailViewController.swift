@@ -59,7 +59,7 @@ class SignupWithEmailViewController: UIViewController {
 
     private func setUp() {
         navigationItem.title = "SIGN UP"
-        
+
         signUpButton.colorScheme = .email
         signUpButton.setTitle("SIGN UP WITH EMAIL", for: .normal)
 

@@ -65,16 +65,7 @@ class RsvpSummaryViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        let nrOfGuests = GuestList.shared.countGuests()
-        
-        let nrInvitationsSent = GuestList.shared.countInvitationsSent()
-        nrInvitationSentCircleView.setTitle(to: "\(nrInvitationsSent)")
-        nrInvitationSentCircleView.setSubTitle(to: "of \(nrOfGuests)")
         nrInvitationSentCircleView.animate(toValue: GuestList.shared.percentageOfInvitationsSent())
-        
-        let nrThankYousSent = GuestList.shared.countThankYousSent()
-        nrThankYousSentCicleView.setTitle(to: "\(nrThankYousSent)")
-        nrThankYousSentCicleView.setSubTitle(to: "of \(nrOfGuests)")
         nrThankYousSentCicleView.animate(toValue: GuestList.shared.percentageOfThankYousSent())
     }
 
@@ -110,11 +101,19 @@ class RsvpSummaryViewController: UIViewController {
         maybeNrLabel.text = "\(GuestList.shared.countMaybeRsvps())"
         nrTotalGuestsLabel.text = "\(nrOfGuests) TOTAL GUESTS"
         
+        // Invitations sent
         let nrInvitationsSent = GuestList.shared.countInvitationsSent()
+        nrInvitationSentCircleView.setTitle(to: "\(nrInvitationsSent)")
+        nrInvitationSentCircleView.setSubTitle(to: "of \(nrOfGuests)")
+        
         let inviteText = nrInvitationsSent > 1 ? "invites" : "invite"
         invitationSentDescriptionLabel.text = "\(nrInvitationsSent) \(inviteText) are already out the door - you're breezing through this!"
         
+        // Thank yous sent
         let nrThankYousSent = GuestList.shared.countThankYousSent()
+        nrThankYousSentCicleView.setTitle(to: "\(nrThankYousSent)")
+        nrThankYousSentCicleView.setSubTitle(to: "of \(nrOfGuests)")
+        
         let thankYouSentText = nrThankYousSent > 1 ? "thank-yous" : "thank-you"
         thankYousSentDescriptionLabel.text = "You've already sent \(nrThankYousSent) \(thankYouSentText) notes - you've got this!"
     }
