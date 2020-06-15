@@ -136,6 +136,7 @@ extension RsvpDetailsViewController : UISearchResultsUpdating, UISearchBarDelega
         navigationItem.hidesSearchBarWhenScrolling = false
         navigationItem.searchController = searchController
         definesPresentationContext = true
+        extendedLayoutIncludesOpaqueBars = true // Set searchController opague when viewController is popped
     }
     
     private func filterContentForSearchText(_ searchText: String) {
