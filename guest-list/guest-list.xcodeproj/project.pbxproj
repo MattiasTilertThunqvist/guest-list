@@ -44,6 +44,8 @@
 		8A88CBD324897C320098C618 /* Relation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A88CBD224897C320098C618 /* Relation.swift */; };
 		8A88CBD524897C480098C618 /* FamilyStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A88CBD424897C480098C618 /* FamilyStatus.swift */; };
 		8A88CBD724897C600098C618 /* Gender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A88CBD624897C600098C618 /* Gender.swift */; };
+		8A8FE5752497CE01001A2EF5 /* BaseGuestListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8FE5742497CE01001A2EF5 /* BaseGuestListViewController.swift */; };
+		8A8FE5772497D2DD001A2EF5 /* BaseGuestList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A8FE5762497D2DD001A2EF5 /* BaseGuestList.storyboard */; };
 		8A9B49CF2464A9A6000C0A08 /* Notification + Wedding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9B49CE2464A9A6000C0A08 /* Notification + Wedding.swift */; };
 		8AABA8DB24640EC20043A05F /* PickerOptionsDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AABA8DA24640EC20043A05F /* PickerOptionsDelegate.swift */; };
 		8ABFDA282456D86100B9E333 /* OnboardUser.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8ABFDA272456D86100B9E333 /* OnboardUser.storyboard */; };
@@ -100,6 +102,8 @@
 		8A88CBD224897C320098C618 /* Relation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Relation.swift; sourceTree = "<group>"; };
 		8A88CBD424897C480098C618 /* FamilyStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyStatus.swift; sourceTree = "<group>"; };
 		8A88CBD624897C600098C618 /* Gender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gender.swift; sourceTree = "<group>"; };
+		8A8FE5742497CE01001A2EF5 /* BaseGuestListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseGuestListViewController.swift; sourceTree = "<group>"; };
+		8A8FE5762497D2DD001A2EF5 /* BaseGuestList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BaseGuestList.storyboard; sourceTree = "<group>"; };
 		8A9B49CE2464A9A6000C0A08 /* Notification + Wedding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification + Wedding.swift"; sourceTree = "<group>"; };
 		8AABA8DA24640EC20043A05F /* PickerOptionsDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerOptionsDelegate.swift; sourceTree = "<group>"; };
 		8ABFDA272456D86100B9E333 /* OnboardUser.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = OnboardUser.storyboard; sourceTree = "<group>"; };
@@ -295,6 +299,7 @@
 		8A504D512456D15A007D4C14 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
+				8A8FE5732497CDD3001A2EF5 /* Base */,
 				8ABFDA352456F82200B9E333 /* Onboard User */,
 			);
 			path = Onboarding;
@@ -330,6 +335,15 @@
 				8A7535722452F6DE00777F3B /* GuestTableViewHeader.swift */,
 			);
 			path = "Guest Table View Header";
+			sourceTree = "<group>";
+		};
+		8A8FE5732497CDD3001A2EF5 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				8A8FE5762497D2DD001A2EF5 /* BaseGuestList.storyboard */,
+				8A8FE5742497CE01001A2EF5 /* BaseGuestListViewController.swift */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 		8AABA8D924640EAF0043A05F /* Protocols */ = {
@@ -415,6 +429,7 @@
 				8A75356C2452D8FD00777F3B /* GuestTableViewCell.xib in Resources */,
 				8AF697E42461BB64009DB7B9 /* GoogleService-Info.plist in Resources */,
 				8A33DA70244DCF270009D9D0 /* Assets.xcassets in Resources */,
+				8A8FE5772497D2DD001A2EF5 /* BaseGuestList.storyboard in Resources */,
 				8ABFDA282456D86100B9E333 /* OnboardUser.storyboard in Resources */,
 				8A252909244F1DA800ED903D /* GuestList.storyboard in Resources */,
 				8A7535712452F66B00777F3B /* GuestTableViewHeader.xib in Resources */,
@@ -489,6 +504,7 @@
 				8ABFDA302456DB4F00B9E333 /* LargeStickyButton.swift in Sources */,
 				8ABFDA2E2456D9E800B9E333 /* LoginViewController.swift in Sources */,
 				8AE37F96248E663300C73482 /* CircleView.swift in Sources */,
+				8A8FE5752497CE01001A2EF5 /* BaseGuestListViewController.swift in Sources */,
 				8A88CBD324897C320098C618 /* Relation.swift in Sources */,
 				8A33DA6B244DCF230009D9D0 /* GuestListViewController.swift in Sources */,
 				8A32E9D52453412F001D585E /* WeddingSegmentedControl.swift in Sources */,

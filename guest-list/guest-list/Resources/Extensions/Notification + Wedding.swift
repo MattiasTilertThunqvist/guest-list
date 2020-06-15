@@ -11,4 +11,5 @@ import Foundation
 extension Notification.Name {
     static let GuestListDidChange = Notification.Name("guestListDidChange")
     static let OnboardingDidFinish = Notification.Name("onboardingDidFinish")
+    static let SignOut = Notification.Name("signOut")
 }

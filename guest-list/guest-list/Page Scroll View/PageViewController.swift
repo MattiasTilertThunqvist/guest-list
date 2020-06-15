@@ -32,11 +32,7 @@ class PageViewController: UIPageViewController {
     }
     
     @IBAction private func didTapSignOutButton(_ sender: UIBarButtonItem) {
-        NetworkManager.shared.signOut { (_) in
-            let viewController = StoryboardInstance.onboardingNavigationController()
-            viewController.modalPresentationStyle = .fullScreen
-            self.present(viewController, animated: true, completion: nil)
-        }
+        NotificationCenter.default.post(name: .SignOut, object: nil)
     }
     
     // MARK: Lifecycle
@@ -44,7 +40,7 @@ class PageViewController: UIPageViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
-        checkUserAuthentication()
+        loadGuestList()
     }
     
     private func setup() {
@@ -54,22 +50,6 @@ class PageViewController: UIPageViewController {
         navigationController?.navigationBar.backgroundColor = .weddingWhite
         navigationController?.navigationBar.isTranslucent = false
         extendedLayoutIncludesOpaqueBars = true // Set contentview top constrain to navbar
-        NotificationCenter.default.addObserver(self, selector: #selector(onboardingDidFinish), name: .OnboardingDidFinish, object: nil)
-    }
-    
-    private func checkUserAuthentication() {
-        if NetworkManager.shared.isAuthenticated() {
-            loadGuestList()
-        } else {
-            // Start onboarding
-            let viewController = StoryboardInstance.onboardingNavigationController()
-            viewController.modalPresentationStyle = .fullScreen
-            present(viewController, animated: false, completion: nil)
-        }
-    }
-    
-    @objc private func onboardingDidFinish() {
-        self.loadGuestList()
     }
     
     private func loadGuestList() {
@@ -117,7 +97,6 @@ extension PageViewController: UIPageViewControllerDataSource, UIPageViewControll
     }
     
     func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
-        
         if completed {
             guard let currentIndex = orderedViewControllers.firstIndex(where: { $0 == pageViewController.viewControllers?.last }) else { return }
             segmentedControl.selectedSegmentIndex = currentIndex

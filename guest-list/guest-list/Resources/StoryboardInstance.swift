@@ -11,9 +11,13 @@ import UIKit
 final class StoryboardInstance {
     
     private static let onboardingStoryboard = UIStoryboard(name: "OnboardUser", bundle: nil)
-    private static let pageScrollStoryboard = UIStoryboard(name: "PageSroll", bundle: nil)
+    private static let pageScrollStoryboard = UIStoryboard(name: "PageScroll", bundle: nil)
     private static let guestListStoryboard = UIStoryboard(name: "GuestList", bundle: nil)
     private static let summaryStoryboard = UIStoryboard(name: "Summary", bundle: nil)
+    
+    static func pageViewController() -> PageViewController {
+        return pageScrollStoryboard.instantiateViewController(withIdentifier: "PageViewController") as! PageViewController
+    }
     
     static func onboardingNavigationController() -> UINavigationController {
         return onboardingStoryboard.instantiateViewController(withIdentifier: "OnboardingNavigationController") as! UINavigationController
