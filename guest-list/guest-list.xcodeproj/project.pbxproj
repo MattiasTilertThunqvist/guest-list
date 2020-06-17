@@ -1,0 +1,748 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1F4F7EF2E23E421E13D5C6F8 /* Pods_guest_list.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 575FC73F9547EB8B0E8C130F /* Pods_guest_list.framework */; };
+		8A252903244F118600ED903D /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A252902244F118600ED903D /* PageViewController.swift */; };
+		8A252905244F120500ED903D /* RsvpSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A252904244F120500ED903D /* RsvpSummaryViewController.swift */; };
+		8A252909244F1DA800ED903D /* GuestList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A252908244F1DA800ED903D /* GuestList.storyboard */; };
+		8A25290B244F1DC900ED903D /* Summary.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A25290A244F1DC900ED903D /* Summary.storyboard */; };
+		8A32E9D52453412F001D585E /* WeddingSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A32E9D42453412F001D585E /* WeddingSegmentedControl.swift */; };
+		8A33DA67244DCF230009D9D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A33DA66244DCF230009D9D0 /* AppDelegate.swift */; };
+		8A33DA69244DCF230009D9D0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A33DA68244DCF230009D9D0 /* SceneDelegate.swift */; };
+		8A33DA6B244DCF230009D9D0 /* GuestListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A33DA6A244DCF230009D9D0 /* GuestListViewController.swift */; };
+		8A33DA6E244DCF230009D9D0 /* PageScroll.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A33DA6C244DCF230009D9D0 /* PageScroll.storyboard */; };
+		8A33DA70244DCF270009D9D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A33DA6F244DCF270009D9D0 /* Assets.xcassets */; };
+		8A33DA73244DCF270009D9D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A33DA71244DCF270009D9D0 /* LaunchScreen.storyboard */; };
+		8A33DA82244DDDE40009D9D0 /* StoryboardInstance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A33DA81244DDDE40009D9D0 /* StoryboardInstance.swift */; };
+		8A33DA85244DDE360009D9D0 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A33DA84244DDE360009D9D0 /* NetworkManager.swift */; };
+		8A33DA89244DDF2D0009D9D0 /* UIColor + Wedding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A33DA88244DDF2D0009D9D0 /* UIColor + Wedding.swift */; };
+		8A33DA8B244DE3DC0009D9D0 /* UIFont + Wedding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A33DA8A244DE3DC0009D9D0 /* UIFont + Wedding.swift */; };
+		8A33DA8D244DE54E0009D9D0 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A33DA8C244DE54E0009D9D0 /* NetworkError.swift */; };
+		8A4FA8462454A9C100E0ABC4 /* LargeTextLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4FA8452454A9C100E0ABC4 /* LargeTextLabel.swift */; };
+		8A4FA8482454AC2400E0ABC4 /* GuestStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4FA8472454AC2400E0ABC4 /* GuestStatusViewController.swift */; };
+		8A4FA84A2454AFF100E0ABC4 /* BoxButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4FA8492454AFF100E0ABC4 /* BoxButton.swift */; };
+		8A504D502456CE03007D4C14 /* Guest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A504D4F2456CE03007D4C14 /* Guest.swift */; };
+		8A553D512462A8ED00261BE1 /* GuestList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A553D502462A8ED00261BE1 /* GuestList.swift */; };
+		8A553D552463240200261BE1 /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A553D542463240200261BE1 /* PickerViewController.swift */; };
+		8A553D5824635C4E00261BE1 /* PickerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A553D5724635C4E00261BE1 /* PickerState.swift */; };
+		8A55BEB62453355100672E63 /* ManageGuestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A55BEB42453355100672E63 /* ManageGuestsViewController.swift */; };
+		8A5DD5682455C4BF00941F6E /* ExtraLargeTextLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5DD5672455C4BF00941F6E /* ExtraLargeTextLabel.swift */; };
+		8A75356B2452D8FD00777F3B /* GuestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7535692452D8FD00777F3B /* GuestTableViewCell.swift */; };
+		8A75356C2452D8FD00777F3B /* GuestTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A75356A2452D8FD00777F3B /* GuestTableViewCell.xib */; };
+		8A75356E2452F42000777F3B /* MediumTextLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A75356D2452F42000777F3B /* MediumTextLabel.swift */; };
+		8A7535712452F66B00777F3B /* GuestTableViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A7535702452F66B00777F3B /* GuestTableViewHeader.xib */; };
+		8A7535732452F6DE00777F3B /* GuestTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7535722452F6DE00777F3B /* GuestTableViewHeader.swift */; };
+		8A88CBCD24897BA80098C618 /* Rsvp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A88CBCC24897BA80098C618 /* Rsvp.swift */; };
+		8A88CBCF24897BEE0098C618 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A88CBCE24897BEE0098C618 /* List.swift */; };
+		8A88CBD124897C090098C618 /* Role.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A88CBD024897C090098C618 /* Role.swift */; };
+		8A88CBD324897C320098C618 /* Relation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A88CBD224897C320098C618 /* Relation.swift */; };
+		8A88CBD524897C480098C618 /* FamilyStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A88CBD424897C480098C618 /* FamilyStatus.swift */; };
+		8A88CBD724897C600098C618 /* Gender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A88CBD624897C600098C618 /* Gender.swift */; };
+		8A8FE5752497CE01001A2EF5 /* BaseGuestListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8FE5742497CE01001A2EF5 /* BaseGuestListViewController.swift */; };
+		8A8FE5772497D2DD001A2EF5 /* BaseGuestList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A8FE5762497D2DD001A2EF5 /* BaseGuestList.storyboard */; };
+		8A9B49CF2464A9A6000C0A08 /* Notification + Wedding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9B49CE2464A9A6000C0A08 /* Notification + Wedding.swift */; };
+		8AABA8DB24640EC20043A05F /* PickerOptionsDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AABA8DA24640EC20043A05F /* PickerOptionsDelegate.swift */; };
+		8ABFDA282456D86100B9E333 /* OnboardUser.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8ABFDA272456D86100B9E333 /* OnboardUser.storyboard */; };
+		8ABFDA2A2456D9D500B9E333 /* StartOnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABFDA292456D9D500B9E333 /* StartOnboardingViewController.swift */; };
+		8ABFDA2C2456D9DF00B9E333 /* SignupWithEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABFDA2B2456D9DF00B9E333 /* SignupWithEmailViewController.swift */; };
+		8ABFDA2E2456D9E800B9E333 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABFDA2D2456D9E800B9E333 /* LoginViewController.swift */; };
+		8ABFDA302456DB4F00B9E333 /* LargeStickyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABFDA2F2456DB4F00B9E333 /* LargeStickyButton.swift */; };
+		8ABFDA3A2457587F00B9E333 /* RsvpDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABFDA392457587F00B9E333 /* RsvpDetailsViewController.swift */; };
+		8ADCBA8D24542A2E001DE10D /* LargeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADCBA8C24542A2E001DE10D /* LargeTextField.swift */; };
+		8ADCBA8F24543B7A001DE10D /* GuestInfoTextFieldsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADCBA8E24543B7A001DE10D /* GuestInfoTextFieldsViewController.swift */; };
+		8ADCBA9124545B84001DE10D /* MoreGuestInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADCBA9024545B84001DE10D /* MoreGuestInfoViewController.swift */; };
+		8ADD4F4C2455D036006EF29F /* CALayer + Wedding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADD4F4B2455D036006EF29F /* CALayer + Wedding.swift */; };
+		8AE37F96248E663300C73482 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE37F95248E663300C73482 /* CircleView.swift */; };
+		8AF697E42461BB64009DB7B9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8AF697E32461BB64009DB7B9 /* GoogleService-Info.plist */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		575FC73F9547EB8B0E8C130F /* Pods_guest_list.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_guest_list.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A252902244F118600ED903D /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
+		8A252904244F120500ED903D /* RsvpSummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RsvpSummaryViewController.swift; sourceTree = "<group>"; };
+		8A252908244F1DA800ED903D /* GuestList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GuestList.storyboard; sourceTree = "<group>"; };
+		8A25290A244F1DC900ED903D /* Summary.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Summary.storyboard; sourceTree = "<group>"; };
+		8A32E9D42453412F001D585E /* WeddingSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeddingSegmentedControl.swift; sourceTree = "<group>"; };
+		8A33DA63244DCF230009D9D0 /* guest-list.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "guest-list.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A33DA66244DCF230009D9D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8A33DA68244DCF230009D9D0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		8A33DA6A244DCF230009D9D0 /* GuestListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestListViewController.swift; sourceTree = "<group>"; };
+		8A33DA6D244DCF230009D9D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/PageScroll.storyboard; sourceTree = "<group>"; };
+		8A33DA6F244DCF270009D9D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8A33DA72244DCF270009D9D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8A33DA74244DCF270009D9D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8A33DA81244DDDE40009D9D0 /* StoryboardInstance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardInstance.swift; sourceTree = "<group>"; };
+		8A33DA84244DDE360009D9D0 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		8A33DA88244DDF2D0009D9D0 /* UIColor + Wedding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Wedding.swift"; sourceTree = "<group>"; };
+		8A33DA8A244DE3DC0009D9D0 /* UIFont + Wedding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont + Wedding.swift"; sourceTree = "<group>"; };
+		8A33DA8C244DE54E0009D9D0 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		8A4FA8452454A9C100E0ABC4 /* LargeTextLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeTextLabel.swift; sourceTree = "<group>"; };
+		8A4FA8472454AC2400E0ABC4 /* GuestStatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestStatusViewController.swift; sourceTree = "<group>"; };
+		8A4FA8492454AFF100E0ABC4 /* BoxButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxButton.swift; sourceTree = "<group>"; };
+		8A504D4F2456CE03007D4C14 /* Guest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Guest.swift; sourceTree = "<group>"; };
+		8A553D502462A8ED00261BE1 /* GuestList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestList.swift; sourceTree = "<group>"; };
+		8A553D542463240200261BE1 /* PickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
+		8A553D5724635C4E00261BE1 /* PickerState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerState.swift; sourceTree = "<group>"; };
+		8A55BEB42453355100672E63 /* ManageGuestsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageGuestsViewController.swift; sourceTree = "<group>"; };
+		8A5DD5672455C4BF00941F6E /* ExtraLargeTextLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtraLargeTextLabel.swift; sourceTree = "<group>"; };
+		8A7535692452D8FD00777F3B /* GuestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestTableViewCell.swift; sourceTree = "<group>"; };
+		8A75356A2452D8FD00777F3B /* GuestTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GuestTableViewCell.xib; sourceTree = "<group>"; };
+		8A75356D2452F42000777F3B /* MediumTextLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumTextLabel.swift; sourceTree = "<group>"; };
+		8A7535702452F66B00777F3B /* GuestTableViewHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GuestTableViewHeader.xib; sourceTree = "<group>"; };
+		8A7535722452F6DE00777F3B /* GuestTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestTableViewHeader.swift; sourceTree = "<group>"; };
+		8A88CBCC24897BA80098C618 /* Rsvp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rsvp.swift; sourceTree = "<group>"; };
+		8A88CBCE24897BEE0098C618 /* List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
+		8A88CBD024897C090098C618 /* Role.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Role.swift; sourceTree = "<group>"; };
+		8A88CBD224897C320098C618 /* Relation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Relation.swift; sourceTree = "<group>"; };
+		8A88CBD424897C480098C618 /* FamilyStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyStatus.swift; sourceTree = "<group>"; };
+		8A88CBD624897C600098C618 /* Gender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gender.swift; sourceTree = "<group>"; };
+		8A8FE5742497CE01001A2EF5 /* BaseGuestListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseGuestListViewController.swift; sourceTree = "<group>"; };
+		8A8FE5762497D2DD001A2EF5 /* BaseGuestList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BaseGuestList.storyboard; sourceTree = "<group>"; };
+		8A9B49CE2464A9A6000C0A08 /* Notification + Wedding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification + Wedding.swift"; sourceTree = "<group>"; };
+		8AABA8DA24640EC20043A05F /* PickerOptionsDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerOptionsDelegate.swift; sourceTree = "<group>"; };
+		8ABFDA272456D86100B9E333 /* OnboardUser.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = OnboardUser.storyboard; sourceTree = "<group>"; };
+		8ABFDA292456D9D500B9E333 /* StartOnboardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartOnboardingViewController.swift; sourceTree = "<group>"; };
+		8ABFDA2B2456D9DF00B9E333 /* SignupWithEmailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupWithEmailViewController.swift; sourceTree = "<group>"; };
+		8ABFDA2D2456D9E800B9E333 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		8ABFDA2F2456DB4F00B9E333 /* LargeStickyButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LargeStickyButton.swift; sourceTree = "<group>"; };
+		8ABFDA392457587F00B9E333 /* RsvpDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RsvpDetailsViewController.swift; sourceTree = "<group>"; };
+		8ADCBA8C24542A2E001DE10D /* LargeTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeTextField.swift; sourceTree = "<group>"; };
+		8ADCBA8E24543B7A001DE10D /* GuestInfoTextFieldsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestInfoTextFieldsViewController.swift; sourceTree = "<group>"; };
+		8ADCBA9024545B84001DE10D /* MoreGuestInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreGuestInfoViewController.swift; sourceTree = "<group>"; };
+		8ADD4F4B2455D036006EF29F /* CALayer + Wedding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer + Wedding.swift"; sourceTree = "<group>"; };
+		8AE37F95248E663300C73482 /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
+		8AF697E32461BB64009DB7B9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		EC4C66B88AEC9EDDDF361820 /* Pods-guest-list.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-guest-list.release.xcconfig"; path = "Pods/Target Support Files/Pods-guest-list/Pods-guest-list.release.xcconfig"; sourceTree = "<group>"; };
+		F0CA2C6D4DE83932D24994EA /* Pods-guest-list.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-guest-list.debug.xcconfig"; path = "Pods/Target Support Files/Pods-guest-list/Pods-guest-list.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8A33DA60244DCF230009D9D0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F4F7EF2E23E421E13D5C6F8 /* Pods_guest_list.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3740BD797D56EA7D3147A609 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F0CA2C6D4DE83932D24994EA /* Pods-guest-list.debug.xcconfig */,
+				EC4C66B88AEC9EDDDF361820 /* Pods-guest-list.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		70CC6A1EA00ED20F283B79A4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				575FC73F9547EB8B0E8C130F /* Pods_guest_list.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8A252906244F125F00ED903D /* Guest List */ = {
+			isa = PBXGroup;
+			children = (
+				8A252908244F1DA800ED903D /* GuestList.storyboard */,
+				8A33DA6A244DCF230009D9D0 /* GuestListViewController.swift */,
+				8A55BEB42453355100672E63 /* ManageGuestsViewController.swift */,
+				8ADCBA8E24543B7A001DE10D /* GuestInfoTextFieldsViewController.swift */,
+				8ADCBA9024545B84001DE10D /* MoreGuestInfoViewController.swift */,
+				8A4FA8472454AC2400E0ABC4 /* GuestStatusViewController.swift */,
+				8A553D542463240200261BE1 /* PickerViewController.swift */,
+			);
+			path = "Guest List";
+			sourceTree = "<group>";
+		};
+		8A252907244F127200ED903D /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				8A25290A244F1DC900ED903D /* Summary.storyboard */,
+				8A252904244F120500ED903D /* RsvpSummaryViewController.swift */,
+				8ABFDA392457587F00B9E333 /* RsvpDetailsViewController.swift */,
+			);
+			path = Events;
+			sourceTree = "<group>";
+		};
+		8A25290C244F1E6C00ED903D /* Page Scroll View */ = {
+			isa = PBXGroup;
+			children = (
+				8A33DA6C244DCF230009D9D0 /* PageScroll.storyboard */,
+				8A252902244F118600ED903D /* PageViewController.swift */,
+			);
+			path = "Page Scroll View";
+			sourceTree = "<group>";
+		};
+		8A33DA5A244DCF230009D9D0 = {
+			isa = PBXGroup;
+			children = (
+				8A33DA65244DCF230009D9D0 /* guest-list */,
+				8A33DA64244DCF230009D9D0 /* Products */,
+				3740BD797D56EA7D3147A609 /* Pods */,
+				70CC6A1EA00ED20F283B79A4 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		8A33DA64244DCF230009D9D0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8A33DA63244DCF230009D9D0 /* guest-list.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8A33DA65244DCF230009D9D0 /* guest-list */ = {
+			isa = PBXGroup;
+			children = (
+				8A504D512456D15A007D4C14 /* Onboarding */,
+				8A25290C244F1E6C00ED903D /* Page Scroll View */,
+				8A252906244F125F00ED903D /* Guest List */,
+				8A252907244F127200ED903D /* Events */,
+				8A33DA80244DDD9C0009D9D0 /* Cells */,
+				8A504D4E2456CDE8007D4C14 /* Models */,
+				8A33DA83244DDE180009D9D0 /* Network Manager */,
+				8A33DA7F244DDD410009D9D0 /* Resources */,
+				8A33DA7E244DDD1D0009D9D0 /* Supporting Files */,
+			);
+			path = "guest-list";
+			sourceTree = "<group>";
+		};
+		8A33DA7E244DDD1D0009D9D0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8A33DA68244DCF230009D9D0 /* SceneDelegate.swift */,
+				8A33DA66244DCF230009D9D0 /* AppDelegate.swift */,
+				8A33DA71244DCF270009D9D0 /* LaunchScreen.storyboard */,
+				8A33DA74244DCF270009D9D0 /* Info.plist */,
+				8AF697E32461BB64009DB7B9 /* GoogleService-Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8A33DA7F244DDD410009D9D0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8AABA8D924640EAF0043A05F /* Protocols */,
+				8A553D5624635C1800261BE1 /* Custom Types */,
+				8A33DA87244DDEED0009D9D0 /* Extensions */,
+				8A33DA86244DDEC60009D9D0 /* UI Components */,
+				8A33DA6F244DCF270009D9D0 /* Assets.xcassets */,
+				8A33DA81244DDDE40009D9D0 /* StoryboardInstance.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		8A33DA80244DDD9C0009D9D0 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				8A75356F2452F5C300777F3B /* Guest Table View Header */,
+				8A7535682452D8D700777F3B /* Guest Table View Cell */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		8A33DA83244DDE180009D9D0 /* Network Manager */ = {
+			isa = PBXGroup;
+			children = (
+				8A33DA84244DDE360009D9D0 /* NetworkManager.swift */,
+				8A33DA8C244DE54E0009D9D0 /* NetworkError.swift */,
+			);
+			path = "Network Manager";
+			sourceTree = "<group>";
+		};
+		8A33DA86244DDEC60009D9D0 /* UI Components */ = {
+			isa = PBXGroup;
+			children = (
+				8A75356D2452F42000777F3B /* MediumTextLabel.swift */,
+				8A4FA8452454A9C100E0ABC4 /* LargeTextLabel.swift */,
+				8A5DD5672455C4BF00941F6E /* ExtraLargeTextLabel.swift */,
+				8A32E9D42453412F001D585E /* WeddingSegmentedControl.swift */,
+				8ADCBA8C24542A2E001DE10D /* LargeTextField.swift */,
+				8A4FA8492454AFF100E0ABC4 /* BoxButton.swift */,
+				8ABFDA2F2456DB4F00B9E333 /* LargeStickyButton.swift */,
+				8AE37F95248E663300C73482 /* CircleView.swift */,
+			);
+			path = "UI Components";
+			sourceTree = "<group>";
+		};
+		8A33DA87244DDEED0009D9D0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8A33DA88244DDF2D0009D9D0 /* UIColor + Wedding.swift */,
+				8A33DA8A244DE3DC0009D9D0 /* UIFont + Wedding.swift */,
+				8ADD4F4B2455D036006EF29F /* CALayer + Wedding.swift */,
+				8A9B49CE2464A9A6000C0A08 /* Notification + Wedding.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		8A504D4E2456CDE8007D4C14 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8A504D4F2456CE03007D4C14 /* Guest.swift */,
+				8A553D502462A8ED00261BE1 /* GuestList.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8A504D512456D15A007D4C14 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				8A8FE5732497CDD3001A2EF5 /* Base */,
+				8ABFDA352456F82200B9E333 /* Onboard User */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		8A553D5624635C1800261BE1 /* Custom Types */ = {
+			isa = PBXGroup;
+			children = (
+				8A553D5724635C4E00261BE1 /* PickerState.swift */,
+				8A88CBCC24897BA80098C618 /* Rsvp.swift */,
+				8A88CBCE24897BEE0098C618 /* List.swift */,
+				8A88CBD024897C090098C618 /* Role.swift */,
+				8A88CBD224897C320098C618 /* Relation.swift */,
+				8A88CBD424897C480098C618 /* FamilyStatus.swift */,
+				8A88CBD624897C600098C618 /* Gender.swift */,
+			);
+			path = "Custom Types";
+			sourceTree = "<group>";
+		};
+		8A7535682452D8D700777F3B /* Guest Table View Cell */ = {
+			isa = PBXGroup;
+			children = (
+				8A75356A2452D8FD00777F3B /* GuestTableViewCell.xib */,
+				8A7535692452D8FD00777F3B /* GuestTableViewCell.swift */,
+			);
+			path = "Guest Table View Cell";
+			sourceTree = "<group>";
+		};
+		8A75356F2452F5C300777F3B /* Guest Table View Header */ = {
+			isa = PBXGroup;
+			children = (
+				8A7535702452F66B00777F3B /* GuestTableViewHeader.xib */,
+				8A7535722452F6DE00777F3B /* GuestTableViewHeader.swift */,
+			);
+			path = "Guest Table View Header";
+			sourceTree = "<group>";
+		};
+		8A8FE5732497CDD3001A2EF5 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				8A8FE5762497D2DD001A2EF5 /* BaseGuestList.storyboard */,
+				8A8FE5742497CE01001A2EF5 /* BaseGuestListViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		8AABA8D924640EAF0043A05F /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				8AABA8DA24640EC20043A05F /* PickerOptionsDelegate.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		8ABFDA352456F82200B9E333 /* Onboard User */ = {
+			isa = PBXGroup;
+			children = (
+				8ABFDA272456D86100B9E333 /* OnboardUser.storyboard */,
+				8ABFDA292456D9D500B9E333 /* StartOnboardingViewController.swift */,
+				8ABFDA2B2456D9DF00B9E333 /* SignupWithEmailViewController.swift */,
+				8ABFDA2D2456D9E800B9E333 /* LoginViewController.swift */,
+			);
+			path = "Onboard User";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8A33DA62244DCF230009D9D0 /* guest-list */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8A33DA77244DCF270009D9D0 /* Build configuration list for PBXNativeTarget "guest-list" */;
+			buildPhases = (
+				B1EFD0ACF3CCF18CA46F8708 /* [CP] Check Pods Manifest.lock */,
+				8A33DA5F244DCF230009D9D0 /* Sources */,
+				8A33DA60244DCF230009D9D0 /* Frameworks */,
+				8A33DA61244DCF230009D9D0 /* Resources */,
+				47E3AB323C4A68C15D2A6B03 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "guest-list";
+			productName = "guest-list";
+			productReference = 8A33DA63244DCF230009D9D0 /* guest-list.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8A33DA5B244DCF230009D9D0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1140;
+				LastUpgradeCheck = 1140;
+				ORGANIZATIONNAME = "Mattias Tilert Thunqvist";
+				TargetAttributes = {
+					8A33DA62244DCF230009D9D0 = {
+						CreatedOnToolsVersion = 11.4.1;
+					};
+				};
+			};
+			buildConfigurationList = 8A33DA5E244DCF230009D9D0 /* Build configuration list for PBXProject "guest-list" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8A33DA5A244DCF230009D9D0;
+			productRefGroup = 8A33DA64244DCF230009D9D0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8A33DA62244DCF230009D9D0 /* guest-list */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8A33DA61244DCF230009D9D0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A33DA73244DCF270009D9D0 /* LaunchScreen.storyboard in Resources */,
+				8A75356C2452D8FD00777F3B /* GuestTableViewCell.xib in Resources */,
+				8AF697E42461BB64009DB7B9 /* GoogleService-Info.plist in Resources */,
+				8A33DA70244DCF270009D9D0 /* Assets.xcassets in Resources */,
+				8A8FE5772497D2DD001A2EF5 /* BaseGuestList.storyboard in Resources */,
+				8ABFDA282456D86100B9E333 /* OnboardUser.storyboard in Resources */,
+				8A252909244F1DA800ED903D /* GuestList.storyboard in Resources */,
+				8A7535712452F66B00777F3B /* GuestTableViewHeader.xib in Resources */,
+				8A33DA6E244DCF230009D9D0 /* PageScroll.storyboard in Resources */,
+				8A25290B244F1DC900ED903D /* Summary.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		47E3AB323C4A68C15D2A6B03 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-guest-list/Pods-guest-list-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL-GRPC/openssl_grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/CodableFirebase/CodableFirebase.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl_grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CodableFirebase.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-guest-list/Pods-guest-list-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B1EFD0ACF3CCF18CA46F8708 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-guest-list-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8A33DA5F244DCF230009D9D0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AABA8DB24640EC20043A05F /* PickerOptionsDelegate.swift in Sources */,
+				8ABFDA302456DB4F00B9E333 /* LargeStickyButton.swift in Sources */,
+				8ABFDA2E2456D9E800B9E333 /* LoginViewController.swift in Sources */,
+				8AE37F96248E663300C73482 /* CircleView.swift in Sources */,
+				8A8FE5752497CE01001A2EF5 /* BaseGuestListViewController.swift in Sources */,
+				8A88CBD324897C320098C618 /* Relation.swift in Sources */,
+				8A33DA6B244DCF230009D9D0 /* GuestListViewController.swift in Sources */,
+				8A32E9D52453412F001D585E /* WeddingSegmentedControl.swift in Sources */,
+				8ADD4F4C2455D036006EF29F /* CALayer + Wedding.swift in Sources */,
+				8A33DA8D244DE54E0009D9D0 /* NetworkError.swift in Sources */,
+				8ABFDA3A2457587F00B9E333 /* RsvpDetailsViewController.swift in Sources */,
+				8A88CBD524897C480098C618 /* FamilyStatus.swift in Sources */,
+				8A4FA8462454A9C100E0ABC4 /* LargeTextLabel.swift in Sources */,
+				8A553D512462A8ED00261BE1 /* GuestList.swift in Sources */,
+				8ADCBA8D24542A2E001DE10D /* LargeTextField.swift in Sources */,
+				8A4FA84A2454AFF100E0ABC4 /* BoxButton.swift in Sources */,
+				8ADCBA8F24543B7A001DE10D /* GuestInfoTextFieldsViewController.swift in Sources */,
+				8A33DA8B244DE3DC0009D9D0 /* UIFont + Wedding.swift in Sources */,
+				8A7535732452F6DE00777F3B /* GuestTableViewHeader.swift in Sources */,
+				8ABFDA2C2456D9DF00B9E333 /* SignupWithEmailViewController.swift in Sources */,
+				8A33DA82244DDDE40009D9D0 /* StoryboardInstance.swift in Sources */,
+				8A88CBCF24897BEE0098C618 /* List.swift in Sources */,
+				8A553D552463240200261BE1 /* PickerViewController.swift in Sources */,
+				8A33DA85244DDE360009D9D0 /* NetworkManager.swift in Sources */,
+				8A33DA67244DCF230009D9D0 /* AppDelegate.swift in Sources */,
+				8A5DD5682455C4BF00941F6E /* ExtraLargeTextLabel.swift in Sources */,
+				8A504D502456CE03007D4C14 /* Guest.swift in Sources */,
+				8A55BEB62453355100672E63 /* ManageGuestsViewController.swift in Sources */,
+				8A88CBCD24897BA80098C618 /* Rsvp.swift in Sources */,
+				8A252903244F118600ED903D /* PageViewController.swift in Sources */,
+				8A75356B2452D8FD00777F3B /* GuestTableViewCell.swift in Sources */,
+				8A88CBD124897C090098C618 /* Role.swift in Sources */,
+				8A553D5824635C4E00261BE1 /* PickerState.swift in Sources */,
+				8ABFDA2A2456D9D500B9E333 /* StartOnboardingViewController.swift in Sources */,
+				8A33DA69244DCF230009D9D0 /* SceneDelegate.swift in Sources */,
+				8ADCBA9124545B84001DE10D /* MoreGuestInfoViewController.swift in Sources */,
+				8A33DA89244DDF2D0009D9D0 /* UIColor + Wedding.swift in Sources */,
+				8A4FA8482454AC2400E0ABC4 /* GuestStatusViewController.swift in Sources */,
+				8A88CBD724897C600098C618 /* Gender.swift in Sources */,
+				8A75356E2452F42000777F3B /* MediumTextLabel.swift in Sources */,
+				8A9B49CF2464A9A6000C0A08 /* Notification + Wedding.swift in Sources */,
+				8A252905244F120500ED903D /* RsvpSummaryViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		8A33DA6C244DCF230009D9D0 /* PageScroll.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8A33DA6D244DCF230009D9D0 /* Base */,
+			);
+			name = PageScroll.storyboard;
+			sourceTree = "<group>";
+		};
+		8A33DA71244DCF270009D9D0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8A33DA72244DCF270009D9D0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8A33DA75244DCF270009D9D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8A33DA76244DCF270009D9D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8A33DA78244DCF270009D9D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F0CA2C6D4DE83932D24994EA /* Pods-guest-list.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7W34QQJZM3;
+				INFOPLIST_FILE = "guest-list/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tilert.guest-list";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8A33DA79244DCF270009D9D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC4C66B88AEC9EDDDF361820 /* Pods-guest-list.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7W34QQJZM3;
+				INFOPLIST_FILE = "guest-list/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tilert.guest-list";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8A33DA5E244DCF230009D9D0 /* Build configuration list for PBXProject "guest-list" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A33DA75244DCF270009D9D0 /* Debug */,
+				8A33DA76244DCF270009D9D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8A33DA77244DCF270009D9D0 /* Build configuration list for PBXNativeTarget "guest-list" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A33DA78244DCF270009D9D0 /* Debug */,
+				8A33DA79244DCF270009D9D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8A33DA5B244DCF230009D9D0 /* Project object */;
+}

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Page View Controller-->
+        <scene sceneID="GZi-ca-U9q">
+            <objects>
+                <pageViewController storyboardIdentifier="PageViewController" autoresizesArchivedViewToFullSize="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="IdH-xG-xSw" customClass="PageViewController" customModule="guest_list" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="ZeY-Gd-WCk">
+                        <nil key="title"/>
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="0Fp-Ez-OKP" customClass="WeddingSegmentedControl" customModule="guest_list" customModuleProvider="target">
+                            <rect key="frame" x="89.5" y="5.5" width="235" height="33"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segments>
+                                <segment title="Guest List"/>
+                                <segment title="RSVP"/>
+                            </segments>
+                            <color key="tintColor" name="weddingWhite"/>
+                            <connections>
+                                <action selector="valueChangedSegmentedControl:" destination="IdH-xG-xSw" eventType="valueChanged" id="lJa-uh-dqd"/>
+                            </connections>
+                        </segmentedControl>
+                        <barButtonItem key="rightBarButtonItem" image="logout" id="WCh-Om-SGq">
+                            <color key="tintColor" name="weddingGray"/>
+                            <connections>
+                                <action selector="didTapSignOutButton:" destination="IdH-xG-xSw" id="tos-t7-acF"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="segmentedControl" destination="0Fp-Ez-OKP" id="EBy-4O-YtV"/>
+                    </connections>
+                </pageViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oAD-G2-Pf8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2490" y="117"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="logout" width="24" height="24"/>
+        <namedColor name="weddingGray">
+            <color red="0.49803921568627452" green="0.49803921568627452" blue="0.49803921568627452" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="weddingWhite">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

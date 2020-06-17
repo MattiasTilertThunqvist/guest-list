@@ -1,0 +1,18 @@
+# Uncomment the next line to define a global platform for your project
+ platform :ios, '11.0'
+
+target 'guest-list' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for guest-list
+  pod 'CodableFirebase'
+  
+  # add pods for desired Firebase products
+  # https://firebase.google.com/docs/ios/setup#available-pods
+  pod 'Firebase/Analytics'
+  pod 'Firebase/Firestore', '6.10.0'
+  pod 'FirebaseFirestoreSwift'
+  pod 'Firebase/Auth'
+
+end
